@@ -11,25 +11,34 @@
                     <img src="../assets/img/logo.png" alt="branza-logo" />
                 </li>
 
-                
+                <a href="#productos">
+                    <li class="hover">
+                        Productos
+                        <font-awesome-icon :icon="['fas', 'angle-down']" />
 
-                <li class="hover">
-                    Productos
-                    <font-awesome-icon :icon="['fas', 'angle-down']" />
+                    </li>
 
-                </li>
-                
+                </a>
+                <a href="#nosotros">
+                    <li class="hover">
+                        Sobre Nosotros
+                        <font-awesome-icon :icon="['fas', 'angle-down']" />
 
-                <li class="hover">
-                    Sobre Nosotros
-                    <font-awesome-icon :icon="['fas', 'angle-down']" />
+                    </li>
 
-                </li>
-                <li class="hover">
-                    Contacto
-                    <font-awesome-icon :icon="['fas', 'angle-down']" />
+                </a>
+                <a href="#contacto">
 
-                </li>
+                    <li class="hover">
+                        Contacto
+                        <font-awesome-icon :icon="['fas', 'angle-down']" />
+
+                    </li>
+                </a>
+
+
+
+
             </ul>
         </div>
 
@@ -54,9 +63,11 @@
             </div>
         </div>
     </nav>
+
 </template>
 
 <style scoped>
+
 nav {
     display: flex;
     align-items: center;
@@ -69,6 +80,9 @@ nav {
 
 }
 
+a{
+    text-decoration: none;
+}
 .left-side {
     display: flex;
     align-items: center;
@@ -159,5 +173,26 @@ p a {
 
 p a:hover {
     color: #070f53;
-}</style>
+}
+
+
+
+@media (max-width: 800px) {
+    
+    nav{
+        justify-content: center;
+    }
+    .left-side a,form{
+        display: none;
+    }
+    .right-side p{
+        font-size: 14pt;
+    }
+   
+
+}
+
+
+
+</style>
 

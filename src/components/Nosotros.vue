@@ -161,5 +161,17 @@ import splash from './splash.vue'
     color: white;
 }
 
+@media (max-width: 800px) {
+    .nosotros{
+        min-height: fit-content;
+    }
+    .time-line{
+        flex-direction: column;
+    }
+    .logo{
+        margin-bottom: 500px;
+    }
+}
+
 </style>
 

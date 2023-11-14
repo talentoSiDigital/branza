@@ -4,70 +4,77 @@ import splash from './splash.vue'
 </script>
 
 <template>
-    <div class="main-container">
-        <div class="img-container">
-            <img src="../assets/img/contacto.jpg" alt="" class="banner-img">
-        </div>
-    </div>
-    <div class="text-area">
-
-        <h1>Contacto</h1>
-        <p>Ponte en contacto con nosotros a traves de los canales que te ofrecemos, o envianos un mensjae directo a nuestro
-            correo. Nos encantaria leerte!</p>
-
-
-
-    </div>
-    <div class="time-line">
-
-
-        <div class="splash">
-            <splash color="#00adef" class="medium" />
-            <div class="text-splash">
-                <header class="white">
-                    <div class="line">
-                        <font-awesome-icon :icon="['fas', 'envelope']" class="icon" />
-                        <h5>branza@example.com</h5>
-                    </div>
-                    <div class="line">
-                        <font-awesome-icon :icon="['fas', 'phone']" class="icon " />
-                        <h5>(58) 212-000-0000</h5>
-                    </div>
-                    <div class="line">
-                        <font-awesome-icon :icon="['fas', 'location-dot']" class="icon2" />
-                        <h5>284 Royal, New Jersey</h5>
-                    </div>
-
-
-                </header>
+    <div class="contacto">
+        <div class="main-container">
+            <div class="img-container">
+                <img src="../assets/img/contacto.jpg" alt="" class="banner-img">
             </div>
         </div>
+        <div class="text-area">
 
-        <form action="" class="contact-form">
-            <div>
+            <h1>Contacto</h1>
+            <p>Ponte en contacto con nosotros a traves de los canales que te ofrecemos, o envianos un mensaje directo a
+                nuestro
+                correo. Nos encantaria leerte!</p>
 
-                <h1>Escribe tu correo</h1>
-           
 
 
+        </div>
+        <div class="time-line">
+
+
+            <div class="splash">
+                <splash color="#00adef" class="medium" />
+                <div class="text-splash">
+                    <header class="white">
+                        <div class="line">
+                            <font-awesome-icon :icon="['fas', 'envelope']" class="icon" />
+                            <h5>branza@example.com</h5>
+                        </div>
+                        <div class="line">
+                            <font-awesome-icon :icon="['fas', 'phone']" class="icon " />
+                            <h5>(58) 212-000-0000</h5>
+                        </div>
+                        <div class="line">
+                            <font-awesome-icon :icon="['fas', 'location-dot']" class="icon2" />
+                            <h5>284 Royal, New Jersey</h5>
+                        </div>
+
+
+                    </header>
+                </div>
             </div>
-            <div class="form-group">
-                <input type="text" class="form-control" id="name" placeholder="Nombre">
-                <input type="email" class="form-control" id="email" placeholder="Email">
-            </div>
 
-            <div class="form-group">
-                <input type="text" class="form-control" id="subject" placeholder="Asunto">
-                <input type="text" class="form-control" id="phone" placeholder="Telefono">
-            </div>
-            <div class="form-group">
-                <textarea class="form-control" id="message" rows="7" cols="44"></textarea>
-            </div>
-            <div class="form-group">
-                <button>Enviar</button>
-            </div>
-        </form>
+            <form action="" class="contact-form">
+                <div class="form-header">
 
+                    <h1>Dejanos un mensaje</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, voluptates.</p>
+
+
+
+                </div>
+                <div class="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="name" placeholder="Nombre">
+                        <input type="email" class="form-control" id="email" placeholder="Email">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="subject" placeholder="Asunto">
+                        <input type="text" class="form-control" id="phone" placeholder="Telefono">
+                    </div>
+                    <div class="form-group">
+                        <textarea class=" textarea" placeholder="Escribe tu mensaje" id="message" rows="7"
+                            cols="44"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button>Enviar</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
     </div>
 </template>
 
@@ -100,6 +107,11 @@ import splash from './splash.vue'
     justify-content: center;
     gap: 5px;
     padding: 10px;
+}
+
+.form-header,
+.text-area {
+    color: #31439b;
 }
 
 .text-area p {
@@ -186,15 +198,53 @@ import splash from './splash.vue'
     gap: 10px;
     margin-top: 15px;
 }
-form{
-    width: 300px;
+
+form {
+    width: 40%;
+    box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.15);
+    padding: 15px;
 }
+
+
 .form-group {
     margin-top: 10px;
     display: flex;
     gap: 5px;
 }
 
-.form-group .form-control {}
-</style>
+.form-group .form-control {
+    width: 100%;
+    height: 30px;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+    background: #e4e4e4;
+}
+
+
+.textarea {
+    min-width: 96%;
+    max-width: 96%;
+    min-height: 130px;
+    max-height: 130px;
+    padding: 5px;
+    border-radius: 2%;
+    border: none;
+    background: #e4e4e4;
+    padding: 10px;
+}
+
+button {
+    padding: 10px 35px;
+    border-radius: 5%;
+    font-weight: 900;
+    background: #31439b;
+    border: none;
+    color: white;
+    transition: 0.5s;
+}
+
+button:hover {
+    background: #4f66da;
+}</style>
 

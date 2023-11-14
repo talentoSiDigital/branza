@@ -1,6 +1,33 @@
 <script setup>
 import 'vue3-carousel/dist/carousel.css'
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
+import { onMounted, onUnmounted, ref, watch } from 'vue'
+
+const screenWidth = ref(screen.width)
+
+const sliderShow = ref(1.6)
+
+const handleResize = () => {
+    screenWidth.value = window.innerWidth
+}
+
+onMounted(() => {
+    window.addEventListener('resize', handleResize)
+    console.log(screenWidth.value)
+    
+    if (screenWidth.value > 800){
+        sliderShow.value = 1
+    }
+
+    
+})
+
+onUnmounted(() => {
+    window.removeEventListener('resize', handleResize)
+})
+
+
+
 </script>
 
 <template>
@@ -8,7 +35,7 @@ import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
         <div class="slider-container">
 
 
-            <carousel :items-to-show="1">
+            <carousel :items-to-show="sliderShow">
                 <slide v-for="slide in 3" :key="slide">
                     <div class="card">
                         <img src="../assets/img/ADECO.jpg" alt="adecoagro">

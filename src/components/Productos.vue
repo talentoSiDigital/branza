@@ -1,5 +1,8 @@
 <script setup>
 import Slider from './Slider.vue'
+
+
+
 </script>
 
 <template>
@@ -11,14 +14,14 @@ import Slider from './Slider.vue'
         </div>
 
         <div class="text-area">
-      
-                <h1>Productos</h1>
-                <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus et aperiam expedita nihil
-                    praesentium culpa aliquam iusto dolorem. Voluptatem, in!</p>
+
+            <h1>Productos</h1>
+            <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus et aperiam expedita nihil
+                praesentium culpa aliquam iusto dolorem. Voluptatem, in!</p>
 
         </div>
-        <Slider/>
+        <Slider />
     </div>
 </template>
 
@@ -56,10 +59,24 @@ img {
     gap: 5px;
     padding: 10px;
 }
-.text-area p{
-  
-    width: 40% ;
+
+.text-area p {
+
+    width: 40%;
     text-align: center;
+}
+
+
+@media (max-width: 800px) {
+    .text-area p {
+
+        width: 80%;
+        text-align: center;
+    }
+    .contact {
+    height: 120vh;
+}
+
 }
 </style>
 
