@@ -12,7 +12,7 @@ import Slider from './Slider.vue'
 
         <div class="text-area">
       
-                <h2>Productos</h2>
+                <h1>Productos</h1>
                 <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h5>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus et aperiam expedita nihil
                     praesentium culpa aliquam iusto dolorem. Voluptatem, in!</p>

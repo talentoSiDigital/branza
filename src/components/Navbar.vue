@@ -4,55 +4,59 @@
 </script>
 
 <template>
-  <nav>
-    <div class="left-side">
-      <ul>
-        <li> 
-            <img src="../assets/img/logo.png" alt="branza-logo" />
-        </li>
-        <li class="hover">
-            Productos
-            <font-awesome-icon :icon="['fas', 'angle-down']" />
-        
-        </li>
-        <li class="hover">
-            Sobre Nosotros
-            <font-awesome-icon :icon="['fas', 'angle-down']" />
-        
-        </li>
-        <li class="hover">
-            Contacto
-            <font-awesome-icon :icon="['fas', 'angle-down']" />
-        
-        </li>
-      </ul>
-    </div>
-    
-    <div class="right-side">
-      <form>
-        <button>
-            <font-awesome-icon :icon="['fas', 'magnifying-glass']" />
-        </button>
-        <input type="text" placeholder="Buscar"/>
-      </form>
-      <div>
-        <p>
-            Siguenos en:
-            <a href="#">
-                <font-awesome-icon :icon="['fab', 'facebook-f']" />
-            </a>
+    <nav>
+        <div class="left-side">
+            <ul>
+                <li>
+                    <img src="../assets/img/logo.png" alt="branza-logo" />
+                </li>
 
-            <a href="#">
-                <font-awesome-icon :icon="['fab', 'instagram']" />
-            </a>
-        </p>
-      </div>
-    </div>
-  </nav>
+                
+
+                <li class="hover">
+                    Productos
+                    <font-awesome-icon :icon="['fas', 'angle-down']" />
+
+                </li>
+                
+
+                <li class="hover">
+                    Sobre Nosotros
+                    <font-awesome-icon :icon="['fas', 'angle-down']" />
+
+                </li>
+                <li class="hover">
+                    Contacto
+                    <font-awesome-icon :icon="['fas', 'angle-down']" />
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="right-side">
+            <form>
+                <button>
+                    <font-awesome-icon :icon="['fas', 'magnifying-glass']" />
+                </button>
+                <input type="text" placeholder="Buscar" />
+            </form>
+            <div>
+                <p>
+                    Siguenos en:
+                    <a href="#">
+                        <font-awesome-icon :icon="['fab', 'facebook-f']" />
+                    </a>
+
+                    <a href="#">
+                        <font-awesome-icon :icon="['fab', 'instagram']" />
+                    </a>
+                </p>
+            </div>
+        </div>
+    </nav>
 </template>
 
 <style scoped>
-
 nav {
     display: flex;
     align-items: center;
@@ -64,9 +68,10 @@ nav {
     width: 98%;
 
 }
-.left-side  {
+
+.left-side {
     display: flex;
-    align-items: center; 
+    align-items: center;
     gap: 20px;
     width: 50%;
 
@@ -81,33 +86,35 @@ ul {
     list-style: none;
     gap: 10px;
 
-} 
+}
+
 ul .hover {
     color: #273294;
 }
 
 
-ul .hover:hover{   
+ul .hover:hover {
     color: #070f53;
-   
 
-}   
 
-img {   
+}
+
+img {
     width: 100px;
     height: 50px;
-}   
+}
 
 
 
 
-.right-side{   
+.right-side {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 30%;
 }
-form{
+
+form {
     background: #f5f5f5;
     color: #a2a2a2;
     padding: 5px;
@@ -115,41 +122,42 @@ form{
     width: 50%;
 
 }
-form button{
+
+form button {
     background: none;
     border: none;
 }
-form button:hover{
+
+form button:hover {
     color: #6a6a6a;
 }
 
-input[type="text"] { 
+input[type="text"] {
     padding: 0 5px;
     border: none;
     background: #f5f5f5;
     width: 80%;
 
 }
-input[type="text"]:focus { 
-    border: none; 
+
+input[type="text"]:focus {
+    border: none;
 }
 
 
 p {
 
     color: #273294;
-} 
+}
 
 
-p a {   
+p a {
     padding: 0 10px;
     text-decoration: none;
     color: #273294;
-}   
+}
 
 p a:hover {
     color: #070f53;
-}
-
-</style>
+}</style>
 

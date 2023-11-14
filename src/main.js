@@ -8,11 +8,11 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 /* import specific icons */
-import { faMagnifyingGlass, faAngleDown,faIndustry,faHandshake,faAward,faHandsHoldingCircle,faCircleCheck } from '@fortawesome/free-solid-svg-icons'
+import { faMagnifyingGlass, faAngleDown,faIndustry,faHandshake,faAward,faHandsHoldingCircle,faCircleCheck,faEnvelope,faPhone,faLocationDot } from '@fortawesome/free-solid-svg-icons'
 import { faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons'
 
 
-library.add(faMagnifyingGlass,faFacebookF,faInstagram, faAngleDown,faIndustry,faHandshake,faAward,faHandsHoldingCircle,faCircleCheck)
+library.add(faMagnifyingGlass,faFacebookF,faInstagram, faAngleDown,faIndustry,faHandshake,faAward,faHandsHoldingCircle,faCircleCheck,faEnvelope,faPhone,faLocationDot)
 
 
 

@@ -11,7 +11,7 @@
             </header>
             <p class="text-box"> Distribuimos y vendemos productos alimenticios de alta calidad a precios accesibles, a todos los niveles sociales en Venezuela</p>
         </div>
-        <img src="../assets/img/milk.png" alt="">
+        <img src="../assets/img/milk.png" alt="" class="bounce2">
     </div>
     <!-- Falta svg del fondo. hacer en illustrator y colocar -->
 </template>
@@ -44,6 +44,14 @@
 
 img{
     width: 40%;
+}
+.bounce2 {
+  animation: bounce2 2s ease infinite;
+}
+@keyframes bounce2 {
+	0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+	40% {transform: translateY(-30px);}
+	60% {transform: translateY(-15px);}
 }
 </style>
 
