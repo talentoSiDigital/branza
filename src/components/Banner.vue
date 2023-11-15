@@ -80,9 +80,7 @@ img {
 }
 
 @media (max-width: 800px) {
-    .banner-container {
-        height: 120vh;
-    }
+  
 
     .banner {
         flex-direction: column-reverse;

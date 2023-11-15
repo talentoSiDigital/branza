@@ -1,10 +1,13 @@
+<script setup>
+import ImageBanner from './ImageBanner.vue'
+
+</script>  
+
+
+
 <template>
     <div class="mision">
-        <div class="main-container">
-            <div class="img-container">
-                <img src="../assets/img/mision.jpg" alt="">
-            </div>
-        </div>
+        <ImageBanner img="mision" />
 
         <div class="text-box ">
             <h1 class="mission">Mision</h1>
@@ -69,7 +72,7 @@
 }
 
 .img-container {
-    width: 95%;
+    width: 90%;
     height: 200px;
     overflow: hidden;
     border-radius: 10px;

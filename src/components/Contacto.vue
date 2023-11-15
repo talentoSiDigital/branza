@@ -1,15 +1,14 @@
 <script setup>
 import splash from './splash.vue'
+import ImageBanner from './ImageBanner.vue'
+
 
 </script>
 
 <template>
     <div class="contacto">
-        <div class="main-container">
-            <div class="img-container">
-                <img src="../assets/img/contacto.jpg" alt="" class="banner-img">
-            </div>
-        </div>
+        <ImageBanner img="contacto" />
+        
         <div class="text-area">
 
             <h1>Contacto</h1>

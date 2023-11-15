@@ -1,17 +1,13 @@
 <script setup>
 import splash from './splash.vue'
+import ImageBanner from './ImageBanner.vue'
 
 </script>
 
 <template>
     <div class="nosotros">
+        <ImageBanner img="sobrenosotros"/>
 
-
-        <div class="main-container">
-            <div class="img-container">
-                <img src="../assets/img/sobrenosotros.jpg" alt="" class="banner-img">
-            </div>
-        </div>
 
         <div class="text-area">
 
@@ -167,10 +163,10 @@ import splash from './splash.vue'
     }
     .time-line{
         flex-direction: column;
+        position:static;
+        height: 130vh;
     }
-    .logo{
-        margin-bottom: 500px;
-    }
+   
 }
 
 </style>

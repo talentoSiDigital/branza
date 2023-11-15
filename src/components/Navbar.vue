@@ -12,7 +12,7 @@
                 </li>
 
                 <a href="#productos">
-                    <li class="hover">
+                    <li class="hover hover-underline-animation">
                         Productos
                         <font-awesome-icon :icon="['fas', 'angle-down']" />
 
@@ -20,7 +20,7 @@
 
                 </a>
                 <a href="#nosotros">
-                    <li class="hover">
+                    <li class="hover hover-underline-animation">
                         Sobre Nosotros
                         <font-awesome-icon :icon="['fas', 'angle-down']" />
 
@@ -29,7 +29,7 @@
                 </a>
                 <a href="#contacto">
 
-                    <li class="hover">
+                    <li class="hover hover-underline-animation">
                         Contacto
                         <font-awesome-icon :icon="['fas', 'angle-down']" />
 
@@ -104,6 +104,8 @@ ul {
 
 ul .hover {
     color: #273294;
+    display: inline-block;
+  position: relative;
 }
 
 
@@ -118,7 +120,23 @@ img {
     height: 50px;
 }
 
+.hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #0087ca;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
 
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
 
 
 .right-side {

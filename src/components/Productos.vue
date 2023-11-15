@@ -1,5 +1,7 @@
 <script setup>
 import Slider from './Slider.vue'
+import ImageBanner from './ImageBanner.vue'
+
 
 
 
@@ -7,18 +9,13 @@ import Slider from './Slider.vue'
 
 <template>
     <div class="contact">
-        <div class="main-container">
-            <div class="img-container">
-                <img src="../assets/img/productos.jpg" alt="">
-            </div>
-        </div>
+        
+        <ImageBanner img="productos"/>
 
         <div class="text-area">
 
             <h1>Productos</h1>
-            <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h5>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus et aperiam expedita nihil
-                praesentium culpa aliquam iusto dolorem. Voluptatem, in!</p>
+
 
         </div>
         <Slider />
@@ -28,28 +25,10 @@ import Slider from './Slider.vue'
 <style scoped>
 .contact {
     height: 90vh;
+    margin-bottom: 10px;
     color: #273294;
 }
 
-.main-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-
-.img-container {
-    width: 95%;
-    height: 180px;
-
-    overflow: hidden;
-    border-radius: 10px;
-}
-
-img {
-    width: 100%;
-    transform: translateY(-15em);
-}
 
 .text-area {
     display: flex;
