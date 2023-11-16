@@ -42,8 +42,6 @@ onUnmounted(() => {
                         <div class="card-body">
                             <p class="card-title">Saco de 25Kgr</p>
                             <h3 class="card-title">Leche entera AdecoAgro</h3>
-                            <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident, at?
-                            </p>
                         </div>
                     </div>
                     <div class="card">
@@ -51,8 +49,7 @@ onUnmounted(() => {
                         <div class="card-body">
                             <p class="card-title">Saco de 25Kgr</p>
                             <h3 class="card-title">Leche entera Conaprole</h3>
-                            <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident, at?
-                            </p>
+                           
                         </div>
                     </div>
                     <div class="card">
@@ -60,8 +57,7 @@ onUnmounted(() => {
                         <div class="card-body">
                             <p class="card-title">Saco de 25Kgr</p>
                             <h3 class="card-title">Leche entera Magnalat</h3>
-                            <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident, at?
-                            </p>
+                           
                         </div>
                     </div>
                     <div class="card">
@@ -69,8 +65,7 @@ onUnmounted(() => {
                         <div class="card-body">
                             <p class="card-title">Saco de 25Kgr</p>
                             <h3 class="card-title">Leche entera Conaprole</h3>
-                            <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident, at?
-                            </p>
+                            
                         </div>
                     </div>
                     <div class="card">
@@ -78,8 +73,7 @@ onUnmounted(() => {
                         <div class="card-body">
                             <p class="card-title">Saco de 25Kgr</p>
                             <h3 class="card-title">Leche entera AdecoAgro</h3>
-                            <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident, at?
-                            </p>
+                           
                         </div>
                     </div>
                 </slide>

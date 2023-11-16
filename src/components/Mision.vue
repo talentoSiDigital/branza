@@ -1,5 +1,5 @@
 <script setup>
-import ImageBanner from './ImageBanner.vue'
+import ImageBanner from '../partials/ImageBanner.vue'
 
 </script>  
 

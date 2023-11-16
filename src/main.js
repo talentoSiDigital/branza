@@ -25,7 +25,7 @@ import {
     faPhone,
     faLocationDot
 } from '@fortawesome/free-solid-svg-icons'
-import { faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons'
+import { faFacebookF, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons'
 
 
 library.add(
@@ -40,7 +40,8 @@ library.add(
     faCircleCheck,
     faEnvelope,
     faPhone,
-    faLocationDot
+    faLocationDot,
+    faTwitter
 )
 
 

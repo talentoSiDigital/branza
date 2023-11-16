@@ -5,70 +5,109 @@
 
 <template>
     <nav>
-        <div class="left-side">
-            <ul>
-                <li>
-                    <img src="../assets/img/logo.png" alt="branza-logo" />
-                </li>
+        <div class="normal-nav">
+            <div class="left-side">
+                <ul>
+                    <li>
+                        <img src="../assets/img/logo.png" alt="branza-logo" />
+                    </li>
 
-                <a href="#productos">
                     <li class="hover hover-underline-animation">
-                        Productos
-                        <font-awesome-icon :icon="['fas', 'angle-down']" />
+                        <div class="nav-heading">
+                            Productos 
+                            <font-awesome-icon :icon="['fas', 'angle-down']" />
+                        </div>
+                        <div class="dropdown-content">
+                            
+                                <a href="#" >Leche Completa</a>
+                                <a href="#" >Leche Semi-completa</a>
+                                <a href="#" >Leche Descremada</a>
+                               
+                           
+                        </div>
+                    </li>
+
+                    <li class="hover hover-underline-animation">
+                        <div class="nav-heading">
+                            Sobre Nosotros
+                            <font-awesome-icon :icon="['fas', 'angle-down']" />
+                        </div>
+                        <div class="dropdown-content">
+                            
+                            <a href="#" >Mision</a>
+                            <a href="#" >Vision</a>
+                           
+                       
+                    </div>
 
                     </li>
 
-                </a>
-                <a href="#nosotros">
                     <li class="hover hover-underline-animation">
-                        Sobre Nosotros
-                        <font-awesome-icon :icon="['fas', 'angle-down']" />
+                        <div class="nav-heading">
+                            Elaboraciones
+                            <font-awesome-icon :icon="['fas', 'angle-down']" />
+                        </div>
 
                     </li>
 
-                </a>
-                <a href="#contacto">
-
                     <li class="hover hover-underline-animation">
-                        Contacto
-                        <font-awesome-icon :icon="['fas', 'angle-down']" />
+                        <div class="nav-heading">
+                            Contacto
+                            <font-awesome-icon :icon="['fas', 'angle-down']" />
+                        </div>
+                        <div class="dropdown-content">
+                            
+                            <a href="#" >Correo</a>
+                            <a href="#" >Informacion</a>
+                           
+                       
+                    </div>
 
                     </li>
-                </a>
+
+                   
 
 
 
 
-            </ul>
-        </div>
+                </ul>
 
-        <div class="right-side">
-            <form>
-                <button>
-                    <font-awesome-icon :icon="['fas', 'magnifying-glass']" />
-                </button>
-                <input type="text" placeholder="Buscar" />
-            </form>
-            <div>
-                <p>
-                    Siguenos en:
-                    <a href="#">
-                        <font-awesome-icon :icon="['fab', 'facebook-f']" />
-                    </a>
+            </div>
 
-                    <a href="#">
-                        <font-awesome-icon :icon="['fab', 'instagram']" />
-                    </a>
-                </p>
+            <div class="right-side">
+                <form>
+                    <button>
+                        <font-awesome-icon :icon="['fas', 'magnifying-glass']" />
+                    </button>
+                    <input type="text" placeholder="Buscar" />
+                </form>
+                <div>
+                    <p>
+                        Siguenos en:
+                        <a href="https://www.facebook.com/branzafoods/" target="_blank" class="socials">
+                            <font-awesome-icon :icon="['fab', 'facebook-f']" />
+                        </a>
+
+                        <a href="https://www.instagram.com/branzafoods" target="_blank" class="socials">
+                            <font-awesome-icon :icon="['fab', 'instagram']" />
+                        </a>
+                        <a href="https://twitter.com/i/flow/login?redirect_after_login=%2Fbranzafoods" target="_blank"
+                            class="socials">
+                            <font-awesome-icon :icon="['fab', 'twitter']" />
+                        </a>
+                    </p>
+                </div>
             </div>
         </div>
-    </nav>
+        <div class="dropdown">
 
+
+        </div>
+    </nav>
 </template>
 
 <style scoped>
-
-nav {
+.normal-nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -80,14 +119,15 @@ nav {
 
 }
 
-a{
+a {
     text-decoration: none;
 }
+
 .left-side {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     gap: 20px;
-    width: 50%;
+    width: 60%;
 
 }
 
@@ -105,8 +145,9 @@ ul {
 ul .hover {
     color: #273294;
     display: inline-block;
-  position: relative;
+    position: relative;
 }
+.nav-
 
 
 ul .hover:hover {
@@ -121,21 +162,27 @@ img {
 }
 
 .hover-underline-animation::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #0087ca;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0087ca;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
 }
 
 .hover-underline-animation:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+.nav-heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
 }
 
 
@@ -194,23 +241,56 @@ p a:hover {
 }
 
 
+.dropdown {
+    position: fixed;
+}
 
-@media (max-width: 800px) {
-    
-    nav{
-        justify-content: center;
-    }
-    .left-side a,form{
-        display: none;
-    }
-    .right-side p{
-        font-size: 14pt;
-    }
-   
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+  color: #070f53;
+  padding: 10px 15px;
 
+  text-decoration: none;
+  display: block;
+}
+
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.hover:hover .dropdown-content {display: block;}
+
+.flex-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 
 
+@media (max-width: 800px) {
+
+    nav {
+        justify-content: center;
+    }
+
+    .left-side a,
+    form {
+        display: none;
+    }
+
+    .right-side p {
+        font-size: 14pt;
+    }
+
+
+}
 </style>
 

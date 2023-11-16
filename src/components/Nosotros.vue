@@ -1,6 +1,6 @@
 <script setup>
-import splash from './splash.vue'
-import ImageBanner from './ImageBanner.vue'
+import splash from '../partials/splash.vue'
+import ImageBanner from '../partials/ImageBanner.vue'
 
 </script>
 

@@ -1,6 +1,6 @@
 <script setup>
-import Slider from './Slider.vue'
-import ImageBanner from './ImageBanner.vue'
+import Slider from '../partials/Slider.vue'
+import ImageBanner from '../partials/ImageBanner.vue'
 
 
 

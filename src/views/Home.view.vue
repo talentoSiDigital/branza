@@ -16,7 +16,6 @@ import Footer from '../components/Footer.vue'
         <Nosotros />
         <Mision/>
         <Contacto  />
-        <Footer /> 
         <!-- <Productos v-motion-slide-visible-left />
         <Nosotros v-motion-slide-visible-left />
         <Mision v-motion-slide-visible-left />

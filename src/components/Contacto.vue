@@ -1,6 +1,6 @@
 <script setup>
-import splash from './splash.vue'
-import ImageBanner from './ImageBanner.vue'
+import splash from '../partials/splash.vue'
+import ImageBanner from '../partials/ImageBanner.vue'
 
 
 </script>
@@ -48,7 +48,6 @@ import ImageBanner from './ImageBanner.vue'
                 <div class="form-header">
 
                     <h1>Dejanos un mensaje</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, voluptates.</p>
 
 
 

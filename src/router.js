@@ -1,5 +1,6 @@
 import {createRouter,createWebHistory} from 'vue-router'
 import Home from './views/Home.view.vue'
+import Nosotros from './views/Nosotros.view.vue'
 
 
 const router = createRouter({
@@ -10,8 +11,14 @@ const router = createRouter({
             name:"Home",
             component:Home,
             meta: {
-                title:'Branza the boss'
-            }
+                title:'Branza Foods'
+            },
+            path:"/nosotros",
+            name:"nosotros",
+            component:Nosotros,
+            meta: {
+                title:'Branza Foods - Nosotros'
+            },
             
         },
       
