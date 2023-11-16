@@ -27,6 +27,8 @@ import ImageBanner from '../partials/ImageBanner.vue'
     height: 90vh;
     margin-bottom: 10px;
     color: #273294;
+    position: relative;
+    z-index: 2;
 }
 
 

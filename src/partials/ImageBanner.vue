@@ -25,13 +25,12 @@ const img = defineProps(['img'])
 
 .img-container {
     width: 90%;
-    background: linear-gradient(90deg, rgba(0, 173, 239, 1) 0%, rgba(0, 251, 244, 1) 50%, rgba(0, 173, 239, 1) 100%);
-    border-radius: 10px;
-    height: 200px;
 }
 
 img {
     width: 100%;
+    border-radius: 10px;
+
 }
 </style>
 

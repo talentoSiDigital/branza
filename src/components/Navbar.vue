@@ -9,36 +9,43 @@
             <div class="left-side">
                 <ul>
                     <li>
-                        <img src="../assets/img/logo.png" alt="branza-logo" />
+                        <router-link to="/">
+
+                            <img src="../assets/img/logo.png" alt="branza-logo" />
+                        </router-link>
                     </li>
 
                     <li class="hover hover-underline-animation">
                         <div class="nav-heading">
-                            Productos 
+                            Productos
                             <font-awesome-icon :icon="['fas', 'angle-down']" />
                         </div>
+
                         <div class="dropdown-content">
-                            
-                                <a href="#" >Leche Completa</a>
-                                <a href="#" >Leche Semi-completa</a>
-                                <a href="#" >Leche Descremada</a>
-                               
-                           
+
+                            <a href="#">Leche Completa</a>
+                            <a href="#">Leche Semi-completa</a>
+                            <a href="#">Leche Descremada</a>
+
+
                         </div>
                     </li>
 
                     <li class="hover hover-underline-animation">
-                        <div class="nav-heading">
-                            Sobre Nosotros
-                            <font-awesome-icon :icon="['fas', 'angle-down']" />
-                        </div>
+
+                        <router-link to="/nosotros">
+                            <div class="nav-heading">
+                                Sobre Nosotros
+                                <font-awesome-icon :icon="['fas', 'angle-down']" />
+                            </div>
+                        </router-link>
                         <div class="dropdown-content">
-                            
-                            <a href="#" >Mision</a>
-                            <a href="#" >Vision</a>
-                           
-                       
-                    </div>
+
+                            <a href="#">Mision</a>
+                            <a href="#">Vision</a>
+
+
+                        </div>
 
                     </li>
 
@@ -56,16 +63,16 @@
                             <font-awesome-icon :icon="['fas', 'angle-down']" />
                         </div>
                         <div class="dropdown-content">
-                            
-                            <a href="#" >Correo</a>
-                            <a href="#" >Informacion</a>
-                           
-                       
-                    </div>
+
+                            <a href="#">Correo</a>
+                            <a href="#">Informacion</a>
+
+
+                        </div>
 
                     </li>
 
-                   
+
 
 
 
@@ -147,10 +154,8 @@ ul .hover {
     display: inline-block;
     position: relative;
 }
-.nav-
 
-
-ul .hover:hover {
+.nav- ul .hover:hover {
     color: #070f53;
 
 
@@ -178,7 +183,8 @@ img {
     transform: scaleX(1);
     transform-origin: bottom left;
 }
-.nav-heading{
+
+.nav-heading {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -254,20 +260,25 @@ p a:hover {
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
-.dropdown-content a {
-  color: #070f53;
-  padding: 10px 15px;
 
-  text-decoration: none;
-  display: block;
+.dropdown-content a {
+    color: #070f53;
+    padding: 10px 15px;
+
+    text-decoration: none;
+    display: block;
 }
 
 
-.dropdown-content a:hover {background-color: #ddd;}
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
 
-.hover:hover .dropdown-content {display: block;}
+.hover:hover .dropdown-content {
+    display: block;
+}
 
-.flex-container{
+.flex-container {
     display: flex;
     flex-direction: column;
     gap: 10px;

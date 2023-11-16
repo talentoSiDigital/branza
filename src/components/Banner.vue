@@ -1,25 +1,37 @@
 <script setup>
-
+import BG from './svgComponents/BG-1.vue'
 </script>
 
 <template>
-    <div class="banner-container">
-        <div class="banner">
-            <div class="text-area">
-                <header>
-                    <p>La mejor selección</p>
-                    <p><strong>de productos lácteos</strong></p>
-                </header>
-                <p class="text-box"> Distribuimos y vendemos productos alimenticios de alta calidad a precios accesibles, a
-                    todos los niveles sociales en Venezuela</p>
+    <div class="main-box">
+        <BG class="bg" svg-type="fullwave"/>
+        <div class="banner-container">
+
+            <div class="banner">
+                <div class="text-area">
+                    <header>
+                        <p>La mejor selección</p>
+                        <p><strong>de productos lácteos</strong></p>
+                    </header>
+                    <p class="text-box"> Distribuimos y vendemos productos alimenticios de alta calidad a precios
+                        accesibles, a
+                        todos los niveles sociales en Venezuela</p>
+                </div>
+                <img src="../assets/img/milk.png" alt="" class="bounce2">
             </div>
-            <img src="../assets/img/milk.png" alt="" class="bounce2">
         </div>
     </div>
 </template>
 
 <style scoped>
+.bg{
+    position: absolute;
+    top: 150px;
+    z-index: 1;
+}
 .banner-container {
+    position: relative;
+    z-index: 2;
     color: #273294;
     height: 100vh;
     display: flex;
@@ -80,7 +92,7 @@ img {
 }
 
 @media (max-width: 800px) {
-  
+
 
     .banner {
         flex-direction: column-reverse;
@@ -102,5 +114,6 @@ img {
     }
 
 
-}</style>
+}
+</style>
 

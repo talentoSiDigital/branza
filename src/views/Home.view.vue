@@ -4,7 +4,6 @@ import Productos from '../components/Productos.vue'
 import Nosotros from '../components/Nosotros.vue'
 import Mision from '../components/Mision.vue'
 import Contacto from '../components/Contacto.vue'
-import Footer from '../components/Footer.vue'
 </script>
 
 <template>
@@ -23,6 +22,4 @@ import Footer from '../components/Footer.vue'
         <Footer v-motion-slide-visible-left /> -->
     </div>
 </template>
-
-<style scoped></style>
 

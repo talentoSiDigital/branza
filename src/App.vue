@@ -10,9 +10,12 @@ import { RouterView } from 'vue-router'
   <div>
     <Navbar />
     <RouterView />
-    <Footer />
+    <Footer/>
 
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+
+
+</style>

@@ -1,52 +1,59 @@
 <script setup>
-import splash from '../partials/splash.vue'
+import splash from '../components/svgComponents/splash.vue'
 import ImageBanner from '../partials/ImageBanner.vue'
+import BG from './svgComponents/BG-1.vue'
 
 </script>
 
 <template>
     <div class="nosotros">
-        <ImageBanner img="sobrenosotros"/>
+        <BG class="bg" svg-type="second" />
 
 
-        <div class="text-area">
-
-            <h1>Sobre Nosotros</h1>
-            <p>Desde nuestros inicios en el mercado Venezolano en el año 2012 como importadores y distribudores de materias
-                primas para la industria nacional, nos hemos siempre caracterizado por brindar el servicio y la asesoría
-                técnica que ha requerido cada cliente</p>
-
-            <img src="../assets/img/logo.png" alt="branza-logo" class="logo">
+        <div class="nosotros-container">
+            <ImageBanner img="sobrenosotros" />
 
 
-        </div>
+            <div class="text-area">
 
-        <div class="time-line">
-            <div class="splash">
-                <splash color="#fff9f3" class="small rotate-30" />
-                <div class="text-splash">
-                    <header class="blue">
-                        <h2>2012</h2>
-                        <p>Se establece Branza 1800 C.A.</p>
-                    </header>
-                </div>
+                <h1>Sobre Nosotros</h1>
+                <p>Desde nuestros inicios en el mercado Venezolano en el año 2012 como importadores y distribudores de
+                    materias
+                    primas para la industria nacional, nos hemos siempre caracterizado por brindar el servicio y la asesoría
+                    técnica que ha requerido cada cliente</p>
+
+                <img src="../assets/img/logo.png" alt="branza-logo" class="logo">
+
+
             </div>
-            <div class="splash">
-                <splash color="#00adef" class="small rotate-90" />
-                <div class="text-splash">
-                    <header class="white correction-small">
-                        <h2>2019</h2>
-                        <p>Nace el proyecto de crear una planta llenadora de alimentos en polvo</p>
-                    </header>
+
+            <div class="time-line">
+                <div class="splash">
+                    <splash color="#fff9f3" class="small rotate-30" />
+                    <div class="text-splash">
+                        <header class="blue">
+                            <h2>2012</h2>
+                            <p>Se establece Branza 1800 C.A.</p>
+                        </header>
+                    </div>
                 </div>
-            </div>
-            <div class="splash">
-                <splash color="#fff9f3" class="small rotate-140" />
-                <div class="text-splash">
-                    <header class="blue correction">
-                        <h2>2022</h2>
-                        <p>Inaguramos la planta llenadora de polvos con 1 maquina llenadora de sobres de 30gr.</p>
-                    </header>
+                <div class="splash">
+                    <splash color="#00adef" class="small rotate-90" />
+                    <div class="text-splash">
+                        <header class="white correction-small">
+                            <h2>2019</h2>
+                            <p>Nace el proyecto de crear una planta llenadora de alimentos en polvo</p>
+                        </header>
+                    </div>
+                </div>
+                <div class="splash">
+                    <splash color="#fff9f3" class="small rotate-140" />
+                    <div class="text-splash">
+                        <header class="blue correction">
+                            <h2>2022</h2>
+                            <p>Inaguramos la planta llenadora de polvos con 1 maquina llenadora de sobres de 30gr.</p>
+                        </header>
+                    </div>
                 </div>
             </div>
         </div>
@@ -54,7 +61,19 @@ import ImageBanner from '../partials/ImageBanner.vue'
 </template>
 
 <style scoped>
+.nosotros {
+    position: relative;
+}
+.nosotros-container {
+    position: relative;
+    z-index: 2;
+}
 
+.bg {
+    position: absolute;
+    z-index: 1;
+    top: 45px;
+}
 
 .main-container {
     display: flex;
@@ -83,6 +102,7 @@ import ImageBanner from '../partials/ImageBanner.vue'
     justify-content: center;
     gap: 5px;
     padding: 10px;
+    color: white;
 }
 
 .text-area p {
@@ -124,50 +144,55 @@ import ImageBanner from '../partials/ImageBanner.vue'
     width: 100px;
 }
 
-.text-splash header  h2{
-    font-weight: 900;    
-}
-.text-splash header  p{
-    font-size: 10pt;    
+.text-splash header h2 {
+    font-weight: 900;
 }
 
-.rotate-30{
+.text-splash header p {
+    font-size: 10pt;
+}
+
+.rotate-30 {
     transform: rotate(30deg);
-    
-}
-.rotate-90{
-    transform: rotate(90deg);
-    
-}
-.rotate-140{
-    transform: rotate(140deg);
-    
+
 }
 
-.blue{
-    color:#31439b;
+.rotate-90 {
+    transform: rotate(90deg);
+
 }
+
+.rotate-140 {
+    transform: rotate(140deg);
+
+}
+
+.blue {
+    color: #31439b;
+}
+
 .correction {
     transform: translateY(-30px);
 }
+
 .correction-small {
     transform: translateY(-15px);
 }
-.white{
+
+.white {
     color: white;
 }
 
 @media (max-width: 800px) {
-    .nosotros{
+    .nosotros {
         min-height: fit-content;
     }
-    .time-line{
+
+    .time-line {
         flex-direction: column;
-        position:static;
+        position: static;
         height: 130vh;
     }
-   
-}
 
-</style>
+}</style>
 

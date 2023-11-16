@@ -8,19 +8,19 @@ const router = createRouter({
     routes: [
         {
             path:"/",
-            name:"Home",
             component:Home,
             meta: {
                 title:'Branza Foods'
-            },
+            }
+        },
+        {
+          
             path:"/nosotros",
-            name:"nosotros",
             component:Nosotros,
             meta: {
                 title:'Branza Foods - Nosotros'
-            },
-            
-        },
+            }
+        }
       
     ]
 })
