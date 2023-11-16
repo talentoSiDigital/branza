@@ -5,7 +5,7 @@
 <template>
     <div class="frame">
 
-    </div>
+    </div>            
 </template>
 
 <style scoped>
