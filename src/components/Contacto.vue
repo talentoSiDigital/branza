@@ -3,6 +3,8 @@ import splash from '../components/svgComponents/splash.vue'
 
 import ImageBanner from '../partials/ImageBanner.vue'
 
+import ContactForm from '../components/ContactForm.vue'
+
 
 </script>
 
@@ -45,39 +47,18 @@ import ImageBanner from '../partials/ImageBanner.vue'
                 </div>
             </div>
 
-            <form action="" class="contact-form">
-                <div class="form-header">
-
-                    <h1>Dejanos un mensaje</h1>
-
-
-
-                </div>
-                <div class="form">
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="name" placeholder="Nombre">
-                        <input type="email" class="form-control" id="email" placeholder="Email">
-                    </div>
-
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="subject" placeholder="Asunto">
-                        <input type="text" class="form-control" id="phone" placeholder="Telefono">
-                    </div>
-                    <div class="form-group">
-                        <textarea class=" textarea" placeholder="Escribe tu mensaje" id="message" rows="7"
-                            cols="44"></textarea>
-                    </div>
-                    <div class="form-group">
-                        <button>Enviar</button>
-                    </div>
-                </div>
-            </form>
+            <ContactForm class="form"/>
 
         </div>
     </div>
 </template>
 
 <style scoped>
+.form {
+    width: 40%;
+    box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.15);
+    padding: 15px;
+}
 .main-container {
     display: flex;
     align-items: center;
@@ -198,52 +179,5 @@ import ImageBanner from '../partials/ImageBanner.vue'
     margin-top: 15px;
 }
 
-form {
-    width: 40%;
-    box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.15);
-    padding: 15px;
-}
-
-
-.form-group {
-    margin-top: 10px;
-    display: flex;
-    gap: 5px;
-}
-
-.form-group .form-control {
-    width: 100%;
-    height: 30px;
-    padding: 5px;
-    border-radius: 10px;
-    border: none;
-    background: #e4e4e4;
-}
-
-
-.textarea {
-    min-width: 96%;
-    max-width: 96%;
-    min-height: 130px;
-    max-height: 130px;
-    padding: 5px;
-    border-radius: 2%;
-    border: none;
-    background: #e4e4e4;
-    padding: 10px;
-}
-
-button {
-    padding: 10px 35px;
-    border-radius: 5%;
-    font-weight: 900;
-    background: #31439b;
-    border: none;
-    color: white;
-    transition: 0.5s;
-}
-
-button:hover {
-    background: #4f66da;
-}</style>
+</style>
 

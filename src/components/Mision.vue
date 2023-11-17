@@ -147,6 +147,7 @@ header {
 
 .mission {
     color: #273294;
+    transform: translateY(-50px);
 }
 
 h3 {

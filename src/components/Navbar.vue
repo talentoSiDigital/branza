@@ -1,5 +1,15 @@
 <script setup>
+import { ref } from 'vue';
 
+const navStatus = ref('close')
+const navFull = ref('nav-close')
+
+
+const navChange = () => {
+    navStatus.value === 'close' ? navStatus.value = 'open' : navStatus.value = 'close'
+    navFull.value === 'nav-close' ? navFull.value = 'nav-open' : navFull.value = 'nav-close'
+
+}
 
 </script>
 
@@ -7,11 +17,12 @@
     <nav>
         <div class="normal-nav">
             <div class="left-side">
+
                 <ul>
                     <li>
                         <router-link to="/">
 
-                            <img src="../assets/img/logo.png" alt="branza-logo" />
+                            <img src="../assets/img/logo.png" alt="branza-logo" class="logo" />
                         </router-link>
                     </li>
 
@@ -58,10 +69,12 @@
                     </li>
 
                     <li class="hover hover-underline-animation">
-                        <div class="nav-heading">
-                            Contacto
-                            <font-awesome-icon :icon="['fas', 'angle-down']" />
-                        </div>
+                        <router-link to="/contacto">
+                            <div class="nav-heading">
+                                Contacto
+                                <font-awesome-icon :icon="['fas', 'angle-down']" />
+                            </div>
+                        </router-link>
                         <div class="dropdown-content">
 
                             <a href="#">Correo</a>
@@ -72,7 +85,29 @@
 
                     </li>
 
+                    <li class="responsive-socials hover hover-underline-animation ">
+                        <a href="https://www.facebook.com/branzafoods/" target="_blank" class="nav-heading">
+                            <font-awesome-icon :icon="['fab', 'facebook-f']" />
+                            <p>Facebook</p>
+                        </a>
 
+
+
+                    </li>
+                    <li class="responsive-socials hover hover-underline- ">
+                        <a href="https://www.instagram.com/branzafoods" target="_blank" class="nav-heading">
+                            <font-awesome-icon :icon="['fab', 'instagram']" />
+                            <p>Facebook</p>
+
+                        </a>
+                    </li>
+                    <li class="responsive-socials hover hover-underline-animation ">
+                        <a href="https://twitter.com/i/flow/login?redirect_after_login=%2Fbranzafoods" target="_blank"
+                            class="nav-heading">
+                            <font-awesome-icon :icon="['fab', 'twitter']" />
+                            <p>Facebook</p>
+                        </a>
+                    </li>
 
 
 
@@ -106,9 +141,85 @@
                 </div>
             </div>
         </div>
-        <div class="dropdown">
+
+        <div class="responsive-nav">
+            <div @click="navChange" id="nav-icon1" :class="navStatus">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul :class="navFull">
+
+                <li class="hover hover-underline-animation">
+                    <router-link to="/" class="logo">
+
+                        <img src="../assets/img/logo.png" alt="branza-logo" class="logo" />
+                    </router-link>
+                </li>
+
+                <li class="hover hover-underline-animation">
+                    <div class="nav-heading">
+                        Productos
+                        <font-awesome-icon :icon="['fas', 'angle-down']" />
+                    </div>
 
 
+                </li>
+
+                <li class="hover hover-underline-animation">
+
+                    <router-link to="/nosotros">
+                        <div class="nav-heading">
+                            Sobre Nosotros
+                            <font-awesome-icon :icon="['fas', 'angle-down']" />
+                        </div>
+                    </router-link>
+
+
+                </li>
+
+                <li class="hover hover-underline-animation">
+                    <div class="nav-heading">
+                        Elaboraciones
+                        <font-awesome-icon :icon="['fas', 'angle-down']" />
+                    </div>
+
+                </li>
+
+                <li class="hover hover-underline-animation">
+                    <div class="nav-heading">
+                        Contacto
+                        <font-awesome-icon :icon="['fas', 'angle-down']" />
+                    </div>
+
+
+                </li>
+
+                <li class="hover hover-underline-animation ">
+                    <a href="https://www.facebook.com/branzafoods/" target="_blank" class="nav-heading">
+                        <font-awesome-icon :icon="['fab', 'facebook-f']" />
+                        <p>Facebook</p>
+                    </a>
+
+
+
+                </li>
+                <li class=" hover hover-underline- ">
+                    <a href="https://www.instagram.com/branzafoods" target="_blank" class="nav-heading">
+                        <font-awesome-icon :icon="['fab', 'instagram']" />
+                        <p>Instagram</p>
+
+                    </a>
+                </li>
+                <li class=" hover hover-underline-animation ">
+                    <a href="https://twitter.com/i/flow/login?redirect_after_login=%2Fbranzafoods" target="_blank"
+                        class="nav-heading">
+                        <font-awesome-icon :icon="['fab', 'twitter']" />
+                        <p>Twitter</p>
+                    </a>
+                </li>
+
+            </ul>
         </div>
     </nav>
 </template>
@@ -119,12 +230,17 @@
     align-items: center;
     justify-content: space-between;
     padding: 15px;
-    background: white;
     position: fixed;
     z-index: 99;
+    background: white;
     width: 98%;
 
 }
+
+.transparent {
+    background: transparent !important;
+}
+
 
 a {
     text-decoration: none;
@@ -132,7 +248,6 @@ a {
 
 .left-side {
     display: flex;
-    flex-direction: column;
     gap: 20px;
     width: 60%;
 
@@ -146,6 +261,7 @@ ul {
     width: 70%;
     list-style: none;
     gap: 10px;
+    transition: 0.5s;
 
 }
 
@@ -162,8 +278,10 @@ ul .hover {
 }
 
 img {
-    width: 100px;
-    height: 50px;
+    min-width: 100px;
+    min-height: 50px;
+    max-width: 100px;
+    max-height: 50px;
 }
 
 .hover-underline-animation::after {
@@ -246,7 +364,6 @@ p a:hover {
     color: #070f53;
 }
 
-
 .dropdown {
     position: fixed;
 }
@@ -286,19 +403,149 @@ p a:hover {
 
 
 
+
+
+#nav-icon1 {
+    display: none;
+    position: fixed;
+    z-index: 99;
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+#nav-icon1 span {
+    display: block;
+    position: absolute;
+    height: 7px;
+    width: 100%;
+    background: #31439b;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+    z-index: 99;
+}
+
+#nav-icon1 span:nth-child(1) {
+    top: 0px;
+}
+
+#nav-icon1 span:nth-child(2) {
+    top: 18px;
+}
+
+#nav-icon1 span:nth-child(3) {
+    top: 36px;
+}
+
+#nav-icon1.open span:nth-child(1) {
+    top: 18px;
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+#nav-icon1.open span:nth-child(2) {
+    opacity: 0;
+    left: -60px;
+}
+
+#nav-icon1.open span:nth-child(3) {
+    top: 18px;
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+}
+
+.responsive-nav {
+    margin: 0px;
+    display: none;
+
+}
+
+.responsive-nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: fixed;
+    z-index: 98;
+    background: white;
+    width: 100%;
+    height: 100%;
+
+}
+
+.nav-close {
+    transform: translateX(-1000px);
+
+}
+
+.responsive-nav ul li {
+    height: 80px;
+    width: 100%;
+}
+
+.responsive-socials {
+    display: none !important;
+
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
 @media (max-width: 800px) {
 
     nav {
         justify-content: center;
     }
 
-    .left-side a,
+    .normal-nav {
+        display: none;
+    }
+
+    #nav-icon1 {
+        display: block;
+    }
+
+    .nav-close {
+        transform: translateX(-1000px);
+        background: transparent !important;
+    }
+
+
     form {
         display: none;
     }
 
-    .right-side p {
-        font-size: 14pt;
+    .right-side {
+        display: none;
+    }
+
+    .responsive-nav {
+        display: block;
     }
 
 

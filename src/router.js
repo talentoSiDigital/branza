@@ -1,6 +1,8 @@
 import {createRouter,createWebHistory} from 'vue-router'
 import Home from './views/Home.view.vue'
 import Nosotros from './views/Nosotros.view.vue'
+import Elaboraciones from './views/Elaboraciones.view.vue'
+import Contacto from './views/Contacto.view.vue'
 
 
 const router = createRouter({
@@ -20,14 +22,28 @@ const router = createRouter({
             meta: {
                 title:'Branza Foods - Nosotros'
             }
+        },
+        {
+          
+            path:"/elaboraciones",
+            component:Elaboraciones,
+            meta: {
+                title:'Branza Foods - Elaboraciones'
+            }
+        },
+        {
+          
+            path:"/contacto",
+            component:Contacto,
+            meta: {
+                title:'Branza - Contacta con nosotros'
+            }
         }
       
     ]
 })
 
-// router.beforeEach((to, from) => {
-//     document.title = to.meta?.title ?? 'Title'
-// })
+
 router.beforeEach((to, from, next) => {
     // Get the page title from the route meta data that we have defined
     // See further down below for how we setup this data
