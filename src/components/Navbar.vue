@@ -34,12 +34,12 @@ const navChange = () => {
 
                         <div class="dropdown-content">
 
-                            <a href="#">Leche Completa</a>
-                            <a href="#">Leche Semi-completa</a>
-                            <a href="#">Leche Descremada</a>
+                            <router-link to="/industrial">Industrial</router-link>
+                            <router-link to="/consumo-masivo">Consumo Masivo</router-link>
 
 
                         </div>
+                        
                     </li>
 
                     <li class="hover hover-underline-animation">
@@ -50,13 +50,7 @@ const navChange = () => {
                                 <font-awesome-icon :icon="['fas', 'angle-down']" />
                             </div>
                         </router-link>
-                        <div class="dropdown-content">
-
-                            <a href="#">Mision</a>
-                            <a href="#">Vision</a>
-
-
-                        </div>
+                 
 
                     </li>
 
@@ -75,40 +69,11 @@ const navChange = () => {
                                 <font-awesome-icon :icon="['fas', 'angle-down']" />
                             </div>
                         </router-link>
-                        <div class="dropdown-content">
-
-                            <a href="#">Correo</a>
-                            <a href="#">Informacion</a>
-
-
-                        </div>
+                        
 
                     </li>
 
-                    <li class="responsive-socials hover hover-underline-animation ">
-                        <a href="https://www.facebook.com/branzafoods/" target="_blank" class="nav-heading">
-                            <font-awesome-icon :icon="['fab', 'facebook-f']" />
-                            <p>Facebook</p>
-                        </a>
-
-
-
-                    </li>
-                    <li class="responsive-socials hover hover-underline- ">
-                        <a href="https://www.instagram.com/branzafoods" target="_blank" class="nav-heading">
-                            <font-awesome-icon :icon="['fab', 'instagram']" />
-                            <p>Facebook</p>
-
-                        </a>
-                    </li>
-                    <li class="responsive-socials hover hover-underline-animation ">
-                        <a href="https://twitter.com/i/flow/login?redirect_after_login=%2Fbranzafoods" target="_blank"
-                            class="nav-heading">
-                            <font-awesome-icon :icon="['fab', 'twitter']" />
-                            <p>Facebook</p>
-                        </a>
-                    </li>
-
+                    
 
 
 
@@ -231,7 +196,7 @@ const navChange = () => {
     justify-content: space-between;
     padding: 15px;
     position: fixed;
-    z-index: 99;
+    z-index: 50;
     background: white;
     width: 98%;
 

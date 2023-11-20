@@ -10,17 +10,17 @@ import Contacto from '../components/Contacto.vue'
     <div>
 
 
-        <!-- <Banner />
+        <Banner />
         <Productos />
         <Nosotros />
         <Mision/>
-        <Contacto  /> -->
-        <Banner  />
+        <Contacto  />
+        <!-- <Banner  />
         <Productos v-motion-slide-visible-left />
         <Nosotros v-motion-slide-visible-left />
         <Mision v-motion-slide-visible-left />
         <Contacto v-motion-slide-visible-left />
-        <Footer v-motion-slide-visible-left />
+        <Footer v-motion-slide-visible-left /> -->
     </div>
 </template>
 

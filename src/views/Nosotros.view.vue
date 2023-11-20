@@ -1,49 +1,27 @@
 <script setup>
-import TwoFrameSection from '../partials/TwoFrameSection.vue'
-import BG from '../components/svgComponents/BG-1.vue'
 import WaveAnimated from '../components/svgComponents/WaveAnimated.vue'
-import IconCard from '../partials/IconCard.vue'
-import ImageBanner from '../partials/ImageBanner.vue'
 
 
 </script>
 
 <template>
-    <BG class="bg" svg-type="fullwave" />
-
     <div class="frames-container">
-        <div class="frame">
-            <div class="text-side dark-blue-text">
-                <header>
-                    <h4>
-                        ¿Quiénes Somos?
-                    </h4>
-                    <p>
-                        Somos una empresa fundada en 2012 nos dedicamos a la distribución e importación de materias primas en el mercado venezolano,
-                        brindando a todos nuestros clientes el servicio y asesoría técnica requerida.
-                    </p>
-                </header>
-            </div>
-            <div class="img-side">
-                <img src="../assets/img/layout.jpg" alt="">
 
-
-            </div>
-
-
-        </div>
         <div class="img-overlay">
 
             <div class="content">
                 <div class="frame reverse">
                     <div class="text-side white-text">
+
                         <header>
-                            <h4>
-                                Todos nuestros productos están elaborados con ingredientes de la más alta calidad
-                            </h4>
-                            <p>
-                                y se someten a estrictos controles de calidad para garantizar su seguridad y frescura.
-                            </p>
+                            <h3>
+                                ¿Quiénes Somos?
+                            </h3>
+                            <h5>
+                                Somos una empresa fundada en 2012 nos dedicamos a la distribución e importación de materias
+                                primas en el mercado venezolano,
+                                brindando a todos nuestros clientes el servicio y asesoría técnica requerida.
+                            </h5>
                         </header>
                     </div>
                     <div class="img-side small ">
@@ -56,74 +34,79 @@ import ImageBanner from '../partials/ImageBanner.vue'
                 </div>
             </div>
         </div>
+        <!-- <BG class="bg" svg-type="fullwave" /> -->
+
+        <div class="frame">
+            <div class="text-side dark-blue-text">
+                <header>
+                    <h3>
+                        Todos nuestros productos están elaborados con ingredientes de la más alta calidad
+                    </h3>
+                    <h5>
+                        y se someten a estrictos controles de calidad para garantizar su seguridad y frescura.
+                    </h5>
+                </header>
+            </div>
+            <div class="img-side">
+                <img src="../assets/img/layout.jpg" alt="">
+
+
+            </div>
+
+
+        </div>
 
         <WaveAnimated fillColor="#31439b" />
-        <div class="box dark-blue">
+        <div class="box dark-blue white-text">
+            <div class="box-container ">
 
-            <header>
-                <div class="text-side ">
-                <header class="white-text">
-                    <h4>
-                        Misión
-                    </h4>
+                <h3>
+                    Misión
+                </h3>
 
-                </header>
+                <ul>
+                    <li>
+                        <h5 >Fabricar y comercializar</h5>
+                        <p>productos alimenticios de la más alta calidad que cubran las expectativas de todos nuestros
+                        consumidores</p>
+                    </li>
+                    <li>
+                        
+                        <h5 >Optimizar recursos</h5>
+                        <p>y cumplir con las expectativas del cliente, de esta manera contribuir con el desarrollo
+                        economico y social del pais</p>
+                    </li>
+                </ul>
+
+
             </div>
-            <div class="text-side">
-                <header class="white-text">
-                    <h4>
-                        Visión
-                    </h4>
+            <div class="box-container ">
 
-                </header>
+                <h3>
+                    Visión
+                </h3>
+
+                <ul>
+                    <li>
+                        <h5 >Consolidar los logros</h5>
+                        <p>para ser reconocida en el campo empresarial como una importante empresa pionera en la venta y
+                        manufactura de alimentos.</p>
+                    </li>
+                    <li>
+                        
+                        <h5 >Compromiso con la seguridad</h5>
+                        <p>garantizando asi una optima calidad de los productos comercializados y elaborados para satisfaccion
+                        de nuestros clientes</p>
+                    </li>
+                </ul>
+
+
             </div>
-            </header>
-
-            <div class="card-container">
-                <IconCard icon="industry">
-                    <template #header>
-                        Fabricar y comercializar
-                    </template>
-                    <template #paragraph>
-                        productos alimenticios de la más alta calidad que cubran las expectativas de todos nuestros
-                        consumidores
-                    </template>
-                </IconCard>
-                <IconCard icon="hands-holding-circle">
-                    <template #header>
-                        Optimizar recursos
-                    </template>
-                    <template #paragraph>
-                        y cumplir con las expectativas del cliente, de esta manera contribuir con el desarrollo
-                        economico y social del pais
-                    </template>
-                </IconCard>
 
 
+            
 
 
-
-                <IconCard icon="award" class="dark-glass">
-                    <template #header>
-                        Consolidar los logros
-                    </template>
-                    <template #paragraph>
-                        para ser reconocida en el campo empresarial como una importante empresa pionera en la venta y
-                        manufactura de alimentos.
-                    </template>
-                </IconCard>
-
-
-                <IconCard icon="circle-check" class="dark-glass">
-                    <template #header>
-                        Compromiso con la seguridad 
-                    </template>
-                    <template #paragraph>
-                        garantizando asi una optima calidad de los productos comercializados y elaborados para satisfaccion
-                        de nuestros clientes
-                    </template>
-                </IconCard>
-            </div>
 
 
         </div>
@@ -185,15 +168,31 @@ import ImageBanner from '../partials/ImageBanner.vue'
 .box {
     width: 100%;
     height: fit-content;
-
-
-
-}
-.box header{
     display: flex;
-    justify-content: space-evenly;
+    align-items: center;
+
+
 }
-.card-container{
+
+.box .box-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+
+}
+.box .box-container ul{
+    width: 70%
+}
+.box .box-container ul li{
+    padding: 15px;
+}
+
+
+
+.card-container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -243,14 +242,15 @@ img {
     width: 50%;
 }
 
-h4 {
+h3 {
     font-size: 50pt;
     font-weight: 900;
-
+    
 }
 
 
-p {
+h5 {
+    font-weight: 400;
 
     font-size: 20pt;
 }

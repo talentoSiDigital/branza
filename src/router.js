@@ -3,6 +3,8 @@ import Home from './views/Home.view.vue'
 import Nosotros from './views/Nosotros.view.vue'
 import Elaboraciones from './views/Elaboraciones.view.vue'
 import Contacto from './views/Contacto.view.vue'
+import Industrial from './views/Industrial.view.vue'
+import ConsumoMasivo from './views/ConsumoMasivo.view.vue'
 
 
 const router = createRouter({
@@ -37,6 +39,22 @@ const router = createRouter({
             component:Contacto,
             meta: {
                 title:'Branza - Contacta con nosotros'
+            }
+        },
+        { 
+          
+            path:"/industrial",
+            component:Industrial,
+            meta: {
+                title:'Branza - Productos Industriales'
+            }
+        },
+        {
+          
+            path:"/consumo-masivo",
+            component:Industrial,
+            meta: {
+                title:'Branza - Consumo Masivo'
             }
         }
       

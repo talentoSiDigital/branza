@@ -24,7 +24,7 @@ import ImageBanner from '../partials/ImageBanner.vue'
 
 <style scoped>
 .contact {
-    height: 90vh;
+    height:fit-content;
     margin-bottom: 10px;
     color: #273294;
     position: relative;

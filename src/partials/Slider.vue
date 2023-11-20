@@ -14,12 +14,12 @@ const handleResize = () => {
 onMounted(() => {
     window.addEventListener('resize', handleResize)
     console.log(screenWidth.value)
-    
-    if (screenWidth.value > 800){
+
+    if (screenWidth.value > 800) {
         sliderShow.value = 1
     }
 
-    
+
 })
 
 onUnmounted(() => {
@@ -34,57 +34,67 @@ onUnmounted(() => {
     <div class="slider">
         <div class="slider-container">
 
+            <Carousel :items-to-show="1" class="carousel-container">
+                <Slide v-for="slide in 1" :key="slide">
 
-            <carousel :items-to-show="sliderShow">
-                <slide v-for="slide in 3" :key="slide">
+                    
                     <div class="card">
-                        <img src="../assets/img/ADECO.jpg" alt="adecoagro">
+                        <img src="/img/adecoagro.png" alt="adecoagro">
                         <div class="card-body">
                             <p class="card-title">Saco de 25Kgr</p>
                             <h3 class="card-title">Leche entera AdecoAgro</h3>
                         </div>
                     </div>
                     <div class="card">
-                        <img src="../assets/img/CONAPROLE.png" alt="adecoagro">
+                        <img src="/img/conaprole.png" alt="adecoagro" class="big-img">
                         <div class="card-body">
                             <p class="card-title">Saco de 25Kgr</p>
                             <h3 class="card-title">Leche entera Conaprole</h3>
-                           
                         </div>
                     </div>
                     <div class="card">
-                        <img src="../assets/img/MAGNALAT.jpg" alt="adecoagro">
+                        <img src="/img/formidable.png" alt="adecoagro" class="big-img">
+                        <div class="card-body">
+                            <p class="card-title">Saco de 25Kgr</p>
+                            <h3 class="card-title">Leche entera Formidable</h3>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="/img/magnalat.png" alt="adecoagro" class="big-img">
                         <div class="card-body">
                             <p class="card-title">Saco de 25Kgr</p>
                             <h3 class="card-title">Leche entera Magnalat</h3>
-                           
                         </div>
                     </div>
                     <div class="card">
-                        <img src="../assets/img/CONAPROLE.png" alt="adecoagro">
+                        <img src="/img/purisima.png" alt="adecoagro" class="big-img">
                         <div class="card-body">
                             <p class="card-title">Saco de 25Kgr</p>
-                            <h3 class="card-title">Leche entera Conaprole</h3>
-                            
+                            <h3 class="card-title">Leche entera Purisima</h3>
                         </div>
                     </div>
                     <div class="card">
-                        <img src="../assets/img/ADECO.jpg" alt="adecoagro">
+                        <img src="/img/colun.png" alt="adecoagro" class="big-img">
                         <div class="card-body">
                             <p class="card-title">Saco de 25Kgr</p>
-                            <h3 class="card-title">Leche entera AdecoAgro</h3>
-                           
+                            <h3 class="card-title">Leche entera Lactolun</h3>
                         </div>
                     </div>
-                </slide>
+                    <div class="card">
+                        <img src="/img/us-diary.png" alt="adecoagro" class="big-img">
+                        <div class="card-body">
+                            <p class="card-title">Saco de 25Kgr</p>
+                            <h3 class="card-title">Leche entera US-diary</h3>
+                        </div>
+                    </div>
 
-                <template #addons>
-                    <div class="arrow">
-                        <navigation />
-                    </div>
-                  
-                </template>
-            </carousel>
+
+                </Slide>
+
+                <!-- <template #addons>
+                    <Navigation />
+                </template> -->
+            </Carousel>
 
 
         </div>
@@ -92,20 +102,26 @@ onUnmounted(() => {
 </template>
 
 <style scoped>
-.slider {
+.slider-container {
     display: flex;
+    align-items: center;
     justify-content: center;
     overflow: hidden;
     width: 100%;
+
 }
 
-.slider-container {
-    display: flex;
-    width: 100%;
+
+
+.carousel-container {
+    
+    width: 95%;
+
 }
 
 .card {
-    width: 100% ;
+    width: 200px;
+    height: 350px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -113,14 +129,20 @@ onUnmounted(() => {
 }
 
 .card img {
-    width: 60%;
+    max-width: 200px;
+
     box-shadow: 5px 5px 12px 0px rgba(0, 0, 0, 0.10);
 }
 
-.arrow svg{
+.big-img {
+    width: 145px !important;
+
+}
+
+.arrow {
     background: #273294;
     width: 20px;
-   
+
 }
 </style>
 
