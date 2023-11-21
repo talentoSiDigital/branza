@@ -8,15 +8,20 @@ import { ref } from 'vue';
 const popUp = ref(0)
 
 const activatePopUp = (index) => {
-    
-        popUp.value = index
 
+    if(popUp.value == 0){
+        
+        popUp.value = index
+    } else {
+        popUp.value = 0
+    }
+    
 }
 
 </script>
 
 <template>
-    <PopUp :product="popUp" />
+    <PopUp :product="popUp" @activate-pop-up="activatePopUp"/>
 
 
     <div class="bg-container absolute">

@@ -6,9 +6,9 @@
         "img":"vitale-sobre.png",
         "country":"Venezuela"
     },
-    "vitale-semi-descremada":{
-        "name":"Sobre de leche Vitale Semi Descremada",
-        "type":"Leche Semi Descremada",
+    "vitale-descremada":{
+        "name":"Sobre de leche Vitale Descremada",
+        "type":"Leche Descremada",
         "weight":"30gr",
         "img":"vitale-sobre-descremada.png",
         "country":"Venezuela"
@@ -20,9 +20,9 @@
         "img":"vitale-display.png",
         "country":"Venezuela"
     },
-    "vitale-display-semi-descremada":{
-        "name":"Display de leche Vitale Semi descremada",
-        "type":"Leche Entera",
+    "vitale-display-descremada":{
+        "name":"Display de leche Vitale descremada",
+        "type":"Leche Descremada",
         "weight":"30 unidades",
         "img":"vitale-display.png",
         "country":"Venezuela"

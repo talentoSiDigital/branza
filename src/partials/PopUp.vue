@@ -3,7 +3,7 @@ import { ref, watch } from "vue";
 
 import ProductsList from "../products.json"
 
-
+const emit = defineEmits(['activate-pop-up'])
 const product = defineProps(["product"])
 const referenceProduct = ref(product.product)
 const showClass = ref("show")
@@ -23,6 +23,9 @@ watch(product, () => {
 
 })
 
+const emitPopUp=()=>{
+    emit('activate-pop-up',0)
+}
 
 
 </script>
@@ -34,7 +37,7 @@ watch(product, () => {
                 <img :src="`/img/${parsedProduct.img}`" :alt="parsedProduct.name">
                 <div class="text-side">
                     <div class="close">
-                        <font-awesome-icon @click="close" :icon="['fas', 'xmark']" class="close" />
+                        <font-awesome-icon @click="emitPopUp" :icon="['fas', 'xmark']" class="close" />
 
                     </div>
                     <h1 class="title">Leche {{ parsedProduct.name }}</h1>

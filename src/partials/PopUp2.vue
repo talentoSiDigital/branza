@@ -4,6 +4,7 @@ import { ref, watch } from "vue";
 import ProductsList from '../products-small.json'
 
 
+const emit = defineEmits(['activate-pop-up'])
 
 const product = defineProps(["product"])
 const referenceProduct = ref(product.product)
@@ -22,6 +23,10 @@ watch(product, () => {
     parsedProduct = ProductsList[product.product]
 })
 
+const emitPopUp=()=>{
+    emit('activate-pop-up',0)
+}
+
 </script>
 
 <template>
@@ -32,7 +37,7 @@ watch(product, () => {
                     <img :src="`/img/${parsedProduct.img}`" :alt="parsedProduct.name" >
                     <div class="text-side">
                         <div class="close">
-                            <font-awesome-icon @click="close" :icon="['fas', 'xmark']" class="close" />
+                            <font-awesome-icon @click="emitPopUp" :icon="['fas', 'xmark']" class="close" />
                             
                         </div>
                         <h1 class="title">{{ parsedProduct.name }}</h1>
@@ -136,7 +141,7 @@ img {
 }
 
 .text-side h1 {
-    font-size: 45pt;
+    font-size: 30pt;
     font-weight: 900;
     text-align: center;
 }
@@ -202,7 +207,7 @@ strong {
         width: 90%;
     }
     .title{
-        font-size: 40pt !important;
+        font-size: 30pt !important;
     }
     .text-side{
         font-size: 14pt !important;
