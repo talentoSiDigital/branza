@@ -6,9 +6,9 @@ const icon = defineProps(["icon"])
 
 <template>
     <div class="card">
-        <div class="icon-container hi-there">
+        <div class="icon-container">
             <font-awesome-icon :icon="['fas', icon.icon]" class="icon blue light-blue-text" />
-        </div>
+            </div>
         <header>
             <h5>
                 <slot name="header">
@@ -34,8 +34,6 @@ const icon = defineProps(["icon"])
     flex-direction: column;
     align-items: center;
     text-align: center;
-    border-radius: 20px 0px;
-    border: 3px solid #eee;
     width: 450px;
     height: fit-content;
     padding: 20px;

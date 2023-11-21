@@ -64,6 +64,7 @@ import BG from './svgComponents/BG-1.vue'
 .nosotros {
     position: relative;
 }
+
 .nosotros-container {
     position: relative;
     z-index: 2;
@@ -183,9 +184,10 @@ import BG from './svgComponents/BG-1.vue'
     color: white;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1100px) {
     .nosotros {
         min-height: fit-content;
+
     }
 
     .time-line {
@@ -193,6 +195,11 @@ import BG from './svgComponents/BG-1.vue'
         position: static;
         height: 130vh;
     }
+    .text-area{
+        color: #31439b !important ;
 
-}</style>
+    }
+
+}
+</style>
 

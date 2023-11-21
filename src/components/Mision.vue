@@ -41,7 +41,8 @@ import ImageBanner from '../partials/ImageBanner.vue'
                             <font-awesome-icon :icon="['fas', 'award']" class="icon2 white" />
                             <h3>Consolidar los logros</h3>
                             <p>para ser reconocida en el campo empresarial<br> como una importante empresa pionera en la
-                                <br> venta y manufactura de alimentos.</p>
+                                <br> venta y manufactura de alimentos.
+                            </p>
                         </header>
                         <header>
                             <font-awesome-icon :icon="['fas', 'circle-check']" class="icon white" />
@@ -89,7 +90,8 @@ img {
 }
 
 .text-box .mission {
-    transform: translateY(-50px);
+    color: #273294;
+    transform: translateY(-80px);
 }
 
 .text-box h1 {
@@ -145,12 +147,29 @@ header {
     text-align: center;
 }
 
-.mission {
-    color: #273294;
-    transform: translateY(-50px);
-}
+
 
 h3 {
     font-weight: 900;
-}</style>
+}
+
+@media (max-width: 1100px) {
+    .bubble {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .text-box {
+        height: fit-content;
+    }
+
+    .mission header {
+        transform: translateY(50px);
+
+    }
+
+
+}
+</style>
 

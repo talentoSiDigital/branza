@@ -1,51 +1,64 @@
 {
     "magnalat":{
-        "name":"Magnalat",
+        "name":"Magnalat ",
         "type":"Leche Entera",
         "weight":"25kg",
         "img":"magnalat.png",
-        "country":"Uruguay"
+        "country":"Uruguay",
+        "icon":"uruguay.png"
     },
     "adecoagro":{
         "name":"Adecoagro",
         "type":"Leche Entera",
         "weight":"25kg",
         "img":"adecoagro.png",
-        "country":"Argentina"
+        "country":"Argentina",
+        "icon":"argentina.png"
+
     },
     "conaprole":{
         "name":"Conaprole",
         "type":"Leche Entera",
         "weight":"25kg",
         "img":"conaprole.png",
-        "country":"Uruguay"
+        "country":"Uruguay",
+        "icon":"uruguay.png"
+
     },
     "purisima":{
         "name":"Purísima",
         "type":"Leche Entera",
         "weight":"25kg",
         "img":"purisima.png",
-        "country":"Uruguay"
+        "country":"Uruguay",
+        "icon":"uruguay.png"
+
     },
     "us-diary":{
         "name":"US-Diary",
         "type":"Leche Entera",
         "weight":"25kg",
         "img":"us-diary.png",
-        "country":"USA"
+        "country":"USA",
+        "icon":"united-states.png"
+
     },
     "formidable":{
         "name":"Formidable",
         "type":"Leche Entera",
         "weight":"25kg",
         "img":"formidable.png",
-        "country": "Uruguay"
+        "country": "Uruguay",
+        "icon":"uruguay.png"
+
     },
     "lactolun":{
         "name":"Lactolun",
         "type":"Suero de Leche",
         "weight":"25kg",
         "img":"colun.png",
-        "country":"Chile"
+        "country":"Chile",
+        "icon":"chile.png"
+
     }
 }

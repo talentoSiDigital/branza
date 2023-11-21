@@ -10,10 +10,12 @@ const parsedProduct = ProductsList[product.product]
 
 <template>
     <div class="card">
-        <img :src="`/img/${parsedProduct.img}`" :alt="parsedProduct.name">
+        <img v-if="parsedProduct.name == 'Adecoagro'" :src="`/img/${parsedProduct.img}`" :alt="parsedProduct.name" class="adecoagro">
+        <img v-else-if="parsedProduct.name == 'Formidable'" :src="`/img/${parsedProduct.img}`" :alt="parsedProduct.name" class="formidable">
+        <img v-else :src="`/img/${parsedProduct.img}`" :alt="parsedProduct.name">
         <div class="card-text">
             <h1>
-                Leche {{ parsedProduct.name }}
+                {{ parsedProduct.type }} {{ parsedProduct.name }}
             </h1>
             <button>Ver más</button>
         </div>
@@ -28,8 +30,14 @@ const parsedProduct = ProductsList[product.product]
     flex-direction: column;
     gap: 15px;
     border: 3px solid #31439b;
-    padding: 15px;
+    background: rgba(51, 186, 237, .45);
+    box-shadow: 5px 5px 25px 0px rgba(31,38,135,0.75);
+    backdrop-filter: blur(19.5px);
+    -webkit-backdrop-filter: blur(19.5px);
     border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: 0.2s all ease-in-out;
+    padding: 15px;
     width: 280px;
     height: 400px;
     transition: 0.2s;
@@ -44,9 +52,18 @@ const parsedProduct = ProductsList[product.product]
 }
 h1{
     color: #31439b;
+    font-size: 16pt;
 }
 .card img {
     width: 170px;
+    padding: 15px 0px;
+}
+.adecoagro{
+    width: 225px !important;
+}
+.formidable{
+    
+    width: 150px !important;
 }
 button{
     border: none;

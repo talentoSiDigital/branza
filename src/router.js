@@ -52,7 +52,7 @@ const router = createRouter({
         {
           
             path:"/consumo-masivo",
-            component:Industrial,
+            component:ConsumoMasivo,
             meta: {
                 title:'Branza - Consumo Masivo'
             }

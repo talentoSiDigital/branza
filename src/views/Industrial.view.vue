@@ -13,10 +13,6 @@ const activatePopUp = (index) => {
 
 }
 
-
-
-
-
 </script>
 
 <template>

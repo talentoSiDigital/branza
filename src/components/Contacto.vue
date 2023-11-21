@@ -27,7 +27,7 @@ import ContactForm from '../components/ContactForm.vue'
 
             <div class="splash">
                 <splash color="#00adef" class="medium" />
-                <div class="text-splash">
+                <div class="text-splash ">
                     <header class="white">
                         <div class="line">
                             <font-awesome-icon :icon="['fas', 'envelope']" class="icon" />
@@ -126,7 +126,6 @@ import ContactForm from '../components/ContactForm.vue'
     position: absolute;
     top: -300px;
     left: 135px;
-    width: 400px;
 }
 
 .text-splash header h2 {
@@ -177,6 +176,23 @@ import ContactForm from '../components/ContactForm.vue'
     align-items: center;
     gap: 10px;
     margin-top: 15px;
+}
+
+
+@media (max-width: 1100px) {
+  .time-line{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+  }
+  .form{
+    box-shadow: none;
+  }
+  .splash{
+    transform: translateX(-100px);
+}
+  
 }
 
 </style>

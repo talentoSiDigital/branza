@@ -8,7 +8,7 @@ import ImageBanner from '../partials/ImageBanner.vue'
 </script>
 
 <template>
-    <div class="contact">
+    <div class="productos">
         
         <ImageBanner img="productos"/>
 
@@ -23,7 +23,7 @@ import ImageBanner from '../partials/ImageBanner.vue'
 </template>
 
 <style scoped>
-.contact {
+.productos {
     height:fit-content;
     margin-bottom: 10px;
     color: #273294;
@@ -48,15 +48,13 @@ import ImageBanner from '../partials/ImageBanner.vue'
 }
 
 
-@media (max-width: 800px) {
+@media (max-width: 1100px) {
     .text-area p {
 
         width: 80%;
         text-align: center;
     }
-    .contact {
-    height: 120vh;
-}
+    
 
 }
 </style>

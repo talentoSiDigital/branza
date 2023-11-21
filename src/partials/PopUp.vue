@@ -37,16 +37,28 @@ watch(product, () => {
                         <font-awesome-icon @click="close" :icon="['fas', 'xmark']" class="close" />
 
                     </div>
-                    <h1>Leche {{ parsedProduct.name }}</h1>
+                    <h1 class="title">Leche {{ parsedProduct.name }}</h1>
                     <ul>
                         <li>
-                            Tipo: {{ parsedProduct.type }}
+                            <strong>
+                                Tipo:
+
+                            </strong>
+                            {{ parsedProduct.type }}
                         </li>
                         <li>
-                            Peso: {{ parsedProduct.weight }}
+                            <strong>
+                                Peso: 
+                            </strong>
+                            {{ parsedProduct.weight }}
                         </li>
                         <li>
-                            País: {{ parsedProduct.country }}
+                            <strong>
+                                País: 
+
+                            </strong>
+                            {{ parsedProduct.country }} 
+                            <img class="country" :src="`/img/${ parsedProduct.icon}`" alt="">
                         </li>
 
 
@@ -64,7 +76,7 @@ watch(product, () => {
                         </a>
                         <a href="https://twitter.com/i/flow/login?redirect_after_login=%2Fbranzafoods" target="_blank"
                             class="icon-link">
-                            <font-awesome-icon :icon="['fab', 'twitter']" class="icons" />
+                            <font-awesome-icon :icon="['fab', 'x-twitter']" class="icons" />
                         </a>
                     </div>
                 </div>
@@ -81,7 +93,7 @@ watch(product, () => {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.7);
     z-index: 1000;
     display: flex;
     align-items: center;
@@ -91,8 +103,13 @@ watch(product, () => {
 .card {
     width: 50%;
     height: 80%;
-    background: rgb(51, 186, 237);
-    border-radius: 15px;
+    border: 3px solid #31439b;
+    background: rgba(51, 186, 237, .45);
+    box-shadow: 5px 5px 25px 0px rgba(31, 38, 135, 0.75);
+    backdrop-filter: blur(19.5px);
+    -webkit-backdrop-filter: blur(19.5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -100,6 +117,18 @@ watch(product, () => {
 
 img {
     width: 35%;
+    /* box-shadow: 14px 17px 42px -2px rgba(18, 69, 96, 0.49);
+    -webkit-box-shadow: 14px 17px 42px -2px rgba(18, 69, 96, 0.49);
+    -moz-box-shadow: 14px 17px 42px -2px rgba(18, 69, 96, 0.49);     */
+
+}
+
+.title {
+    border-radius: 15px;
+    line-height: 48px;
+    padding: 15px;
+    background: white;
+    color: #31439b
 }
 
 .text-side {
@@ -118,10 +147,13 @@ img {
 }
 
 .text-side ul li {
-    font-size: 14pt;
-    font-weight: 600;
+    font-size: 18pt;
+    font-weight: 400;
 }
 
+strong {
+    font-weight: 900;
+}
 
 
 
@@ -131,11 +163,12 @@ img {
     padding: 15px;
     border-radius: 15px;
     transition: 0.4s ease-in-out;
+    color: white;
 }
 
 .socials .icons:hover {
     background: #31439b;
-    color: white;
+    
 
 }
 
@@ -161,8 +194,43 @@ img {
     display: block;
 }
 
+.country{
+    width: 20px;
+}
 .none {
     display: none;
+}
+
+@media (max-width: 1100px) {
+    .card {
+        width: 90%;
+    }
+    .title{
+        font-size: 40pt !important;
+    }
+    .text-side{
+        font-size: 14pt !important;
+        
+    }
+    .text-side ul li{
+        font-size: 14pt !important;
+    
+    }
+    
+}
+
+@media (max-width: 650px) {
+    .title{
+        font-size: 24pt !important;
+    }
+    .text-side{
+        font-size: 14pt !important;
+        
+    }
+    .text-side ul li{
+        font-size: 14pt !important;
+
+    }
 }
 </style>
 

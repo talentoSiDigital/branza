@@ -3,12 +3,16 @@ import { ref } from 'vue';
 
 const navStatus = ref('close')
 const navFull = ref('nav-close')
+const responsiveNavDetail = ref('deactivate-details')
 
 
 const navChange = () => {
     navStatus.value === 'close' ? navStatus.value = 'open' : navStatus.value = 'close'
     navFull.value === 'nav-close' ? navFull.value = 'nav-open' : navFull.value = 'nav-close'
 
+}
+const showDetails = () => {
+    responsiveNavDetail.value === 'deactivate-details' ? responsiveNavDetail.value = 'activate-details' : responsiveNavDetail.value = 'deactivate-details'
 }
 
 </script>
@@ -23,6 +27,7 @@ const navChange = () => {
                         <router-link to="/">
 
                             <img src="../assets/img/logo.png" alt="branza-logo" class="logo" />
+                            <!-- <img src="../assets/img/LOGO MOTION GRAPHIC.gif" alt="branza-logo" class="logo" /> -->
                         </router-link>
                     </li>
 
@@ -39,7 +44,7 @@ const navChange = () => {
 
 
                         </div>
-                        
+
                     </li>
 
                     <li class="hover hover-underline-animation">
@@ -50,7 +55,7 @@ const navChange = () => {
                                 <font-awesome-icon :icon="['fas', 'angle-down']" />
                             </div>
                         </router-link>
-                 
+
 
                     </li>
 
@@ -69,13 +74,9 @@ const navChange = () => {
                                 <font-awesome-icon :icon="['fas', 'angle-down']" />
                             </div>
                         </router-link>
-                        
+
 
                     </li>
-
-                    
-
-
 
                 </ul>
 
@@ -100,12 +101,14 @@ const navChange = () => {
                         </a>
                         <a href="https://twitter.com/i/flow/login?redirect_after_login=%2Fbranzafoods" target="_blank"
                             class="socials">
-                            <font-awesome-icon :icon="['fab', 'twitter']" />
+                            <font-awesome-icon :icon="['fab', 'x-twitter']" />
                         </a>
                     </p>
                 </div>
             </div>
         </div>
+
+        <!-- **************** -->
 
         <div class="responsive-nav">
             <div @click="navChange" id="nav-icon1" :class="navStatus">
@@ -113,83 +116,81 @@ const navChange = () => {
                 <span></span>
                 <span></span>
             </div>
-            <ul :class="navFull">
+            <div class="navigate" :class="navFull">
+                <div class="nav-item no-pointer">
 
-                <li class="hover hover-underline-animation">
-                    <router-link to="/" class="logo">
+                </div>
 
-                        <img src="../assets/img/logo.png" alt="branza-logo" class="logo" />
-                    </router-link>
-                </li>
+                <router-link to="/" class="nav-item" @click="navChange">
 
-                <li class="hover hover-underline-animation">
-                    <div class="nav-heading">
-                        Productos
-                        <font-awesome-icon :icon="['fas', 'angle-down']" />
+                    <img src="../assets/img/logo.png" alt="branza-logo" class="logo" />
+                </router-link>
+
+                <div class="nav-item" @click="showDetails()">
+                    Productos
+                    <font-awesome-icon :icon="['fas', 'angle-down']" />
+                </div>
+
+
+                <div class="transition">
+                    <div class="sub" :class="responsiveNavDetail">
+                        <router-link to="/industrial" class="nav-item" @click="navChange">Industrial</router-link>
+                        <router-link to="/consumo-masivo" class="nav-item" @click="navChange">Consumo Masivo</router-link>
                     </div>
 
-
-                </li>
-
-                <li class="hover hover-underline-animation">
-
-                    <router-link to="/nosotros">
-                        <div class="nav-heading">
-                            Sobre Nosotros
-                            <font-awesome-icon :icon="['fas', 'angle-down']" />
-                        </div>
-                    </router-link>
+                </div>
 
 
-                </li>
 
-                <li class="hover hover-underline-animation">
-                    <div class="nav-heading">
-                        Elaboraciones
-                        <font-awesome-icon :icon="['fas', 'angle-down']" />
-                    </div>
+                <router-link to="/nosotros" class="nav-item" @click="navChange">
 
-                </li>
+                    Sobre Nosotros
+                    <font-awesome-icon :icon="['fas', 'angle-down']" />
 
-                <li class="hover hover-underline-animation">
-                    <div class="nav-heading">
-                        Contacto
-                        <font-awesome-icon :icon="['fas', 'angle-down']" />
-                    </div>
+                </router-link>
 
 
-                </li>
 
-                <li class="hover hover-underline-animation ">
-                    <a href="https://www.facebook.com/branzafoods/" target="_blank" class="nav-heading">
-                        <font-awesome-icon :icon="['fab', 'facebook-f']" />
-                        <p>Facebook</p>
+
+                <router-link to="/elaboraciones" class="nav-item" @click="navChange">
+
+                    Elaboraciones
+                    <font-awesome-icon :icon="['fas', 'angle-down']" />
+
+                </router-link>
+
+                <router-link to="/contacto" class="nav-item" @click="navChange">
+                    Contacto
+                    <font-awesome-icon :icon="['fas', 'angle-down']" />
+                </router-link>
+
+
+
+                <div class="nav-heading">
+                    <a href="https://www.facebook.com/branzafoods/" target="_blank" class="socials">
+                        <font-awesome-icon :icon="['fab', 'facebook-f']" class="icons"/>
                     </a>
 
-
-
-                </li>
-                <li class=" hover hover-underline- ">
-                    <a href="https://www.instagram.com/branzafoods" target="_blank" class="nav-heading">
-                        <font-awesome-icon :icon="['fab', 'instagram']" />
-                        <p>Instagram</p>
+                    <a href="https://www.instagram.com/branzafoods" target="_blank" class="socials">
+                        <font-awesome-icon :icon="['fab', 'instagram']" class="icons"/>
 
                     </a>
-                </li>
-                <li class=" hover hover-underline-animation ">
+
                     <a href="https://twitter.com/i/flow/login?redirect_after_login=%2Fbranzafoods" target="_blank"
-                        class="nav-heading">
-                        <font-awesome-icon :icon="['fab', 'twitter']" />
-                        <p>Twitter</p>
+                        class="socials">
+                        <font-awesome-icon :icon="['fab', 'x-twitter']" class="icons"/>
                     </a>
-                </li>
+                </div>
 
-            </ul>
+
+            </div>
         </div>
     </nav>
 </template>
 
 <style scoped>
+nav {}
+
 .normal-nav {
     display: flex;
     align-items: center;
@@ -373,10 +374,12 @@ p a:hover {
 #nav-icon1 {
     display: none;
     position: fixed;
+    top: 10px;
+
     z-index: 99;
     width: 50px;
     height: 50px;
-    margin: 10px;
+    padding: 5px;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
@@ -386,17 +389,19 @@ p a:hover {
     -o-transition: .5s ease-in-out;
     transition: .5s ease-in-out;
     cursor: pointer;
+
 }
 
 #nav-icon1 span {
     display: block;
     position: absolute;
+
     height: 7px;
-    width: 100%;
+    width: 50px;
     background: #31439b;
     border-radius: 9px;
     opacity: 1;
-    left: 0;
+    left: 10px;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
@@ -419,6 +424,7 @@ p a:hover {
 #nav-icon1 span:nth-child(3) {
     top: 36px;
 }
+
 
 #nav-icon1.open span:nth-child(1) {
     top: 18px;
@@ -445,18 +451,19 @@ p a:hover {
     margin: 0px;
     display: none;
 
+
+
 }
 
-.responsive-nav ul {
+.responsive-nav .navigate {
     display: flex;
     flex-direction: column;
-    gap: 10px;
     position: fixed;
     z-index: 98;
-    background: white;
+    background: #fff9f3ff;
     width: 100%;
     height: 100%;
-
+    transition: all 0.5s ease-out;
 }
 
 .nav-close {
@@ -464,9 +471,19 @@ p a:hover {
 
 }
 
-.responsive-nav ul li {
+.responsive-nav .navigate .nav-item {
     height: 80px;
     width: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-out;
+}
+
+.responsive-nav .navigate .nav-item:hover {
+    background: rgb(187, 170, 154);
+
 }
 
 .responsive-socials {
@@ -480,8 +497,39 @@ p a:hover {
     justify-content: center;
 }
 
+.sub {
+    height: 0px;
+    overflow: hidden;
+    transition: all 0.5s;
+    background: white;
 
-@media (max-width: 800px) {
+}
+
+.activate-details {
+    height: fit-content;
+
+}
+
+.no-pointer {
+    cursor: context-menu;
+}
+
+.socials .icons {
+    width: 25px;
+    height: 25px;
+    padding: 15px;
+    border-radius: 15px;
+    transition: 0.4s ease-in-out;
+    color: #31439b;
+}
+
+.socials .icons:hover {
+    background: #33baed;   
+
+}
+
+
+@media (max-width: 1100px) {
 
     nav {
         justify-content: center;
@@ -496,7 +544,7 @@ p a:hover {
     }
 
     .nav-close {
-        transform: translateX(-1000px);
+        transform: translateX(-2000px);
         background: transparent !important;
     }
 

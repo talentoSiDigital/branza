@@ -3,30 +3,25 @@ import 'vue3-carousel/dist/carousel.css'
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
 import { onMounted, onUnmounted, ref, watch } from 'vue'
 
-const screenWidth = ref(screen.width)
+import products from '../products.json'
 
-const sliderShow = ref(1.6)
-
-const handleResize = () => {
-    screenWidth.value = window.innerWidth
-}
-
-onMounted(() => {
-    window.addEventListener('resize', handleResize)
-    console.log(screenWidth.value)
-
-    if (screenWidth.value > 800) {
-        sliderShow.value = 1
+const breakpoints = {
+      // 700px and up
+      500:{
+        itemsToShow: 1,
+        snapAlign: 'center',
+      }
+      ,
+      800: {
+        itemsToShow: 3,
+        snapAlign: 'center',
+      },
+      // 1024 and up
+      1024: {
+        itemsToShow: 4,
+        snapAlign: 'start',
+      }
     }
-
-
-})
-
-onUnmounted(() => {
-    window.removeEventListener('resize', handleResize)
-})
-
-
 
 </script>
 
@@ -34,66 +29,35 @@ onUnmounted(() => {
     <div class="slider">
         <div class="slider-container">
 
-            <Carousel :items-to-show="1" class="carousel-container">
-                <Slide v-for="slide in 1" :key="slide">
+            <Carousel  
+                class="carousel-container" 
+                :wrap-around="true" 
+                :breakpoints="breakpoints"
+                :autoplay="1500"
+                >
+                <Slide v-for="slide in products" :key="slide">
 
-                    
-                    <div class="card">
-                        <img src="/img/adecoagro.png" alt="adecoagro">
-                        <div class="card-body">
-                            <p class="card-title">Saco de 25Kgr</p>
-                            <h3 class="card-title">Leche entera AdecoAgro</h3>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="/img/conaprole.png" alt="adecoagro" class="big-img">
-                        <div class="card-body">
-                            <p class="card-title">Saco de 25Kgr</p>
-                            <h3 class="card-title">Leche entera Conaprole</h3>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="/img/formidable.png" alt="adecoagro" class="big-img">
-                        <div class="card-body">
-                            <p class="card-title">Saco de 25Kgr</p>
-                            <h3 class="card-title">Leche entera Formidable</h3>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="/img/magnalat.png" alt="adecoagro" class="big-img">
-                        <div class="card-body">
-                            <p class="card-title">Saco de 25Kgr</p>
-                            <h3 class="card-title">Leche entera Magnalat</h3>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="/img/purisima.png" alt="adecoagro" class="big-img">
-                        <div class="card-body">
-                            <p class="card-title">Saco de 25Kgr</p>
-                            <h3 class="card-title">Leche entera Purisima</h3>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="/img/colun.png" alt="adecoagro" class="big-img">
-                        <div class="card-body">
-                            <p class="card-title">Saco de 25Kgr</p>
-                            <h3 class="card-title">Leche entera Lactolun</h3>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="/img/us-diary.png" alt="adecoagro" class="big-img">
-                        <div class="card-body">
-                            <p class="card-title">Saco de 25Kgr</p>
-                            <h3 class="card-title">Leche entera US-diary</h3>
-                        </div>
-                    </div>
+                    <div class="normal">
 
+                        <div class="card">
+                            <div class="img">
+                                <img :src="`/img/${slide.img}`" alt="adecoagro">
+
+                            </div>
+                            <div class="card-body">
+                                <p class="card-title">Saco de {{ slide.weight }}</p>
+                                <h3 class="card-title">{{ slide.type }} {{ slide.name }}</h3>
+                            </div>
+                        </div>
+
+
+                    </div>
 
                 </Slide>
+                <template #addons>
+                    <Pagination />
+                </template>
 
-                <!-- <template #addons>
-                    <Navigation />
-                </template> -->
             </Carousel>
 
 
@@ -114,26 +78,32 @@ onUnmounted(() => {
 
 
 .carousel-container {
-    
     width: 95%;
 
 }
 
 .card {
     width: 200px;
-    height: 350px;
+    height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center
 }
 
-.card img {
-    max-width: 200px;
-
-    box-shadow: 5px 5px 12px 0px rgba(0, 0, 0, 0.10);
+.card .img {
+    height: 350px;
+    width: 100%;
+    display: flex;
 }
 
+.card img {
+    width: 100%;
+    box-shadow: 5px 5px 12px 0px rgba(0, 0, 0, 0.10);
+}
+.card-title{
+    font-size: 17px;
+}
 .big-img {
     width: 145px !important;
 
@@ -144,5 +114,19 @@ onUnmounted(() => {
     width: 20px;
 
 }
+
+.button {
+    font-size: 90pt;
+}
+
+.normal {
+    display: flex;
+}
+
+.red {
+    background: red !important;
+}
+
+@media (max-width: 1100px) {}
 </style>
 

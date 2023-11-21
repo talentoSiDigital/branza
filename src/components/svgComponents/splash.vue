@@ -6,7 +6,7 @@ const color = defineProps(['color'])
 <template>
     <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1001.000000 980.000000"
         preserveAspectRatio="xMidYMid meet">
-        <g transform="translate(5.000000,985.000000) scale(0.100000,-0.100000)" fill="#dfdfdf" stroke="none">
+        <g transform="translate(5.000000,985.000000) scale(0.10100,-0.10100)" fill="#dfdfdf" stroke="none">
             <path d="M6771 9609 c-180 -38 -329 -111 -404 -200 -84 -98 -117 -220 -117
         -437 0 -136 10 -214 71 -542 17 -92 22 -155 22 -310 0 -179 -2 -203 -26 -292
         -14 -54 -42 -129 -62 -167 -96 -182 -277 -294 -480 -295 -76 -1 -85 2 -175 46

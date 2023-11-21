@@ -44,7 +44,6 @@ import ContactForm from '../components/ContactForm.vue'
 
 <style scoped>
 .contacto {
-    height: 88vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -61,7 +60,7 @@ import ContactForm from '../components/ContactForm.vue'
 .info-side {
     display: flex;
     width: 70%;
-    height: 100%;
+    height: 88vh;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -88,6 +87,7 @@ import ContactForm from '../components/ContactForm.vue'
 }
 
 .socials .icons {
+    color: white;
     width: 25px;
     height: 25px;
     padding: 15px;
@@ -96,7 +96,7 @@ import ContactForm from '../components/ContactForm.vue'
 }
 
 .socials .icons:hover {
-    background: white;
+    background: #31439b;
     transform: scale(1.1);
 
 }
@@ -110,6 +110,28 @@ import ContactForm from '../components/ContactForm.vue'
     flex-direction: column;
     justify-content: center;
     padding: 15px;
+}
+@media (max-width: 1100px) {
+    .form{
+        padding: 0px;
+    }
+  .contacto {
+    flex-direction: column-reverse;
+    height: fit-content;
+   
+}
+.info-side {
+    width: 100%;
+    height: 60vh !important;
+    
+}
+form{
+    height: 100vh !important;
+}
+
+
+
+
 }
 </style>
 

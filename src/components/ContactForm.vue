@@ -65,7 +65,7 @@
 
 button {
     padding: 10px 35px;
-    border-radius: 5%;
+    border-radius: 10px;
     font-weight: 900;
     background: #31439b;
     border: none;
@@ -77,6 +77,31 @@ button:hover {
     background: #4f66da;
 }
 
-
+@media (max-width: 1100px) {
+    .form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+    }
+  .form-group{
+    flex-direction: column;
+  }
+  .form-group .form-control {
+    width: 90vw;
+    margin: 3px 0px;
+    height: 45px;
+}
+.textarea{
+    max-width: 88vw;
+    min-width: 88vw;
+    
+  }
+  button{
+    width: 90vw;
+    margin: 3px 0px;
+  }
+}
 </style>
 
