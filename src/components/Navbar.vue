@@ -26,7 +26,7 @@ const showDetails = () => {
                     <li>
                         <router-link to="/">
 
-                            <img src="../assets/img/logo.png" alt="branza-logo" class="logo" />
+                            <img src="/img/logo.png" alt="branza-logo" class="logo" />
                             <!-- <img src="../assets/img/LOGO MOTION GRAPHIC.gif" alt="branza-logo" class="logo" /> -->
                         </router-link>
                     </li>
@@ -123,7 +123,7 @@ const showDetails = () => {
 
                 <router-link to="/" class="nav-item" @click="navChange">
 
-                    <img src="../assets/img/logo.png" alt="branza-logo" class="logo" />
+                    <img src="/img/logo.png" alt="branza-logo" class="logo" />
                 </router-link>
 
                 <div class="nav-item" @click="showDetails()">
@@ -189,7 +189,9 @@ const showDetails = () => {
 </template>
 
 <style scoped>
-nav {}
+nav {
+    color: #273294  !important;
+}
 
 .normal-nav {
     display: flex;

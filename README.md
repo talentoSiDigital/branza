@@ -1,7 +1,35 @@
-# Vue 3 + Vite
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+# Branza foods
 
-## Recommended IDE Setup
+Landing page for Branza foods
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+
+## Tools Used
+
+ - [Vue.js](https://vuejs.org/)
+ - [Vue 3 Carousel](https://ismail9k.github.io/vue3-carousel/)
+ - [Vue Router](https://router.vuejs.org/)
+ - [Google Fonts](https://fonts.google.com/)
+ - Icons by: [Font Awesome](https://fontawesome.com/)
+ - Svg shapes by: [Haikei](https://haikei.app/)
+
+
+## Appendix
+
+To add products to cards:
+- upload image to public/img/
+- add product to products.json or products-small.json withe the following structure
+
+| key             | example                                                              |
+| ----------------- | ------------------------------------------------------------------ |
+| "name" | Capitalized product name|
+| "type" | Type of product |
+| "weight" | weight or quantity of the product |
+| "img" |image name, with extension |
+| "country" |Country origin name |
+
+
+## Authors
+
+[@manuelzorrilladev](https://www.github.com/manuelzorrilladev) under the name of [Talento Si Digital](https://ve.linkedin.com/company/si-digital-agencia)
+

@@ -9,7 +9,7 @@ const img = defineProps(['img'])
 <template>
     <div class="main-container">
         <div class="img-container">
-            <img v-if="img.img" :src="`../src/assets/img/${img.img}.png`" :alt="img.img ">
+            <img v-if="img.img" :src="`/img/${img.img}.png`" :alt="img.img ">
         </div>
     </div>
 </template>

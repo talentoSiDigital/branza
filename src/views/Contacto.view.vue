@@ -34,7 +34,7 @@ import ContactForm from '../components/ContactForm.vue'
                 </a>
                 <a href="https://twitter.com/i/flow/login?redirect_after_login=%2Fbranzafoods" target="_blank"
                     class="icon-link">
-                    <font-awesome-icon :icon="['fab', 'twitter']" class="icons" />
+                    <font-awesome-icon :icon="['fab', 'x-twitter']" class="icons" />
                 </a>
             </div>
         </div>
@@ -111,6 +111,8 @@ import ContactForm from '../components/ContactForm.vue'
     justify-content: center;
     padding: 15px;
 }
+
+
 @media (max-width: 1100px) {
     .form{
         padding: 0px;

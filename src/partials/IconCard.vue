@@ -47,12 +47,6 @@ const icon = defineProps(["icon"])
     border: 1px solid rgba(255, 255, 255, 0.18);
     transition: 0.2s all ease-in-out;
 }
-/* .card:hover{
-    transform: scale(1.2);
-    box-shadow: 5px 5px 25px 0px rgba(3,38,135,0.75);
-
-} */
-
 
 .icon-container .icon {
     height: 40px;

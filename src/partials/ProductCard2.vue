@@ -8,9 +8,11 @@ const parsedProduct = ProductsList[product.product]
 
 <template>
     <div class="card">
+
         <div class="img">
             <img :src="`/img/${parsedProduct.img}`" :alt="parsedProduct.name">
         </div>
+        
         <div class="card-text">
             <h1>
                  {{ parsedProduct.name }}

@@ -37,40 +37,46 @@ const emitPopUp=()=>{
                     <img :src="`/img/${parsedProduct.img}`" :alt="parsedProduct.name" >
                     <div class="text-side">
                         <div class="close">
-                            <font-awesome-icon @click="emitPopUp" :icon="['fas', 'xmark']" class="close" />
-                            
+                            <font-awesome-icon @click="emitPopUp" :icon="['fas', 'xmark']" class="close" />        
                         </div>
+
                         <h1 class="title">{{ parsedProduct.name }}</h1>
-                    <ul>
-                        <li>
-                            Tipo: {{ parsedProduct.type }}
-                        </li>
-                        <li>
-                            Cantidad: {{ parsedProduct.weight }}
-                        </li>
-                        <li>
-                            País: {{ parsedProduct.country }}
-                            <img class="country" src="/img/venezuela.png" alt="">
-                        </li>
 
+                        <ul>
+                        
+                            <li>
+                                Tipo: {{ parsedProduct.type }}
+                            </li>
+                        
+                            <li>
+                                Cantidad: {{ parsedProduct.weight }}
+                            </li>
+                        
+                            <li>
+                                País: {{ parsedProduct.country }}
+                                <img class="country" src="/img/venezuela.png" alt="">
+                            </li>
 
-                    </ul>
-                    <div class="socials">
-                        <h2>
-                            Compartir en:
+                        </ul>
 
-                        </h2>
-                        <a href="https://www.facebook.com/branzafoods/" target="_blank" class="icon-link">
-                            <font-awesome-icon :icon="['fab', 'facebook-f']" class="icons" />
-                        </a>
-                        <a href="https://www.instagram.com/branzafoods" target="_blank" class="icon-link">
-                            <font-awesome-icon :icon="['fab', 'instagram']" class="icons" />
-                        </a>
-                        <a href="https://twitter.com/i/flow/login?redirect_after_login=%2Fbranzafoods" target="_blank"
-                            class="icon-link">
-                            <font-awesome-icon :icon="['fab', 'x-twitter']" class="icons" />
-                        </a>
-                    </div>
+                        <div class="socials">
+                            <h2>
+                                Compartir en:
+                            </h2>
+
+                            <a href="https://www.facebook.com/branzafoods/" target="_blank" class="icon-link">
+                                <font-awesome-icon :icon="['fab', 'facebook-f']" class="icons" />
+                            </a>
+
+                            <a href="https://www.instagram.com/branzafoods" target="_blank" class="icon-link">
+                                <font-awesome-icon :icon="['fab', 'instagram']" class="icons" />
+                            </a>
+
+                            <a href="https://twitter.com/i/flow/login?redirect_after_login=%2Fbranzafoods" target="_blank" class="icon-link">
+                                <font-awesome-icon :icon="['fab', 'x-twitter']" class="icons" />
+                            </a>
+
+                        </div>
                 </div>
                 </div>
             </div>
@@ -117,10 +123,6 @@ const emitPopUp=()=>{
 
 img {
     width: 35%;
-    /* box-shadow: 14px 17px 42px -2px rgba(18, 69, 96, 0.49);
-    -webkit-box-shadow: 14px 17px 42px -2px rgba(18, 69, 96, 0.49);
-    -moz-box-shadow: 14px 17px 42px -2px rgba(18, 69, 96, 0.49);     */
-
 }
 
 .title {
@@ -155,8 +157,6 @@ strong {
     font-weight: 900;
 }
 
-
-
 .socials .icons {
     width: 25px;
     height: 25px;
@@ -168,8 +168,6 @@ strong {
 
 .socials .icons:hover {
     background: #31439b;
-    
-
 }
 
 .close {
@@ -189,14 +187,12 @@ strong {
     display: block;
 }
 
-
 .show {
     display: block;
 }
 .country{
     width: 20px;
 }
-
 
 .none {
     display: none;
@@ -223,6 +219,7 @@ strong {
 @media (max-width: 650px) {
     .title{
         font-size: 24pt !important;
+        line-height: 30px;
     }
     .text-side{
         font-size: 14pt !important;

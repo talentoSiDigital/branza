@@ -1,18 +1,13 @@
 <script setup>
 const {order,bg} = defineProps(['order','bg'])
-
-
 </script>
 
 <template>
-    <!-- CAMBIAR IMAGEN DEL LAYOUT, POR AHORA, SOLO DE REFERENCIA -->
     <div class="frame" :class="order">
         <div class="text-side">
             <header>
                 <h4>
-                    <slot name="h4">
-
-                    </slot>
+                    <slot name="h4"></slot>
                 </h4>
                 <p>
                     <slot name="p"></slot>
@@ -21,11 +16,7 @@ const {order,bg} = defineProps(['order','bg'])
         </div>
         <div class="img-side" :style="['background',bg]">
             <img src="../assets/img/layout.jpg" alt="">
-
-
         </div>
-
-
     </div>
 </template>
 
@@ -52,7 +43,6 @@ const {order,bg} = defineProps(['order','bg'])
 .text-side header {
     width: 80%;
 }
-
 
 .img-side {
     width: 100%;

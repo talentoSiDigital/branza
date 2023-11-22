@@ -10,17 +10,12 @@ const popUp = ref(0)
 const activatePopUp = (index) => {
     
     if(popUp.value == 0){
-        
         popUp.value = index
     } else {
         popUp.value = 0
     }
     
 }
-
-
-
-
 
 </script>
 
@@ -31,7 +26,9 @@ const activatePopUp = (index) => {
     <div class="bg-container absolute">
         <BG1 />
     </div>
+
     <div class="navbar-adjust"></div>
+
     <div class="industrial">
         <h1 class="white-text">Productos de <br> Consumo Masivo</h1>
         <div class="grid">
@@ -65,13 +62,11 @@ const activatePopUp = (index) => {
 }
 
 .products {
-
     display: grid;
     width: 80%;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1rem;
     place-items: center;
-
 }
 
 h1 {
@@ -80,7 +75,6 @@ h1 {
     font-weight: 600;
     margin-bottom: 1rem;
 }
-
 
 .absolute {
     position: absolute;

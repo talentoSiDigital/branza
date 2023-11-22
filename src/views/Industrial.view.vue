@@ -10,7 +10,6 @@ const popUp = ref(0)
 const activatePopUp = (index) => {
 
     if(popUp.value == 0){
-        
         popUp.value = index
     } else {
         popUp.value = 0
@@ -23,20 +22,22 @@ const activatePopUp = (index) => {
 <template>
     <PopUp :product="popUp" @activate-pop-up="activatePopUp"/>
 
-
     <div class="bg-container absolute">
         <BG1 />
     </div>
+
     <div class="navbar-adjust"></div>
+
     <div class="industrial">
+
         <h1 class="white-text">Productos Industriales</h1>
+
         <div class="grid">
             <div class="products">
+
                 <div v-for="(key, index) in productsData" :key="index" class="grid-item">
                     <ProductCard :product="index" @click="activatePopUp(index)" />
-
                 </div>
-
 
             </div>
         </div>

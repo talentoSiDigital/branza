@@ -6,18 +6,19 @@ import { onMounted, onUnmounted, ref, watch } from 'vue'
 import products from '../products.json'
 
 const breakpoints = {
-      // 700px and up
-      500:{
-        itemsToShow: 1,
-        snapAlign: 'center',
-      }
-      ,
-      800: {
+    500:{
+          // 500px and up
+          itemsToShow: 1,
+          snapAlign: 'center',
+        }
+        ,
+        800: {
+          // 700px and up
         itemsToShow: 3,
         snapAlign: 'center',
       },
-      // 1024 and up
       1024: {
+          // 1024 and up
         itemsToShow: 4,
         snapAlign: 'start',
       }
@@ -72,14 +73,10 @@ const breakpoints = {
     justify-content: center;
     overflow: hidden;
     width: 100%;
-
 }
-
-
 
 .carousel-container {
     width: 95%;
-
 }
 
 .card {
@@ -101,18 +98,18 @@ const breakpoints = {
     width: 100%;
     box-shadow: 5px 5px 12px 0px rgba(0, 0, 0, 0.10);
 }
+
 .card-title{
     font-size: 17px;
 }
+
 .big-img {
     width: 145px !important;
-
 }
 
 .arrow {
     background: #273294;
     width: 20px;
-
 }
 
 .button {
@@ -127,6 +124,5 @@ const breakpoints = {
     background: red !important;
 }
 
-@media (max-width: 1100px) {}
 </style>
 

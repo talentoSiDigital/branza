@@ -22,7 +22,7 @@ import BG from './svgComponents/BG-1.vue'
                     primas para la industria nacional, nos hemos siempre caracterizado por brindar el servicio y la asesoría
                     técnica que ha requerido cada cliente</p>
 
-                <img src="../assets/img/logo.png" alt="branza-logo" class="logo">
+                <img src="/img/logo.png" alt="branza-logo" class="logo">
 
 
             </div>

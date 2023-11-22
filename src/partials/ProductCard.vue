@@ -13,6 +13,7 @@ const parsedProduct = ProductsList[product.product]
         <img v-if="parsedProduct.name == 'Adecoagro'" :src="`/img/${parsedProduct.img}`" :alt="parsedProduct.name" class="adecoagro">
         <img v-else-if="parsedProduct.name == 'Formidable'" :src="`/img/${parsedProduct.img}`" :alt="parsedProduct.name" class="formidable">
         <img v-else :src="`/img/${parsedProduct.img}`" :alt="parsedProduct.name">
+        
         <div class="card-text">
             <h1>
                 {{ parsedProduct.type }} {{ parsedProduct.name }}

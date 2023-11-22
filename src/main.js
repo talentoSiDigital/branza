@@ -4,6 +4,9 @@ import App from './App.vue'
 import { MotionPlugin } from '@vueuse/motion'
 import router from './router'
 
+import VueCookieAcceptDecline from 'vue-cookie-accept-decline';
+import 'vue-cookie-accept-decline/dist/vue-cookie-accept-decline.css';
+
 
 
 /* import the fontawesome core */
@@ -26,7 +29,7 @@ import {
     faLocationDot,
     faXmark
 } from '@fortawesome/free-solid-svg-icons'
-import { faFacebookF, faInstagram, faXTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faFacebookF, faInstagram, faXTwitter, faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 
 
 library.add(
@@ -43,7 +46,7 @@ library.add(
     faPhone,
     faLocationDot,
     faXTwitter,
-    faXmark
+    faXmark, faWhatsapp
 )
 
 
@@ -52,4 +55,5 @@ createApp(App)
     .component('font-awesome-icon', FontAwesomeIcon)
     .use(MotionPlugin)
     .use(router)
+    .component('vue-cookie-accept-decline', VueCookieAcceptDecline)
     .mount('#app')
