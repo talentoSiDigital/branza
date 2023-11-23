@@ -12,6 +12,7 @@ const router = createRouter({
     routes: [
         {
             path:"/",
+            name:"Home",
             component:Home,
             meta: {
                 title:'Branza Foods'
@@ -20,6 +21,7 @@ const router = createRouter({
         {
           
             path:"/nosotros",
+            name:"Nosotros",
             component:Nosotros,
             meta: {
                 title:'Branza Foods - Nosotros'
@@ -28,6 +30,7 @@ const router = createRouter({
         {
           
             path:"/elaboraciones",
+            name:"Elaboraciones",
             component:Elaboraciones,
             meta: {
                 title:'Branza Foods - Elaboraciones'
@@ -36,6 +39,7 @@ const router = createRouter({
         {
           
             path:"/contacto",
+            name:"Contacto",
             component:Contacto,
             meta: {
                 title:'Branza - Contacta con nosotros'
@@ -44,6 +48,7 @@ const router = createRouter({
         { 
           
             path:"/industrial",
+            name:"Industrial",
             component:Industrial,
             meta: {
                 title:'Branza - Productos Industriales'
@@ -52,6 +57,7 @@ const router = createRouter({
         {
           
             path:"/consumo-masivo",
+            name:"ConsumoMasivo",
             component:ConsumoMasivo,
             meta: {
                 title:'Branza - Consumo Masivo'

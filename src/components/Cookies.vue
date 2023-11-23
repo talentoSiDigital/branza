@@ -14,7 +14,7 @@
             <!-- Optional -->
             <template #message>
                 <div class="header">
-                    <img src="/img/logo.png" alt="">
+                    <img src="/img/logo.png" alt="branza-logo">
                     Este sitio hace uso de cookies para asegurar la experiencia
                 </div>
             </template>

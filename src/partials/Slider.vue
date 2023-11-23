@@ -36,18 +36,18 @@ const breakpoints = {
                 :breakpoints="breakpoints"
                 :autoplay="1500"
                 >
-                <Slide v-for="slide in products" :key="slide">
+                <Slide v-for="(key,index) in products" :key="index">
 
                     <div class="normal">
 
                         <div class="card">
                             <div class="img">
-                                <img :src="`/img/${slide.img}`" alt="adecoagro">
+                                <img :src="`/img/${key.img}`" :alt="key.name">
 
                             </div>
                             <div class="card-body">
-                                <p class="card-title">Saco de {{ slide.weight }}</p>
-                                <h3 class="card-title">{{ slide.type }} {{ slide.name }}</h3>
+                                <p class="card-title">Saco de {{ key.weight }}</p>
+                                <h3 class="card-title">{{ key.type }} {{ key.name }}</h3>
                             </div>
                         </div>
 
@@ -96,8 +96,9 @@ const breakpoints = {
 
 .card img {
     width: 100%;
-    box-shadow: 5px 5px 12px 0px rgba(0, 0, 0, 0.10);
+    filter: drop-shadow(10px 15px 10px rgba(0, 0, 0, 0.4));
 }
+
 
 .card-title{
     font-size: 17px;

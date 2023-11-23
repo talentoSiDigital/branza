@@ -8,13 +8,10 @@ import 'vue3-carousel/dist/carousel.css'
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
 import { onMounted, onUnmounted, ref, watch } from 'vue'
 
-
-
 </script>
 
 <template>
     <div class="frames-container">
-
 
         <div class="frame ">
 
@@ -27,52 +24,31 @@ import { onMounted, onUnmounted, ref, watch } from 'vue'
                     <h5>
                         Somos una empresa fundada en 2012 nos dedicamos a la distribución e importación de materias
                         primas en el mercado venezolano,
-                    brindando a todos nuestros clientes el servicio y asesoría técnica requerida.
-                </h5>
-            </header>
-        </div>
-
-        <div class="img-side small ">
-            <img src="/img/personas.jpg" alt="">
-
-
-        </div>
-
-    </div>
-
-    <!-- <div class="img-overlay">
-            <div class="content">
-                <div class="frame ">
-
-                    <div class="text-side white-text">
-
-                        <header>
-                            <h3>
-                                ¿Quiénes Somos?
-                            </h3>
-                            <h5>
-                                Somos una empresa fundada en 2012 nos dedicamos a la distribución e importación de materias
-                                primas en el mercado venezolano,
-                                    brindando a todos nuestros clientes el servicio y asesoría técnica requerida.
-                            /h5>
-                        </header>
-                    </div>      
-                  <div class="img-side small ">
-                    
-                        <img src="/img/personas.jpg" alt="">
-                </div>
+                        brindando a todos nuestros clientes el servicio y asesoría técnica requerida.
+                    </h5>
+                </header>
 
             </div>
-        </div>
-    </div> -->
 
+            <div class="img-side small ">
+
+                <Carousel class="carousel-container " :wrap-around="true" :autoplay="1500" :items-to-show="1">
+                    <Slide v-for="slide in 13" :key="slide">
+                        <img :src="`/img/personas-${slide}.jpg`" :alt="slide" class="slider-img-frame">
+                    </Slide>
+                </Carousel>
+
+            </div>
+
+        </div>
 
         <WaveAnimated fillColor="#33baed" reverse="reverse" />
 
         <div class="frame-center white-text light-blue">
-            <div class="frame-container">
-                <div class="text-side big ">
 
+            <div class="frame-container">
+
+                <div class="text-side big ">
                     <header>
                         <h4>
                             Nuestros productos
@@ -83,63 +59,60 @@ import { onMounted, onUnmounted, ref, watch } from 'vue'
 
                         </h5>
                     </header>
-
                 </div>
 
+                <Carousel class="carousel-container " :wrap-around="true" :autoplay="1800" :items-to-show="1">
+                    <Slide v-for="slide in 4" :key="slide" class="slider">
 
-
-                <Carousel class="carousel-container " :wrap-around="true" :autoplay="1500" :items-to-show="1">
-                    <Slide v-for="slide in 4" :key="slide">
-
-                        <img :src="`/img/${slide}.jpg`" alt="" class="slider-img">
+                        <img :src="`/img/${slide}.jpg`" :alt="slide" class="slider-img">
 
                     </Slide>
-                    <template #addons>
-                        <Pagination />
-                    </template>
+                   
 
                 </Carousel>
+
             </div>
 
-
-
         </div>
+
+        <WaveAnimated fillColor="white" reverse="#33baed" />
 
 
         <div class="box ">
 
             <div class="box-container img-overlay mision">
 
-
-                
                 <div class="content box-header">
-                    <h4>Misíon</h4>
-                    <p> 
-                        Fabricar y comercializar productos alimenticios de la más alta calidad que cubran las expectativas de los consumidores, optimizando recursos y cumpliendo con las expectativas del cliente, de esta manera contribuir al desarrollo económico y social del país.
+                    <header>
+                        <h4>Mision</h4>
+                        <p>
+                            Fabricar y comercializar productos alimenticios de la más alta calidad que cubran las
+                            expectativas
+                            de los consumidores, optimizando recursos y cumpliendo con las expectativas del cliente, de esta
+                            manera contribuir al desarrollo económico y social del país.
 
-                    </p>
+                        </p>
+                    </header>
                 </div>
 
-
-
-
             </div>
+
             <div class="box-container img-overlay vision">
 
-
-                
                 <div class="content box-header">
-                    <h4>Visíon</h4>
-                    <p> 
-                        Consolidar los logros para ser reconocida en el campo empresarial como una importante empresa pionera en la venta y manufactura de alimentos, comprometida con la seguridad alimentaria, garantizando así una óptima calidad de los productos comercializados y elaborados para satisfacción de nuestros clientes
-                    </p>
+                    <header >
+                        <h4>Visión</h4>
+                        <p>
+                            Consolidar los logros para ser reconocida en el campo empresarial como una importante empresa
+                            pionera en la venta y manufactura de alimentos, comprometida con la seguridad alimentaria,
+                            garantizando así una óptima calidad de los productos comercializados y elaborados para
+                            satisfacción
+                            de nuestros clientes
+                        </p>
+                    </header>
                 </div>
 
-
-
-
             </div>
-
 
         </div>
 
@@ -149,15 +122,22 @@ import { onMounted, onUnmounted, ref, watch } from 'vue'
 <style scoped>
 .frame-container {
     display: flex;
-    align-items: center;
     justify-content: center;
-    padding: 25px;
+    height: 70vh;
     position: relative;
-    z-index: 5
+    z-index: 5;
+    padding:20px 40px 0px 0px;
 }
 
 .slider-img {
     width: 100%;
+    border-radius:15px ;
+
+}
+
+.slider-img-frame {
+    width: 70%;
+    border-radius: 15px;
 }
 
 .slider {
@@ -171,7 +151,9 @@ import { onMounted, onUnmounted, ref, watch } from 'vue'
 .carousel-container {
     width: 70%;
 }
-
+.slider{
+    height: 90%;
+}
 .border {
     border: 1px solid black;
 }
@@ -181,20 +163,37 @@ import { onMounted, onUnmounted, ref, watch } from 'vue'
     z-index: 1;
 }
 
-.box-header{
+.box-header {
     padding: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-.box-header h4, .box-header p{
+
+.left {
+    align-items: end;
+}
+.left header h4,
+.left header p{
+    text-align: right;
+
+}
+
+
+.box-header h4,
+.box-header p {
     text-align: left;
 }
+
 .img-overlay {
     position: relative;
     z-index: 1;
     text-align: center;
     background-size: cover;
     height: 40vh;
-    width: 90vw !important;
-    
+    width: 45vw !important;
+
     border-radius: 15px;
 }
 
@@ -202,13 +201,14 @@ import { onMounted, onUnmounted, ref, watch } from 'vue'
     border-radius: 15px;
     background-image: url('/img/productos.png');
     color: white;
-    
+
 }
+
 .vision {
     border-radius: 15px;
     background-image: url('/img/mision.png');
     color: white;
-    
+
 }
 
 .img-overlay::after {
@@ -220,7 +220,8 @@ import { onMounted, onUnmounted, ref, watch } from 'vue'
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(0deg, rgba(51,186,237,0.2) 0%, rgba(49,67,155,1) 100%);
+    /* background: linear-gradient(0deg, rgba(51, 186, 237, 0.2) 0%, rgba(49, 67, 155, 1) 100%); */
+    background: rgba(49, 67, 155, 0.70);
 }
 
 .img-overlay .content {
@@ -243,13 +244,12 @@ import { onMounted, onUnmounted, ref, watch } from 'vue'
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
     gap: 15px;
     padding: 40px 0px;
 }
 
 .box .box-container {
-    width: 40%;
+    width: 30%;
     display: flex;
     
     gap: 15px;
@@ -274,12 +274,10 @@ import { onMounted, onUnmounted, ref, watch } from 'vue'
 .box .text-side header {
     width: 100%;
     text-align: center;
-    padding: 20px;
+    padding: 40px;
 }
 
-.reverse {
-    flex-direction: row-reverse
-}
+
 
 .text-side {
     display: flex;
@@ -329,6 +327,10 @@ import { onMounted, onUnmounted, ref, watch } from 'vue'
 
 .dark-glass {
     background: rgba(49, 67, 155, 0.45);
+}
+
+.reverse {
+    flex-direction: row-reverse
 }
 
 .small {
@@ -388,5 +390,4 @@ h5 {
         flex-direction: column;
     }
 
-}
-</style>
+}</style>

@@ -5,7 +5,8 @@
         "weight":"25kg",
         "img":"magnalat.png",
         "country":"Uruguay",
-        "icon":"uruguay.png"
+        "icon":"uruguay.png",
+        "tag":"industrial"
     },
     "adecoagro":{
         "name":"Adecoagro",
@@ -13,7 +14,8 @@
         "weight":"25kg",
         "img":"adecoagro.png",
         "country":"Argentina",
-        "icon":"argentina.png"
+        "icon":"argentina.png",
+        "tag":"industrial"
 
     },
     "conaprole":{
@@ -22,7 +24,8 @@
         "weight":"25kg",
         "img":"conaprole.png",
         "country":"Uruguay",
-        "icon":"uruguay.png"
+        "icon":"uruguay.png",
+        "tag":"industrial"
 
     },
     "purisima":{
@@ -31,7 +34,8 @@
         "weight":"25kg",
         "img":"purisima.png",
         "country":"Uruguay",
-        "icon":"uruguay.png"
+        "icon":"uruguay.png",
+        "tag":"industrial"
 
     },
     "us-diary":{
@@ -40,7 +44,8 @@
         "weight":"25kg",
         "img":"us-diary.png",
         "country":"USA",
-        "icon":"united-states.png"
+        "icon":"united-states.png",
+        "tag":"industrial"
 
     },
     "formidable":{
@@ -49,7 +54,8 @@
         "weight":"25kg",
         "img":"formidable.png",
         "country": "Uruguay",
-        "icon":"uruguay.png"
+        "icon":"uruguay.png",
+        "tag":"industrial"
 
     },
     "lactolun":{
@@ -58,7 +64,8 @@
         "weight":"25kg",
         "img":"colun.png",
         "country":"Chile",
-        "icon":"chile.png"
-
+        "icon":"chile.png",
+        "tag":"industrial"
     }
+    
 }

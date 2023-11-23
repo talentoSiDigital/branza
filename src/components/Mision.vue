@@ -7,11 +7,10 @@ import ImageBanner from '../partials/ImageBanner.vue'
 
 <template>
     <div class="mision">
-        <ImageBanner img="mision" />
+        <ImageBanner img="productos" title="Misión" />
 
         <div class="text-box ">
-            <h1 class="mission">Mision</h1>
-            <div class="bubble mission">
+            <div class="bubble ">
                 <header>
                     <font-awesome-icon :icon="['fas', 'industry']" class="icon blue" />
                     <h3>Fabricar y comercializar</h3>
@@ -31,31 +30,32 @@ import ImageBanner from '../partials/ImageBanner.vue'
 
         </div>
 
+        <ImageBanner img="mision" title="Visión" />
 
-        <div class="main-container">
-            <div class="img-container">
-                <div class="text-box secondary">
-                    <h1>Vision</h1>
-                    <div class="bubble">
-                        <header>
-                            <font-awesome-icon :icon="['fas', 'award']" class="icon2 white" />
-                            <h3>Consolidar los logros</h3>
-                            <p>para ser reconocida en el campo empresarial<br> como una importante empresa pionera en la
-                                <br> venta y manufactura de alimentos.
-                            </p>
-                        </header>
-                        <header>
-                            <font-awesome-icon :icon="['fas', 'circle-check']" class="icon white" />
-                            <h3>Compromiso con la seguridad alimentaria</h3>
-                            <p>garantizando asi una optima calidad de los productos<br> comercializados y elaborados para
-                                satisfaccion <br> de nuestros clientes</p>
-                        </header>
-                    </div>
+     
 
+            <div class="text-box ">
 
+                <div class="bubble">
+                    <header>
+                        <font-awesome-icon :icon="['fas', 'award']" class="icon2 blue" />
+                        <h3>Consolidar los logros</h3>
+                        <p>para ser reconocida en el campo empresarial<br> como una importante empresa pionera en la
+                            <br> venta y manufactura de alimentos.
+                        </p>
+                    </header>
+                    <header>
+                        <font-awesome-icon :icon="['fas', 'circle-check']" class="icon blue" />
+                        <h3>Compromiso con la seguridad alimentaria</h3>
+                        <p>garantizando asi una optima calidad de los productos<br> comercializados y elaborados para
+                            satisfaccion <br> de nuestros clientes</p>
+                    </header>
                 </div>
+
+
             </div>
-        </div>
+
+        
     </div>
 </template>
 
@@ -74,7 +74,7 @@ import ImageBanner from '../partials/ImageBanner.vue'
 
 .img-container {
     width: 90%;
-    height: 200px;
+    height: 250px;
     overflow: hidden;
     border-radius: 10px;
     background: linear-gradient(90deg, rgba(0, 173, 239, 1) 0%, rgba(0, 251, 244, 1) 50%, rgba(0, 173, 239, 1) 100%);
@@ -86,12 +86,18 @@ img {
 }
 
 .text-box {
-    height: 200px;
+    height: 250px;
 }
 
 .text-box .mission {
-    color: #273294;
+
     transform: translateY(-80px);
+}
+
+.mission-header {
+    color: white;
+    text-shadow: 5px 5px 6px rgba(0, 0, 0, 0.6);
+
 }
 
 .text-box h1 {
@@ -101,6 +107,13 @@ img {
 
 
 .bubble {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+.bubble-2 {
     display: flex;
     align-items: center;
     justify-content: space-around;

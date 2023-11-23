@@ -10,14 +10,12 @@ import ImageBanner from '../partials/ImageBanner.vue'
 <template>
     <div class="productos">
         
-        <ImageBanner img="productos"/>
-
-        <div class="text-area">
-
-            <h1>Productos</h1>
+        
+      
+            <ImageBanner img="productos" title="Productos"/>
 
 
-        </div>
+
         <Slider />
     </div>
 </template>
@@ -39,6 +37,7 @@ import ImageBanner from '../partials/ImageBanner.vue'
     justify-content: center;
     gap: 5px;
     padding: 10px;
+    
 }
 
 .text-area p {

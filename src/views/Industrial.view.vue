@@ -35,9 +35,12 @@ const activatePopUp = (index) => {
         <div class="grid">
             <div class="products">
 
-                <div v-for="(key, index) in productsData" :key="index" class="grid-item">
-                    <ProductCard :product="index" @click="activatePopUp(index)" />
+                 <div v-for="(key, index) in productsData" :key="index" class="grid-item">
+                    <ProductCard v-if="key.tag == 'industrial'" :product="index" @click="activatePopUp(index)" />
                 </div>
+               
+
+
 
             </div>
         </div>

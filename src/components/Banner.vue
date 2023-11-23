@@ -17,7 +17,7 @@ import BG from './svgComponents/BG-1.vue'
                         accesibles, a
                         todos los niveles sociales en Venezuela</p>
                 </div>
-                <img src="/img/milk.png" alt="" class="bounce2">
+                <img src="/img/milk.png" alt="branza-illustration" class="bounce2">
             </div>
         </div>
     </div>

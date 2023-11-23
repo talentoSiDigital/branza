@@ -4,35 +4,40 @@
         "type":"Leche Entera",
         "weight":"30gr",
         "img":"vitale-sobre.png",
-        "country":"Venezuela"
+        "country":"Venezuela",
+        "tag":"masivo"
     },
     "vitale-descremada":{
         "name":"Sobre de leche Vitale Descremada",
         "type":"Leche Descremada",
         "weight":"30gr",
         "img":"vitale-sobre-descremada.png",
-        "country":"Venezuela"
+        "country":"Venezuela",
+        "tag":"masivo"
     },
     "vitale-display-completa":{
         "name":"Display de leche Vitale Completa",
         "type":"Leche Entera",
         "weight":"30 unidades",
         "img":"vitale-display.png",
-        "country":"Venezuela"
+        "country":"Venezuela",
+        "tag":"masivo"
     },
     "vitale-display-descremada":{
         "name":"Display de leche Vitale descremada",
         "type":"Leche Descremada",
         "weight":"30 unidades",
         "img":"vitale-display.png",
-        "country":"Venezuela"
+        "country":"Venezuela",
+        "tag":"masivo"
     },
     "vitale-caja":{
         "name":"Caja de leche Vitale Completa",
         "type":"Leche Entera",
         "weight":"180 unidades",
         "img":"vitale-caja.png",
-        "country":"Venezuela"
+        "country":"Venezuela",
+        "tag":"masivo"
     }
   
 }

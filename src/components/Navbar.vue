@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue';
+import  router  from '../router.js';
 
 const navStatus = ref('close')
 const navFull = ref('nav-close')
@@ -15,6 +16,10 @@ const showDetails = () => {
     responsiveNavDetail.value === 'deactivate-details' ? responsiveNavDetail.value = 'activate-details' : responsiveNavDetail.value = 'deactivate-details'
 }
 
+const send = () => {
+    console.log('Home')
+    router.push({name: 'Home'})
+}
 </script>
 
 <template>
@@ -59,13 +64,13 @@ const showDetails = () => {
 
                     </li>
 
-                    <li class="hover hover-underline-animation">
+                    <!-- <li class="hover hover-underline-animation">
                         <div class="nav-heading">
                             Elaboraciones
                             <font-awesome-icon :icon="['fas', 'angle-down']" />
                         </div>
 
-                    </li>
+                    </li> -->
 
                     <li class="hover hover-underline-animation">
                         <router-link to="/contacto">
@@ -84,13 +89,13 @@ const showDetails = () => {
 
             <div class="right-side">
                 <form>
-                    <button>
+                    <button @click="send">
                         <font-awesome-icon :icon="['fas', 'magnifying-glass']" />
                     </button>
-                    <input type="text" placeholder="Buscar" />
+                    <input type="text" placeholder="Buscar"  />
                 </form>
                 <div>
-                    <p>
+                    <p @click="send">
                         Siguenos en:
                         <a href="https://www.facebook.com/branzafoods/" target="_blank" class="socials">
                             <font-awesome-icon :icon="['fab', 'facebook-f']" />
@@ -152,12 +157,12 @@ const showDetails = () => {
 
 
 
-                <router-link to="/elaboraciones" class="nav-item" @click="navChange">
+                <!-- <router-link to="/elaboraciones" class="nav-item" @click="navChange">
 
                     Elaboraciones
                     <font-awesome-icon :icon="['fas', 'angle-down']" />
 
-                </router-link>
+                </router-link> -->
 
                 <router-link to="/contacto" class="nav-item" @click="navChange">
                     Contacto
@@ -191,6 +196,10 @@ const showDetails = () => {
 <style scoped>
 nav {
     color: #273294  !important;
+}
+a:visited{
+    color: #273294  ;
+
 }
 
 .normal-nav {
@@ -334,21 +343,24 @@ p a:hover {
 
 .dropdown {
     position: fixed;
+
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f1f1f1;
+    background-color: #31439b;
     min-width: 160px;
     width: 200px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
+    border-radius: 8px;
 }
 
 .dropdown-content a {
-    color: #070f53;
+    color: white;
     padding: 10px 15px;
+    transition: all 0.3s;
 
     text-decoration: none;
     display: block;
@@ -356,7 +368,10 @@ p a:hover {
 
 
 .dropdown-content a:hover {
-    background-color: #ddd;
+    background-color: #2a3982;
+    border-radius: 8px;
+
+
 }
 
 .hover:hover .dropdown-content {

@@ -8,19 +8,19 @@ import { ref } from 'vue';
 const popUp = ref(0)
 
 const activatePopUp = (index) => {
-    
-    if(popUp.value == 0){
+
+    if (popUp.value == 0) {
         popUp.value = index
     } else {
         popUp.value = 0
     }
-    
+
 }
 
 </script>
 
 <template>
-    <PopUp :product="popUp" @activate-pop-up="activatePopUp"/>
+    <PopUp :product="popUp" @activate-pop-up="activatePopUp" />
 
 
     <div class="bg-container absolute">
@@ -29,15 +29,17 @@ const activatePopUp = (index) => {
 
     <div class="navbar-adjust"></div>
 
+   
+
     <div class="industrial">
+
         <h1 class="white-text">Productos de <br> Consumo Masivo</h1>
         <div class="grid">
             <div class="products">
+
                 <div v-for="(key, index) in productsData" :key="index" class="grid-item">
                     <ProductCard :product="index" @click="activatePopUp(index)" />
-
                 </div>
-
 
             </div>
         </div>
@@ -46,6 +48,7 @@ const activatePopUp = (index) => {
 
 <style scoped>
 .navbar-adjust {
+
     height: 100px;
 }
 
@@ -54,7 +57,9 @@ const activatePopUp = (index) => {
     justify-content: center;
 
 }
-
+.grid .products .grid-items:first-child{
+    display: none;
+}
 .industrial {
     position: relative;
     z-index: 2;
@@ -62,11 +67,13 @@ const activatePopUp = (index) => {
 }
 
 .products {
+
     display: grid;
     width: 80%;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1rem;
     place-items: center;
+
 }
 
 h1 {
@@ -75,6 +82,7 @@ h1 {
     font-weight: 600;
     margin-bottom: 1rem;
 }
+
 
 .absolute {
     position: absolute;

@@ -23,8 +23,8 @@ watch(product, () => {
 
 })
 
-const emitPopUp=()=>{
-    emit('activate-pop-up',0)
+const emitPopUp = () => {
+    emit('activate-pop-up', 0)
 }
 
 
@@ -36,48 +36,52 @@ const emitPopUp=()=>{
 
             <div class="card">
 
-                <img :src="`/img/${parsedProduct.img}`" :alt="parsedProduct.name">
+                <div class="info">
+                    <img :src="`/img/${parsedProduct.img}`" :alt="parsedProduct.name" class="product">
 
-                <div class="text-side">
+                    <div class="text-side">
 
-                    <div class="close">
-                        <font-awesome-icon @click="emitPopUp" :icon="['fas', 'xmark']" class="close" />
+                        <div class="close">
+                            <font-awesome-icon @click="emitPopUp" :icon="['fas', 'xmark']" class="close" />
+                        </div>
+
+                        <h1 class="title">Leche {{ parsedProduct.name }}</h1>
+
+                        <ul>
+                            <li>
+                                <strong>
+                                    Tipo:
+
+                                </strong>
+                                {{ parsedProduct.type }}
+                            </li>
+
+                            <li>
+                                <strong>
+                                    Peso:
+                                </strong>
+                                {{ parsedProduct.weight }}
+                            </li>
+
+                            <li>
+                                <strong>
+                                    País:
+                                </strong>
+                                {{ parsedProduct.country }}
+
+                                <img class="country" :src="`/img/${parsedProduct.icon}`" alt="">
+                            </li>
+                        </ul>
+
                     </div>
+                </div>
+                <div class="socials">
 
-                    <h1 class="title">Leche {{ parsedProduct.name }}</h1>
-                    
-                    <ul>
-                        <li>
-                            <strong>
-                                Tipo:
+                    <h2>
+                        Compartir en:
+                    </h2>
 
-                            </strong>
-                            {{ parsedProduct.type }}
-                        </li>
-
-                        <li>
-                            <strong>
-                                Peso: 
-                            </strong>
-                            {{ parsedProduct.weight }}
-                        </li>
-
-                        <li>
-                            <strong>
-                                País: 
-                            </strong>
-                            {{ parsedProduct.country }} 
-
-                            <img class="country" :src="`/img/${ parsedProduct.icon}`" alt="">
-                        </li>
-                    </ul>
-
-                    <div class="socials">
-                        
-                        <h2>
-                            Compartir en:
-                        </h2>
-
+                    <div class="buttons">
                         <a href="https://www.facebook.com/branzafoods/" target="_blank" class="icon-link">
                             <font-awesome-icon :icon="['fab', 'facebook-f']" class="icons" />
                         </a>
@@ -90,8 +94,8 @@ const emitPopUp=()=>{
                             class="icon-link">
                             <font-awesome-icon :icon="['fab', 'x-twitter']" class="icons" />
                         </a>
-
                     </div>
+
                 </div>
             </div>
         </div>
@@ -123,9 +127,19 @@ const emitPopUp=()=>{
     -webkit-backdrop-filter: blur(19.5px);
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
+
+}
+
+.product {
+    filter: drop-shadow(10px 15px 20px rgba(0, 0, 0, 0.7));
+}
+
+.card .info {
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 img {
@@ -135,24 +149,24 @@ img {
 .title {
     border-radius: 15px;
     line-height: 48px;
-    padding: 15px;
-    background: white;
-    color: #31439b
+    padding: 10px 0px 10px 0px !important;
+    color: white;
 }
 
 .text-side {
     width: 50%;
-    height: 70%;
+    height: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    gap: 25px;
 }
 
 .text-side h1 {
-    font-size: 45pt;
+    font-size: 40pt;
     font-weight: 900;
     text-align: center;
+
 }
 
 .text-side ul li {
@@ -162,6 +176,23 @@ img {
 
 strong {
     font-weight: 900;
+}
+
+.socials {
+    position: absolute;
+    top: 85%;
+    left: 60%;
+    font-size: small;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.socials .buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .socials .icons {
@@ -199,9 +230,10 @@ strong {
     display: block;
 }
 
-.country{
+.country {
     width: 20px;
 }
+
 .none {
     display: none;
 }
@@ -210,29 +242,34 @@ strong {
     .card {
         width: 90%;
     }
-    .title{
+
+    .title {
         font-size: 40pt !important;
     }
-    .text-side{
+
+    .text-side {
         font-size: 14pt !important;
-        
+
     }
-    .text-side ul li{
+
+    .text-side ul li {
         font-size: 14pt !important;
-    
+
     }
-    
+
 }
 
 @media (max-width: 650px) {
-    .title{
+    .title {
         font-size: 24pt !important;
     }
-    .text-side{
+
+    .text-side {
         font-size: 14pt !important;
-        
+
     }
-    .text-side ul li{
+
+    .text-side ul li {
         font-size: 14pt !important;
 
     }

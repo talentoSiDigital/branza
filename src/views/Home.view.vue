@@ -12,20 +12,22 @@ import Cookies from '../components/Cookies.vue'
     <div>
 
 
-        <!-- <Banner />
-                <Productos />
-                <Nosotros />
-                <Mision/>
-                <Contacto  /> -->
-                <WhatsappButton /> 
-                <Banner />
-                
-                <Cookies /> 
+        <!-- <WhatsappButton />
+        <Banner />
+        <Cookies />
         <Productos v-motion-slide-visible-left />
         <Nosotros v-motion-slide-visible-left />
         <Mision v-motion-slide-visible-left />
         <Contacto v-motion-slide-visible-left />
-        <Footer v-motion-slide-visible-left />
+        <Footer v-motion-slide-visible-left /> -->
+        <WhatsappButton />
+        <Banner />
+        <Cookies />
+        <Productos  />
+        <Nosotros  />
+        <Mision  />
+        <Contacto  />
+        <Footer />
     </div>
 </template>
 

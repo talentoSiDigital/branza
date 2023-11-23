@@ -1,12 +1,12 @@
 <script setup>
 
-const {fillColor,reverse} = defineProps(['fillColor','reverse'])
+const {fillColor,Bg} = defineProps(['fillColor','Bg'])
 
 </script>
 
 
 <template>
-    <div class="wave">
+    <div class="wave" :style="['background',Bg]">
         <svg :class="reverse" class="wave-svg" id="visual" viewBox="0 0 1200 200" width="1200" height="200"
             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
             <path
@@ -37,6 +37,9 @@ const {fillColor,reverse} = defineProps(['fillColor','reverse'])
 .wave .wave-svg{
     transform: scaleX(3);
 }
+
+
+
 
 .reverse{
     transform: rotate(180deg) ;
