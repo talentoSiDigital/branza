@@ -15,7 +15,6 @@ const {order,bg} = defineProps(['order','bg'])
             </header>
         </div>
         <div class="img-side" :style="['background',bg]">
-            <img src="../assets/img/layout.jpg" alt="section-img">
         </div>
     </div>
 </template>
