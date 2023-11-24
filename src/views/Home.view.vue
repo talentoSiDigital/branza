@@ -1,9 +1,7 @@
 <script setup>
 import Banner from '../components/Banner.vue'
 import Productos from '../components/Productos.vue'
-import Nosotros from '../components/Nosotros.vue'
-import Mision from '../components/Mision.vue'
-import Contacto from '../components/Contacto.vue'
+
 import WhatsappButton from '../components/WhatsappButton.vue'
 import Cookies from '../components/Cookies.vue'
 import Aliados from '../components/Aliados.vue'
@@ -25,7 +23,6 @@ import Aliados from '../components/Aliados.vue'
         <Banner />
         <Cookies />
         <Productos  />
-        <Mision  />
         <Aliados  />
         <Contacto  />
         <Footer />

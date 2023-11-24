@@ -13,15 +13,15 @@ import ImageBanner from '../partials/ImageBanner.vue'
             <div class="bubble dark-blue">
                 <header>
                     <font-awesome-icon :icon="['fas', 'industry']" class="icon blue" />
-                    <h3>Fabricar y comercializar</h3>
-                    <p>productos alimenticios de la más alta calidad <br> que cubran las expectativas de los consumidores
+                    <h2>Fabricar y comercializar</h2>
+                    <p>productos alimenticios de la <strong>más alta calidad</strong> <br> que cubran las expectativas de los consumidores
                     </p>
                 </header>
                 <header>
                     <font-awesome-icon :icon="['fas', 'hands-holding-circle']" class="icon blue" />
 
-                    <h3>Optimizar recursos</h3>
-                    <p>y cumplir con las expectativas del cliente, de esta manera <br>contribuir con el desarrollo económico y social del país</p>
+                    <h2>Optimizar recursos</h2>
+                    <p>y cumplir con las expectativas del cliente, de esta manera <br>contribuir con el <strong>desarrollo económico y social</strong> del país</p>
                 </header>
             </div>
 
@@ -37,14 +37,14 @@ import ImageBanner from '../partials/ImageBanner.vue'
                 <div class="bubble dark-blue">
                     <header>
                         <font-awesome-icon :icon="['fas', 'award']" class="icon2 blue" />
-                        <h3>Consolidar los logros</h3>
-                        <p>para ser reconocida en el campo empresarial<br> como una importante empresa pionera en la <br> venta y manufactura de alimentos.
+                        <h2>Consolidar los logros</h2>
+                        <p>para ser reconocida en el campo empresarial<br> como una <strong>importante empresa pionera</strong> en la <br> venta y manufactura de alimentos.
                         </p>
                     </header>
                     <header>
                         <font-awesome-icon :icon="['fas', 'circle-check']" class="icon blue" />
-                        <h3>Compromiso con la seguridad alimentaria</h3>
-                        <p>Garantizando así una óptima calidad de los productos<br> comercializados y elaborados para satisfacción <br> de nuestros clientes</p>
+                        <h2>Compromiso con la seguridad alimentaria</h2>
+                        <p>Garantizando así una <strong>óptima calidad</strong> de los productos<br> comercializados y elaborados para satisfacción <br> de nuestros clientes</p>
                     </header>
                 </div>
 
@@ -161,7 +161,7 @@ header {
 
 
 
-h3 {
+h2 {
     font-weight: 900;
 }
 

@@ -3,11 +3,11 @@ import WaveAnimated from '../components/svgComponents/WaveAnimated.vue'
 import IconCard from '../partials/IconCard.vue'
 import BG from '../components/svgComponents/BG-1.vue'
 import ImageBanner2 from '../partials/ImageBanner2.vue'
+import Mision from '../components/Mision.vue'
 
 import 'vue3-carousel/dist/carousel.css'
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
 import { onMounted, onUnmounted, ref, watch } from 'vue'
-import Parallaxy from '@lucien144/vue3-parallaxy';
 
 </script>
 
@@ -17,12 +17,12 @@ import Parallaxy from '@lucien144/vue3-parallaxy';
             <div class="frame video-frame">
 
                 <video width="320" height="220" autoplay loop muted class="video-banner">
-                    <source src="/img/video-banner.mp4" type="video/mp4">
+                    <source src="/img/video-banner-2.mp4" type="video/mp4">
 
                 </video>
                 <div class="video-text-side">
                     <header>
-                        <h3>Conoce a Branza</h3>
+                        <h3>Conoce a </h3>
                         <img src="/img/logo.png" alt="branza-logo-big" class="logo-banner">
                     </header>
                   
@@ -98,41 +98,8 @@ import Parallaxy from '@lucien144/vue3-parallaxy';
         <WaveAnimated fillColor="white" reverse="#33baed" />
 
 
-        <div class="box ">
-
-            <div class="box-container img-overlay mision">
-
-                <div class="content box-header">
-                    <header>
-                        <h4>Misión</h4>
-                        <p>
-                            Fabricar y comercializar productos alimenticios de la más alta calidad que cubran las
-                            expectativas de los consumidores, optimizando recursos y cumpliendo con las expectativas del
-                            cliente, de esta manera contribuir al desarrollo económico y social del país.
-                        </p>
-                    </header>
-                </div>
-
-            </div>
-
-            <div class="box-container img-overlay vision">
-
-                <div class="content box-header">
-                    <header>
-                        <h4>Visión</h4>
-                        <p>
-                            Consolidar los logros para ser reconocida en el campo empresarial como una importante empresa
-                            pionera en la venta y manufactura de alimentos, comprometida con la seguridad alimentaria,
-                            garantizando así una óptima calidad de los productos comercializados y elaborados para
-                            satisfacción de nuestros clientes
-                        </p>
-                    </header>
-                </div>
-
-            </div>
-
-        </div>
-
+        <Mision  />
+       
     </div>
 </template>
 
@@ -202,7 +169,7 @@ import Parallaxy from '@lucien144/vue3-parallaxy';
     flex-direction: column;
     align-items: center;
     justify-content: flex-end   ;
-    gap: 20%;
+    gap: 23%;
 }
 .video-text-side header{
     display: flex;
@@ -291,19 +258,8 @@ import Parallaxy from '@lucien144/vue3-parallaxy';
     border-radius: 15px;
 }
 
-.mision {
-    border-radius: 15px;
-    background-image: url('/img/productos.png');
-    color: white;
 
-}
 
-.vision {
-    border-radius: 15px;
-    background-image: url('/img/mision.png');
-    color: white;
-
-}
 
 .img-overlay::after {
     border-radius: 15px;

@@ -10,19 +10,19 @@ import ContactForm from '../components/ContactForm.vue'
 
 <template>
     <div class="contacto">
-        <ImageBanner img="contacto" title="Contacto"/>
+        <ImageBanner img="contacto" title="Contacto" />
 
         <div class="content">
             <div class="text-area">
 
-                <p>Ponte en contacto con nosotros a través de los canales que te ofrecemos, o envíanos un mensaje directo a nuestro correo. ¡Nos encantaría leerte!</p>
+                <h3>Estamos aquí para ayudarte. Completa el siguiente formulario para que podamos entrar en contacto lo antes posible.</h3>
 
 
 
-            </div>
-            <div class="time-line">
+        </div>
+        <div class="time-line">
 
-                    <!-- <div class="splash">
+            <!-- <div class="splash">
                         <splash color="#00adef" class="medium" />
                         <div class="text-splash ">
                             <header class="white">
@@ -33,21 +33,30 @@ import ContactForm from '../components/ContactForm.vue'
                                 <div class="line">
                                     <font-awesome-icon :icon="['fas', 'phone']" class="icon " />
                                     <h5>(58) 212-000-0000</h5>
-                                </div>
-                                <div class="line">
-                                    <font-awesome-icon :icon="['fas', 'location-dot']" class="icon2" />
-                                    <h5>284 Royal, New Jersey</h5>
-                                </div>
+                                    </div>
+                                    <div class="line">
+                                        <font-awesome-icon :icon="['fas', 'location-dot']" class="icon2" />
+                                        <h5>284 Royal, New Jersey</h5>
+                                    </div>
 
 
-                            </header>
-                        </div>
-                    </div> -->
+                                </header>
+                            </div>
+                        </div> -->
                 <div class="frame frame-glass">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3923.0198343323214!2d-66.82497922422601!3d10.499102364246271!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2a597652590ec7%3A0x7fbbed0fb5069750!2sBranza!5e0!3m2!1ses!2sve!4v1700755744999!5m2!1ses!2sve" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3923.0198343323214!2d-66.82497922422601!3d10.499102364246271!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2a597652590ec7%3A0x7fbbed0fb5069750!2sBranza!5e0!3m2!1ses!2sve!4v1700755744999!5m2!1ses!2sve"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-                   
-                <ContactForm class="form" />
+
+                <ContactForm class="form">
+                    <template #title>
+
+                        <h2>Déjanos un mensaje</h2>
+
+                    </template>
+                </ContactForm>
 
             </div>
         </div>
@@ -55,8 +64,6 @@ import ContactForm from '../components/ContactForm.vue'
 </template>
 
 <style scoped>
-
-
 .form {
     width: 40%;
     box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.15);
@@ -181,10 +188,11 @@ import ContactForm from '../components/ContactForm.vue'
     gap: 10px;
     margin-top: 15px;
 }
-.frame-glass{
+
+.frame-glass {
     border: 3px solid #31439b;
-    background: rgba(31,38,135,0.75);
-    box-shadow: 5px 5px 25px 0px rgba(31,38,135,0.75);
+    background: rgba(31, 38, 135, 0.75);
+    box-shadow: 5px 5px 25px 0px rgba(31, 38, 135, 0.75);
     backdrop-filter: blur(19.5px);
     -webkit-backdrop-filter: blur(19.5px);
     border-radius: 10px;
@@ -205,7 +213,10 @@ import ContactForm from '../components/ContactForm.vue'
     text-shadow: 5px 5px 6px rgba(0, 0, 0, 0.6);
 
 }
-
+h3{
+    font-size: 22px;
+    font-weight: 400;
+}
 
 @media (max-width: 1100px) {
     .time-line {

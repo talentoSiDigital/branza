@@ -41,61 +41,39 @@ const emitPopUp = () => {
 
                     <div class="text-side">
 
-                        <div class="close">
-                            <font-awesome-icon @click="emitPopUp" :icon="['fas', 'xmark']" class="close" />
-                        </div>
-
-                        <h1 class="title">Leche  {{ parsedProduct.name }}</h1>
+                        <font-awesome-icon @click="emitPopUp" :icon="['fas', 'xmark']" class="close" />
+                        
+                        <h1 class="title">Leche <br>{{ parsedProduct.name }}</h1>
 
                         <ul>
-                            <li>
-                                <strong>
-                                    Tipo:
+                            <li><strong> Tipo:</strong>{{ parsedProduct.type }}</li>
 
-                                </strong>
-                                {{ parsedProduct.type }}
-                            </li>
+                            <li><strong>Peso:</strong>{{ parsedProduct.weight }}</li>
 
                             <li>
-                                <strong>
-                                    Peso:
-                                </strong>
-                                {{ parsedProduct.weight }}
-                            </li>
-
-                            <li>
-                                <strong>
-                                    País:
-                                </strong>
-                                {{ parsedProduct.country }}
-
+                                <strong>País:</strong>{{ parsedProduct.country }}
                                 <img class="country" :src="`/img/${parsedProduct.icon}`" alt="">
                             </li>
+                            <li> <h4 class="">Compartir en:</h4> </li>
+                            <li class="socials">
+
+                                <a href="https://www.facebook.com/branzafoods/" target="_blank" class="icon-link">
+                                       <font-awesome-icon :icon="['fab', 'facebook-f']" class="icons" />
+                                    </a>
+
+                                    <a href="https://www.instagram.com/branzafoods" target="_blank" class="icon-link">
+                                        <font-awesome-icon :icon="['fab', 'instagram']" class="icons" />
+                                    </a>
+
+                                    <a href="https://twitter.com/i/flow/login?redirect_after_login=%2Fbranzafoods"
+                                        target="_blank" class="icon-link">
+
+                                        <font-awesome-icon :icon="['fab', 'x-twitter']" class="icons" />
+                                    </a>
+        
+                            </li>
                         </ul>
-
                     </div>
-                </div>
-                <div class="socials">
-
-                    <h2>
-                        Compartir en:
-                    </h2>
-
-                    <div class="buttons">
-                        <a href="https://www.facebook.com/branzafoods/" target="_blank" class="icon-link">
-                            <font-awesome-icon :icon="['fab', 'facebook-f']" class="icons" />
-                        </a>
-
-                        <a href="https://www.instagram.com/branzafoods" target="_blank" class="icon-link">
-                            <font-awesome-icon :icon="['fab', 'instagram']" class="icons" />
-                        </a>
-
-                        <a href="https://twitter.com/i/flow/login?redirect_after_login=%2Fbranzafoods" target="_blank"
-                            class="icon-link">
-                            <font-awesome-icon :icon="['fab', 'x-twitter']" class="icons" />
-                        </a>
-                    </div>
-
                 </div>
             </div>
         </div>
@@ -103,7 +81,6 @@ const emitPopUp = () => {
 </template>
 
 <style scoped>
-
 .pop-up-card {
     color: white;
     position: fixed;
@@ -112,7 +89,7 @@ const emitPopUp = () => {
     width: 100%;
     height: 100%;
     background-color: #33baed;
-    z-index: 100 ;
+    z-index: 100;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -153,7 +130,7 @@ img {
     line-height: 48px;
     padding: 10px 0px 10px 0px !important;
     color: #31439b;
-   
+
 }
 
 .text-side {
@@ -165,7 +142,7 @@ img {
     gap: 25px;
 }
 
-.text-side h1 {
+h1{
     font-size: 40pt;
     font-weight: 900;
     text-align: center;
@@ -182,28 +159,22 @@ strong {
 }
 
 .socials {
-    position: absolute;
-    top: 85%;
-    left: 60%;
     font-size: small;
-    text-align: center;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+    gap: 15px;
     color: #31439b;
 
 }
-.socials .buttons{
+
+.socials .buttons {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
 .socials .icons {
     width: 25px;
     height: 25px;
-    padding: 15px;
     border-radius: 15px;
     transition: 0.4s ease-in-out;
     color: #31439b;
@@ -211,8 +182,7 @@ strong {
 }
 
 .socials .icons:hover {
-    background: #31439b;
-    color: white;
+    color: #18214f;
 }
 
 .close {

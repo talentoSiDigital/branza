@@ -5,10 +5,12 @@
 <template>
     <form action="" class="contact-form">
         <div class="form-header">
+            <header>
+                <slot name="title">
 
-            <h2>Déjanos un mensaje</h2>
+                </slot>
 
-
+            </header>
 
         </div>
         <div class="form">
@@ -22,7 +24,7 @@
                 <input type="text" class="form-control" id="phone" placeholder="Telefono">
             </div>
             <div class="form-group">
-                <textarea class=" textarea" placeholder="Escribe tu mensaje" id="message" rows="7" cols="44"></textarea>
+                <textarea class=" textarea" placeholder="Escribe tu mensaje" id="message"></textarea>
             </div>
             <div class="form-group">
                 <button>Enviar</button>
@@ -32,14 +34,15 @@
 </template>
 
 <style scoped>
-
-
-
 .form-group {
     margin-top: 10px;
     display: flex;
     gap: 5px;
 }
+header{
+    color: #31439b;
+}
+
 
 .form-group .form-control {
     width: 100%;
@@ -52,12 +55,11 @@
 
 
 .textarea {
-    min-width: 97%;
-    max-width: 97%;
-    min-height: 130px;
-    max-height: 130px;
+    width: 100%;
+    height: 150px;
+    resize: none;
     padding: 5px;
-    border-radius: 2%;
+    border-radius: 15px;
     border: none;
     background: #e4e4e4;
     padding: 10px;
@@ -78,30 +80,34 @@ button:hover {
 }
 
 @media (max-width: 1100px) {
-    .form{
+    .form {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         width: 90%;
     }
-  .form-group{
-    flex-direction: column;
-  }
-  .form-group .form-control {
-    width: 90vw;
-    margin: 3px 0px;
-    height: 45px;
-}
-.textarea{
-    max-width: 88vw;
-    min-width: 88vw;
-    
-  }
-  button{
-    width: 90vw;
-    margin: 3px 0px;
-  }
+
+    .form-group {
+        flex-direction: column;
+    }
+
+    .form-group .form-control {
+        width: 90vw;
+        margin: 3px 0px;
+        height: 45px;
+    }
+
+    .textarea {
+        max-width: 88vw;
+        min-width: 88vw;
+
+    }
+
+    button {
+        width: 90vw;
+        margin: 3px 0px;
+    }
 }
 </style>
 
