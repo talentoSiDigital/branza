@@ -6,7 +6,7 @@ const navStatus = ref('close')
 const navFull = ref('nav-close')
 const responsiveNavDetail = ref('deactivate-details')
 
-
+console.log("1")
 const navChange = () => {
     navStatus.value === 'close' ? navStatus.value = 'open' : navStatus.value = 'close'
     navFull.value === 'nav-close' ? navFull.value = 'nav-open' : navFull.value = 'nav-close'
@@ -197,7 +197,7 @@ const send = () => {
 nav {
     color: #273294  !important;
 }
-a:visited{
+a, a:visited{
     color: #273294  ;
 
 }
