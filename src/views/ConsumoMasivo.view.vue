@@ -23,9 +23,6 @@ const activatePopUp = (index) => {
     <PopUp :product="popUp" @activate-pop-up="activatePopUp" />
 
 
-    <div class="bg-container absolute">
-        <BG1 />
-    </div>
 
     <div class="navbar-adjust"></div>
 
@@ -64,6 +61,8 @@ const activatePopUp = (index) => {
     position: relative;
     z-index: 2;
     padding: 10px;
+    background: #33baed;
+
 }
 
 .products {

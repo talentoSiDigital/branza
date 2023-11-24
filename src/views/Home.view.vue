@@ -6,6 +6,7 @@ import Mision from '../components/Mision.vue'
 import Contacto from '../components/Contacto.vue'
 import WhatsappButton from '../components/WhatsappButton.vue'
 import Cookies from '../components/Cookies.vue'
+import Aliados from '../components/Aliados.vue'
 </script>
 
 <template>
@@ -24,8 +25,8 @@ import Cookies from '../components/Cookies.vue'
         <Banner />
         <Cookies />
         <Productos  />
-        <Nosotros  />
         <Mision  />
+        <Aliados  />
         <Contacto  />
         <Footer />
     </div>

@@ -6,7 +6,7 @@
     <form action="" class="contact-form">
         <div class="form-header">
 
-            <h2>Dejanos un mensaje</h2>
+            <h2>Déjanos un mensaje</h2>
 
 
 

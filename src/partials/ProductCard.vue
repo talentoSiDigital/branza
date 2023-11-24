@@ -31,7 +31,7 @@ const parsedProduct = ProductsList[product.product]
     flex-direction: column;
     gap: 15px;
     border: 3px solid #31439b;
-    background: rgba(51, 186, 237, .45);
+    background: rgba(255, 255, 255, .8);
     box-shadow: 5px 5px 25px 0px rgba(31,38,135,0.75);
     backdrop-filter: blur(19.5px);
     -webkit-backdrop-filter: blur(19.5px);

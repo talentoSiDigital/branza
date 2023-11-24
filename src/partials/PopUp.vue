@@ -45,7 +45,7 @@ const emitPopUp = () => {
                             <font-awesome-icon @click="emitPopUp" :icon="['fas', 'xmark']" class="close" />
                         </div>
 
-                        <h1 class="title">Leche {{ parsedProduct.name }}</h1>
+                        <h1 class="title">Leche  {{ parsedProduct.name }}</h1>
 
                         <ul>
                             <li>
@@ -103,6 +103,7 @@ const emitPopUp = () => {
 </template>
 
 <style scoped>
+
 .pop-up-card {
     color: white;
     position: fixed;
@@ -110,8 +111,8 @@ const emitPopUp = () => {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 1000;
+    background-color: #33baed;
+    z-index: 100 ;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -119,9 +120,9 @@ const emitPopUp = () => {
 
 .card {
     width: 50%;
-    height: 80%;
+    height: 75%;
     border: 3px solid #31439b;
-    background: rgba(51, 186, 237, .45);
+    background: rgba(255, 255, 255, .6);
     box-shadow: 5px 5px 25px 0px rgba(31, 38, 135, 0.75);
     backdrop-filter: blur(19.5px);
     -webkit-backdrop-filter: blur(19.5px);
@@ -140,6 +141,7 @@ const emitPopUp = () => {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #31439b;
 }
 
 img {
@@ -150,7 +152,8 @@ img {
     border-radius: 15px;
     line-height: 48px;
     padding: 10px 0px 10px 0px !important;
-    color: white;
+    color: #31439b;
+   
 }
 
 .text-side {
@@ -188,6 +191,8 @@ strong {
     justify-content: center;
     align-items: center;
     gap: 10px;
+    color: #31439b;
+
 }
 .socials .buttons{
     display: flex;
@@ -201,11 +206,13 @@ strong {
     padding: 15px;
     border-radius: 15px;
     transition: 0.4s ease-in-out;
-    color: white;
+    color: #31439b;
+
 }
 
 .socials .icons:hover {
     background: #31439b;
+    color: white;
 }
 
 .close {

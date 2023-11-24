@@ -13,9 +13,7 @@ import BG from './svgComponents/BG-1.vue'
                         <p>La mejor selección</p>
                         <p><strong>de productos lácteos</strong></p>
                     </header>
-                    <p class="text-box"> Distribuimos y vendemos productos alimenticios de alta calidad a precios
-                        accesibles, a
-                        todos los niveles sociales en Venezuela</p>
+                    <p class="text-box"> Distribuimos y vendemos productos alimenticios de alta calidad a precios accesibles, a  todos los niveles sociales en Venezuela</p>
                 </div>
                 <img src="/img/milk.png" alt="branza-illustration" class="bounce2">
             </div>
@@ -69,7 +67,7 @@ img {
 }
 
 .bounce2 {
-    animation: bounce2 2s ease infinite;
+    animation: bounce2 4s ease infinite;
 }
 
 @keyframes bounce2 {

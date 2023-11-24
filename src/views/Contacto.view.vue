@@ -12,7 +12,7 @@ import ContactForm from '../components/ContactForm.vue'
 
                     <h1>Contacta con nosotros</h1>
 
-                    <h4>Queremos saber más de tí</h4>
+                    <h4>Queremos saber más de ti</h4>
 
                 </header>
                 <div class="info-container">
@@ -38,7 +38,7 @@ import ContactForm from '../components/ContactForm.vue'
 
             <div class="socials">
 
-                <h3>Siguenos en nuestras redes</h3>
+                <h3>Síguenos en nuestras redes</h3>
                 <div class="buttons">
                     <a href="https://www.facebook.com/branzafoods/" target="_blank" class="icon-link">
                         <font-awesome-icon :icon="['fab', 'facebook-f']" class="icons" />

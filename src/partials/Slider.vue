@@ -1,9 +1,28 @@
 <script setup>
-import 'vue3-carousel/dist/carousel.css'
-import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
 import { onMounted, onUnmounted, ref, watch } from 'vue'
 
+import 'vue3-carousel/dist/carousel.css'
+import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
+
+import PopUp from '../partials/PopUp.vue'
 import products from '../products.json'
+
+
+
+
+const popUp = ref(0)
+
+const activatePopUp = (index) => {
+
+    if(popUp.value == 0){
+        popUp.value = index
+    } else {
+        popUp.value = 0
+    }
+    
+}
+
+
 
 const breakpoints = {
     500:{
@@ -29,6 +48,7 @@ const breakpoints = {
 <template>
     <div class="slider">
         <div class="slider-container">
+            <PopUp :product="popUp" @activate-pop-up="activatePopUp" class="fixed"/>
 
             <Carousel  
                 class="carousel-container" 
@@ -38,7 +58,7 @@ const breakpoints = {
                 >
                 <Slide v-for="(key,index) in products" :key="index">
 
-                    <div class="normal">
+                    <div class="normal" @click="activatePopUp(index)">
 
                         <div class="card">
                             <div class="img">
@@ -67,6 +87,10 @@ const breakpoints = {
 </template>
 
 <style scoped>
+.fixed{
+    position: fixed;
+    z-index: 100 ;
+}
 .slider-container {
     display: flex;
     align-items: center;

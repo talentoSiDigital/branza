@@ -10,7 +10,7 @@ import ImageBanner from '../partials/ImageBanner.vue'
         <ImageBanner img="productos" title="Misión" />
 
         <div class="text-box ">
-            <div class="bubble ">
+            <div class="bubble dark-blue">
                 <header>
                     <font-awesome-icon :icon="['fas', 'industry']" class="icon blue" />
                     <h3>Fabricar y comercializar</h3>
@@ -21,9 +21,7 @@ import ImageBanner from '../partials/ImageBanner.vue'
                     <font-awesome-icon :icon="['fas', 'hands-holding-circle']" class="icon blue" />
 
                     <h3>Optimizar recursos</h3>
-                    <p>y cumplir con las expectativas del cliente, de esta manera <br>contribuir con el desarrollo economico
-                        y
-                        social del pais</p>
+                    <p>y cumplir con las expectativas del cliente, de esta manera <br>contribuir con el desarrollo económico y social del país</p>
                 </header>
             </div>
 
@@ -36,19 +34,17 @@ import ImageBanner from '../partials/ImageBanner.vue'
 
             <div class="text-box ">
 
-                <div class="bubble">
+                <div class="bubble dark-blue">
                     <header>
                         <font-awesome-icon :icon="['fas', 'award']" class="icon2 blue" />
                         <h3>Consolidar los logros</h3>
-                        <p>para ser reconocida en el campo empresarial<br> como una importante empresa pionera en la
-                            <br> venta y manufactura de alimentos.
+                        <p>para ser reconocida en el campo empresarial<br> como una importante empresa pionera en la <br> venta y manufactura de alimentos.
                         </p>
                     </header>
                     <header>
                         <font-awesome-icon :icon="['fas', 'circle-check']" class="icon blue" />
                         <h3>Compromiso con la seguridad alimentaria</h3>
-                        <p>garantizando asi una optima calidad de los productos<br> comercializados y elaborados para
-                            satisfaccion <br> de nuestros clientes</p>
+                        <p>Garantizando así una óptima calidad de los productos<br> comercializados y elaborados para satisfacción <br> de nuestros clientes</p>
                     </header>
                 </div>
 
@@ -144,6 +140,9 @@ img {
 .blue {
     background: #00adef;
     color: white;
+}
+.dark-blue{
+    color: #273294;
 }
 
 .white {

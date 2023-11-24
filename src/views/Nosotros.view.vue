@@ -7,11 +7,31 @@ import ImageBanner2 from '../partials/ImageBanner2.vue'
 import 'vue3-carousel/dist/carousel.css'
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
 import { onMounted, onUnmounted, ref, watch } from 'vue'
+import Parallaxy from '@lucien144/vue3-parallaxy';
 
 </script>
 
 <template>
     <div class="frames-container">
+       
+            <div class="frame video-frame">
+
+                <video width="320" height="220" autoplay loop muted class="video-banner">
+                    <source src="/img/video-banner.mp4" type="video/mp4">
+
+                </video>
+                <div class="video-text-side">
+                    <header>
+                        <h3>Conoce a Branza</h3>
+                        <img src="/img/logo.png" alt="branza-logo-big" class="logo-banner">
+                    </header>
+                  
+                    <font-awesome-icon :icon="['fas', 'angles-down']" class="icon-down bounce2" />
+
+                </div>
+            </div>
+
+
 
         <div class="frame ">
 
@@ -22,9 +42,9 @@ import { onMounted, onUnmounted, ref, watch } from 'vue'
                         ¿Quiénes Somos?
                     </h3>
                     <h5>
-                        Somos una empresa fundada en 2012 nos dedicamos a la distribución e importación de materias
-                        primas en el mercado venezolano,
-                        brindando a todos nuestros clientes el servicio y asesoría técnica requerida.
+                        Somos una empresa fundada en 2012, nos dedicamos a la distribución e importación de materia primas
+                        en el mercado venezolano, brindando a todos nuestros clientes el servicio y asesoría técnica
+                        requerida.
                     </h5>
                 </header>
 
@@ -33,8 +53,8 @@ import { onMounted, onUnmounted, ref, watch } from 'vue'
             <div class="img-side small ">
 
                 <Carousel class="carousel-container " :wrap-around="true" :autoplay="1500" :items-to-show="1">
-                    <Slide v-for="slide in 13" :key="slide">
-                        <img :src="`/img/personas-${slide}.jpg`" :alt="slide" class="slider-img-frame">
+                    <Slide v-for="slide in 5" :key="slide">
+                        <img :src="`/img/personas-${slide}.png`" :alt="slide" class="slider-img-frame">
                     </Slide>
                 </Carousel>
 
@@ -67,7 +87,7 @@ import { onMounted, onUnmounted, ref, watch } from 'vue'
                         <img :src="`/img/${slide}.jpg`" :alt="slide" class="slider-img">
 
                     </Slide>
-                   
+
 
                 </Carousel>
 
@@ -84,13 +104,11 @@ import { onMounted, onUnmounted, ref, watch } from 'vue'
 
                 <div class="content box-header">
                     <header>
-                        <h4>Mision</h4>
+                        <h4>Misión</h4>
                         <p>
                             Fabricar y comercializar productos alimenticios de la más alta calidad que cubran las
-                            expectativas
-                            de los consumidores, optimizando recursos y cumpliendo con las expectativas del cliente, de esta
-                            manera contribuir al desarrollo económico y social del país.
-
+                            expectativas de los consumidores, optimizando recursos y cumpliendo con las expectativas del
+                            cliente, de esta manera contribuir al desarrollo económico y social del país.
                         </p>
                     </header>
                 </div>
@@ -100,14 +118,13 @@ import { onMounted, onUnmounted, ref, watch } from 'vue'
             <div class="box-container img-overlay vision">
 
                 <div class="content box-header">
-                    <header >
+                    <header>
                         <h4>Visión</h4>
                         <p>
                             Consolidar los logros para ser reconocida en el campo empresarial como una importante empresa
                             pionera en la venta y manufactura de alimentos, comprometida con la seguridad alimentaria,
                             garantizando así una óptima calidad de los productos comercializados y elaborados para
-                            satisfacción
-                            de nuestros clientes
+                            satisfacción de nuestros clientes
                         </p>
                     </header>
                 </div>
@@ -120,18 +137,92 @@ import { onMounted, onUnmounted, ref, watch } from 'vue'
 </template>
 
 <style scoped>
+.logo-banner{
+    width: 400px;
+}
+.bounce2 {
+    animation: bounce2 2s ease infinite;
+}
+
+@keyframes bounce2 {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-20px);
+    }
+
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+.navbar-adjust {
+    height: 100px;
+}
+
+.video-frame {
+
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  
+}
+
+.video-banner {
+ min-height: 130vh;
+ min-width: 100vw;
+ max-width: 100vw;
+
+}
+.icon-down{
+    font-size: 3rem;
+}
+
+.video-text-side {
+    color: white;
+    border-radius: 15px;
+    content: '';
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;  
+
+    background: rgba(49, 67, 155, 0.40);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end   ;
+    gap: 20%;
+}
+.video-text-side header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .frame-container {
     display: flex;
     justify-content: center;
     height: 70vh;
     position: relative;
     z-index: 5;
-    padding:20px 40px 0px 0px;
+    padding: 20px 40px 0px 0px;
 }
 
 .slider-img {
     width: 100%;
-    border-radius:15px ;
+    border-radius: 15px;
 
 }
 
@@ -151,9 +242,11 @@ import { onMounted, onUnmounted, ref, watch } from 'vue'
 .carousel-container {
     width: 70%;
 }
-.slider{
+
+.slider {
     height: 90%;
 }
+
 .border {
     border: 1px solid black;
 }
@@ -174,8 +267,9 @@ import { onMounted, onUnmounted, ref, watch } from 'vue'
 .left {
     align-items: end;
 }
+
 .left header h4,
-.left header p{
+.left header p {
     text-align: right;
 
 }
@@ -238,6 +332,7 @@ import { onMounted, onUnmounted, ref, watch } from 'vue'
     z-index: 2;
 }
 
+
 .box {
     width: 100%;
     height: fit-content;
@@ -251,7 +346,7 @@ import { onMounted, onUnmounted, ref, watch } from 'vue'
 .box .box-container {
     width: 30%;
     display: flex;
-    
+
     gap: 15px;
 
 }
@@ -363,8 +458,15 @@ h5 {
 
 
 @media (max-width:800px) {
+    .navbar-adjust {
+        display: none;
+    }
+
     .frame {
         flex-direction: column;
+    }
+    .video-frame{
+        align-items: end !important;
     }
 
     h3 {
@@ -390,4 +492,5 @@ h5 {
         flex-direction: column;
     }
 
-}</style>
+}
+</style>

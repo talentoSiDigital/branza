@@ -12,15 +12,16 @@ import ImageBanner from '../partials/ImageBanner.vue'
         
         
       
-            <ImageBanner img="productos" title="Productos"/>
+            <ImageBanner img="productos" title="Productos" />
 
 
 
-        <Slider />
+        <Slider  />
     </div>
 </template>
 
 <style scoped>
+
 .productos {
     height:fit-content;
     margin-bottom: 10px;

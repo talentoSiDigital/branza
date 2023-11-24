@@ -15,9 +15,7 @@ import ContactForm from '../components/ContactForm.vue'
         <div class="content">
             <div class="text-area">
 
-                <p>Ponte en contacto con nosotros a traves de los canales que te ofrecemos, o envianos un mensaje directo a
-                    nuestro
-                    correo. Nos encantaria leerte!</p>
+                <p>Ponte en contacto con nosotros a través de los canales que te ofrecemos, o envíanos un mensaje directo a nuestro correo. ¡Nos encantaría leerte!</p>
 
 
 

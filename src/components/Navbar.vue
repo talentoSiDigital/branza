@@ -208,7 +208,7 @@ a:visited{
     justify-content: space-between;
     padding: 15px;
     position: fixed;
-    z-index: 50;
+    z-index: 20;
     background: white;
     width: 98%;
 
