@@ -1,5 +1,4 @@
 <script setup>
-import { ref } from "vue";
 import ProductsList from "../products.json"
 const product = defineProps(["product"])
 const parsedProduct = ProductsList[product.product]

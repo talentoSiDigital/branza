@@ -155,8 +155,6 @@ const send = () => {
                 </router-link>
 
 
-
-
                 <!-- <router-link to="/elaboraciones" class="nav-item" @click="navChange">
 
                     Elaboraciones

@@ -128,25 +128,8 @@ const breakpoints = {
     font-size: 17px;
 }
 
-.big-img {
-    width: 145px !important;
-}
-
-.arrow {
-    background: #273294;
-    width: 20px;
-}
-
-.button {
-    font-size: 90pt;
-}
-
 .normal {
     display: flex;
-}
-
-.red {
-    background: red !important;
 }
 
 </style>

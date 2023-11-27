@@ -3,30 +3,22 @@ import { ref, watch } from "vue";
 
 import ProductsList from '../products-small.json'
 
-
 const emit = defineEmits(['activate-pop-up'])
-
 const product = defineProps(["product"])
+
 const referenceProduct = ref(product.product)
 const showClass = ref("show")
 
-const close = () => {
-    referenceProduct.value = 0
-
-}
-
 let parsedProduct = ProductsList[product.product]
-
-
-watch(product, () => {
-    referenceProduct.value = product.product
-    parsedProduct = ProductsList[product.product]
-})
 
 const emitPopUp = () => {
     emit('activate-pop-up', 0)
 }
 
+watch(product, () => {
+    referenceProduct.value = product.product
+    parsedProduct = ProductsList[product.product]
+})
 </script>
 
 <template>
@@ -56,32 +48,28 @@ const emitPopUp = () => {
                                 País: {{ parsedProduct.country }}
                                 <img class="country" src="/img/venezuela.png" alt="venezuela-icon">
                             </li>
+                            
+                            <li> <h4>Compartir en:</h4> </li>
+                            <li class="socials">
 
+                                <a href="https://www.facebook.com/branzafoods/" target="_blank" class="icon-link">
+                                       <font-awesome-icon :icon="['fab', 'facebook-f']" class="icons" />
+                                    </a>
+
+                                    <a href="https://www.instagram.com/branzafoods" target="_blank" class="icon-link">
+                                        <font-awesome-icon :icon="['fab', 'instagram']" class="icons" />
+                                    </a>
+
+                                    <a href="https://twitter.com/i/flow/login?redirect_after_login=%2Fbranzafoods"
+                                        target="_blank" class="icon-link">
+
+                                        <font-awesome-icon :icon="['fab', 'x-twitter']" class="icons" />
+                                    </a>
+        
+                            </li>
+                         
                         </ul>
 
-                        <div class="socials">
-
-                            <h2>
-                                Compartir en:
-                            </h2>
-
-                            <div class="buttons">
-                                <a href="https://www.facebook.com/branzafoods/" target="_blank" class="icon-link">
-                                    <font-awesome-icon :icon="['fab', 'facebook-f']" class="icons" />
-                                </a>
-
-                                <a href="https://www.instagram.com/branzafoods" target="_blank" class="icon-link">
-                                    <font-awesome-icon :icon="['fab', 'instagram']" class="icons" />
-                                </a>
-
-                                <a href="https://twitter.com/i/flow/login?redirect_after_login=%2Fbranzafoods"
-                                    target="_blank" class="icon-link">
-                                    <font-awesome-icon :icon="['fab', 'x-twitter']" class="icons" />
-                                </a>
-                            </div>
-
-                        </div>
-                     
                     </div>
                 </div>
             </div>
@@ -118,9 +106,6 @@ const emitPopUp = () => {
 
 }
 
-.product {
-    filter: drop-shadow(10px 15px 20px rgba(0, 0, 0, 0.7));
-}
 
 .card .info {
     width: 100%;
@@ -170,29 +155,24 @@ strong {
 }
 
 .socials {
-    position: absolute;
-    top: 85%;
-    left: 60%;
     font-size: small;
-    text-align: center;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+    gap: 15px;
     color: #31439b;
+    margin-top: 10px;
+
 
 }
 
 .socials .buttons {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
 .socials .icons {
     width: 25px;
     height: 25px;
-    padding: 15px;
     border-radius: 15px;
     transition: 0.4s ease-in-out;
     color: #31439b;
@@ -200,8 +180,8 @@ strong {
 }
 
 .socials .icons:hover {
-    background: #31439b;
-    color: white;
+    color: #18214f;
+
 }
 
 .close {
@@ -251,6 +231,9 @@ strong {
     .text-side ul li {
         font-size: 14pt !important;
 
+    }
+    .socials{
+        margin-top: 20px !important;
     }
 
 }

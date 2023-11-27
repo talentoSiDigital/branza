@@ -3,6 +3,8 @@ import productsData from '../products.json'
 import ProductCard from '../partials/ProductCard.vue'
 import PopUp from '../partials/PopUp.vue'
 import BG1 from '../components/svgComponents/BG-1.vue'
+
+
 import { ref } from 'vue';
 
 const popUp = ref(0)
@@ -47,12 +49,12 @@ const activatePopUp = (index) => {
 <style scoped>
 .navbar-adjust {
     height: 100px;
+    background: #33baed
 }
 
 .grid {
     display: flex;
     justify-content: center;
-
 }
 
 .industrial {
@@ -63,13 +65,11 @@ const activatePopUp = (index) => {
 }
 
 .products {
-
     display: grid;
     width: 80%;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1rem;
     place-items: center;
-
 }
 
 h1 {
@@ -78,13 +78,10 @@ h1 {
     font-weight: 600;
     margin-bottom: 1rem;
 }
-
-
 .absolute {
     position: absolute;
     z-index: 1;
 }
-
 .bg-container {
     height: 100vh;
     width: 100%;
@@ -93,5 +90,6 @@ h1 {
 .white-text {
     color: white;
 }
+
 </style>
 

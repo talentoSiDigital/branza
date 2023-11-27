@@ -12,6 +12,5 @@ import Contacto from '../components/Contacto.vue'
     height: 50px;
 }
 
-
 </style>
 

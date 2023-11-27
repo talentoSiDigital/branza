@@ -52,7 +52,7 @@ const breakpoints = {
                 >
                 <Slide v-for="(key,index) in aliados" :key="index">
 
-                    <a href="www.facebook.com" class="card">
+                    <a href="#" class="card">
                         
                         <img :src="`/img/${key}`" :alt="key">
 

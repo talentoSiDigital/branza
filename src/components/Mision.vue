@@ -10,71 +10,53 @@ import ImageBanner from '../partials/ImageBanner.vue'
         <ImageBanner img="productos" title="Misión" />
 
         <div class="text-box ">
+
             <div class="bubble dark-blue">
+
                 <header>
                     <font-awesome-icon :icon="['fas', 'industry']" class="icon blue" />
                     <h2>Fabricar y comercializar</h2>
                     <p>productos alimenticios de la <strong>más alta calidad</strong> <br> que cubran las expectativas de los consumidores
                     </p>
                 </header>
+
                 <header>
                     <font-awesome-icon :icon="['fas', 'hands-holding-circle']" class="icon blue" />
 
                     <h2>Optimizar recursos</h2>
                     <p>y cumplir con las expectativas del cliente, de esta manera <br>contribuir con el <strong>desarrollo económico y social</strong> del país</p>
                 </header>
-            </div>
 
+            </div>
 
         </div>
 
         <ImageBanner img="mision" title="Visión" />
 
-     
+        <div class="text-box ">
 
-            <div class="text-box ">
+            <div class="bubble dark-blue">
 
-                <div class="bubble dark-blue">
-                    <header>
-                        <font-awesome-icon :icon="['fas', 'award']" class="icon2 blue" />
-                        <h2>Consolidar los logros</h2>
+                <header>
+                    <font-awesome-icon :icon="['fas', 'award']" class="icon2 blue" />
+                       <h2>Consolidar los logros</h2>
                         <p>para ser reconocida en el campo empresarial<br> como una <strong>importante empresa pionera</strong> en la <br> venta y manufactura de alimentos.
                         </p>
-                    </header>
-                    <header>
-                        <font-awesome-icon :icon="['fas', 'circle-check']" class="icon blue" />
-                        <h2>Compromiso con la seguridad alimentaria</h2>
-                        <p>Garantizando así una <strong>óptima calidad</strong> de los productos<br> comercializados y elaborados para satisfacción <br> de nuestros clientes</p>
-                    </header>
-                </div>
+                </header>
 
+                <header>
+                    <font-awesome-icon :icon="['fas', 'circle-check']" class="icon blue" />
+                    <h2>Compromiso con la seguridad alimentaria</h2>
+                    <p>Garantizando así una <strong>óptima calidad</strong> de los productos<br> comercializados y elaborados para satisfacción <br> de nuestros clientes</p>
+                </header>
 
             </div>
 
-        
+        </div>        
     </div>
 </template>
 
 <style scoped>
-.contact {
-    height: 90vh;
-    color: #273294;
-}
-
-.main-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-
-.img-container {
-    width: 90%;
-    height: 250px;
-    overflow: hidden;
-    border-radius: 10px;
-    background: linear-gradient(90deg, rgba(0, 173, 239, 1) 0%, rgba(0, 251, 244, 1) 50%, rgba(0, 173, 239, 1) 100%);
-}
 
 img {
     width: 100%;
@@ -85,22 +67,10 @@ img {
     height: 250px;
 }
 
-.text-box .mission {
-
-    transform: translateY(-80px);
-}
-
-.mission-header {
-    color: white;
-    text-shadow: 5px 5px 6px rgba(0, 0, 0, 0.6);
-
-}
-
 .text-box h1 {
     text-align: center;
 
 }
-
 
 .bubble {
     display: flex;
@@ -109,12 +79,6 @@ img {
     height: 100%;
 }
 
-.bubble-2 {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    height: 100%;
-}
 
 .bubble header {
     display: flex;
@@ -159,8 +123,6 @@ header {
     text-align: center;
 }
 
-
-
 h2 {
     font-weight: 900;
 }
@@ -170,18 +132,14 @@ h2 {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        gap: 25px;
+        padding: 20px 0px;
     }
 
     .text-box {
         height: fit-content;
     }
-
-    .mission header {
-        transform: translateY(50px);
-
-    }
-
-
+  
 }
 </style>
 

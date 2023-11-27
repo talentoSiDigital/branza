@@ -8,7 +8,7 @@ import { Vue3Lottie } from 'vue3-lottie'
     <div class="frame video-frame">
 
         <video width="320" height="220" autoplay loop muted class="video-banner">
-            <source src="/img/video-banner.mp4" type="video/mp4">
+            <source src="/img/video-banner.mp4" type="video/mp4" class="video">
 
         </video>
         <div class="video-text-side">
@@ -151,6 +151,9 @@ img {
     }
 }
 
+
+
+
 @media (max-width: 1100px) {
 
 
@@ -172,7 +175,9 @@ img {
         font-weight: normal;
         font-size: 40pt;
     }
-
+    .video-banner{
+        min-width: 1500px;
+    }
 
 }
 </style>

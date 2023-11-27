@@ -1,8 +1,5 @@
 <script setup>
-
 const {img,title} = defineProps(['img','title'])
-
-
 
 </script>
 

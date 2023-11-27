@@ -5,22 +5,15 @@ import ProductsList from "../products.json"
 
 const emit = defineEmits(['activate-pop-up'])
 const product = defineProps(["product"])
+
 const referenceProduct = ref(product.product)
 const showClass = ref("show")
 
-const close = () => {
-    referenceProduct.value = 0
-
-}
-
 let parsedProduct = ProductsList[product.product]
-
 
 watch(product, () => {
     referenceProduct.value = product.product
     parsedProduct = ProductsList[product.product]
-
-
 })
 
 const emitPopUp = () => {
@@ -54,7 +47,8 @@ const emitPopUp = () => {
                                 <strong>País:</strong>{{ parsedProduct.country }}
                                 <img class="country" :src="`/img/${parsedProduct.icon}`" alt="">
                             </li>
-                            <li> <h4 class="">Compartir en:</h4> </li>
+                            
+                            <li> <h4>Compartir en:</h4> </li>
                             <li class="socials">
 
                                 <a href="https://www.facebook.com/branzafoods/" target="_blank" class="icon-link">
@@ -163,6 +157,8 @@ strong {
     display: flex;
     gap: 15px;
     color: #31439b;
+    margin-top: 10px;
+
 
 }
 
@@ -233,12 +229,12 @@ strong {
         font-size: 14pt !important;
 
     }
-
+  
 }
 
 @media (max-width: 650px) {
     .title {
-        font-size: 24pt !important;
+        font-size: 32pt !important;
     }
 
     .text-side {

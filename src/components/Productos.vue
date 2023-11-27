@@ -9,13 +9,7 @@ import ImageBanner from '../partials/ImageBanner.vue'
 
 <template>
     <div class="productos">
-        
-        
-      
-            <ImageBanner img="productos" title="Productos" />
-
-
-
+        <ImageBanner img="productos" title="Productos" />
         <Slider  />
     </div>
 </template>

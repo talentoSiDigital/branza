@@ -45,7 +45,7 @@ const activatePopUp = (index) => {
 
 <style scoped>
 .navbar-adjust {
-
+    background: #33baed;
     height: 100px;
 }
 
@@ -62,11 +62,9 @@ const activatePopUp = (index) => {
     z-index: 2;
     padding: 10px;
     background: #33baed;
-
 }
 
 .products {
-
     display: grid;
     width: 80%;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -82,17 +80,6 @@ h1 {
     margin-bottom: 1rem;
 }
 
-
-.absolute {
-    position: absolute;
-    z-index: 1;
-}
-
-.bg-container {
-    height: 100vh;
-    width: 100%;
-    overflow: hidden;
-}
 .white-text {
     color: white;
 }

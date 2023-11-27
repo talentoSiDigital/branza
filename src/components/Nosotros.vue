@@ -9,7 +9,6 @@ import BG from './svgComponents/BG-1.vue'
     <div class="nosotros">
         <BG class="bg" svg-type="second" />
 
-
         <div class="nosotros-container">
             <ImageBanner img="sobrenosotros" />
 

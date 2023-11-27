@@ -1,13 +1,9 @@
 <script setup>
 import WaveAnimated from '../components/svgComponents/WaveAnimated.vue'
-import IconCard from '../partials/IconCard.vue'
-import BG from '../components/svgComponents/BG-1.vue'
-import ImageBanner2 from '../partials/ImageBanner2.vue'
 import Mision from '../components/Mision.vue'
 
 import 'vue3-carousel/dist/carousel.css'
-import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
-import { onMounted, onUnmounted, ref, watch } from 'vue'
+import { Carousel, Slide, Pagination} from 'vue3-carousel'
 
 </script>
 
@@ -33,7 +29,7 @@ import { onMounted, onUnmounted, ref, watch } from 'vue'
 
 
 
-        <div class="frame ">
+        <div class="frame padding-frame ">
 
             <div class="text-side dark-blue-text">
 
@@ -107,39 +103,15 @@ import { onMounted, onUnmounted, ref, watch } from 'vue'
 .logo-banner{
     width: 400px;
 }
-.bounce2 {
-    animation: bounce2 2s ease infinite;
-}
-
-@keyframes bounce2 {
-
-    0%,
-    20%,
-    50%,
-    80%,
-    100% {
-        transform: translateY(0);
-    }
-
-    40% {
-        transform: translateY(-20px);
-    }
-
-    60% {
-        transform: translateY(-10px);
-    }
-}
 
 .navbar-adjust {
     height: 100px;
 }
 
 .video-frame {
-
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-  
 }
 
 .video-banner {
@@ -214,70 +186,7 @@ import { onMounted, onUnmounted, ref, watch } from 'vue'
     height: 90%;
 }
 
-.border {
-    border: 1px solid black;
-}
 
-.bg {
-    position: absolute;
-    z-index: 1;
-}
-
-.box-header {
-    padding: 45px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.left {
-    align-items: end;
-}
-
-.left header h4,
-.left header p {
-    text-align: right;
-
-}
-
-
-.box-header h4,
-.box-header p {
-    text-align: left;
-}
-
-.img-overlay {
-    position: relative;
-    z-index: 1;
-    text-align: center;
-    background-size: cover;
-    height: 40vh;
-    width: 45vw !important;
-
-    border-radius: 15px;
-}
-
-
-
-
-.img-overlay::after {
-    border-radius: 15px;
-    content: '';
-    position: absolute;
-    z-index: 5;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /* background: linear-gradient(0deg, rgba(51, 186, 237, 0.2) 0%, rgba(49, 67, 155, 1) 100%); */
-    background: rgba(49, 67, 155, 0.70);
-}
-
-.img-overlay .content {
-    position: relative;
-    z-index: 6;
-}
 
 .frame {
     width: 100%;
@@ -287,48 +196,6 @@ import { onMounted, onUnmounted, ref, watch } from 'vue'
     position: relative;
     z-index: 2;
 }
-
-
-.box {
-    width: 100%;
-    height: fit-content;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    padding: 40px 0px;
-}
-
-.box .box-container {
-    width: 30%;
-    display: flex;
-
-    gap: 15px;
-
-}
-
-.box .box-container ul {
-    width: 70%
-}
-
-.box .box-container ul li {
-    padding: 15px;
-}
-
-.card-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
-
-.box .text-side header {
-    width: 100%;
-    text-align: center;
-    padding: 40px;
-}
-
-
 
 .text-side {
     display: flex;
@@ -349,10 +216,29 @@ import { onMounted, onUnmounted, ref, watch } from 'vue'
     justify-content: center;
 }
 
-
-.card-flex {
-    display: flex;
+.bounce2 {
+    animation: bounce2 2s ease infinite;
 }
+
+@keyframes bounce2 {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-20px);
+    }
+
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
 
 
 /* GENERAL STYLING */
@@ -376,13 +262,7 @@ import { onMounted, onUnmounted, ref, watch } from 'vue'
     color: white;
 }
 
-.dark-glass {
-    background: rgba(49, 67, 155, 0.45);
-}
 
-.reverse {
-    flex-direction: row-reverse
-}
 
 .small {
     width: 60%;
@@ -444,9 +324,22 @@ h5 {
         height: fit-content;
     }
 
-    .box {
-        flex-direction: column;
+    .video-banner{
+        min-width: 1440px;
+        transform: translateX(100px);
     }
-
+    .padding-frame{
+        height: 100vh;
+        text-align: justify;
+    }
+    .frame-container{
+        height: 80vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        padding: 0px;
+        text-align: center;
+    }
 }
 </style>

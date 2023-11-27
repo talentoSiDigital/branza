@@ -15,11 +15,10 @@ import ContactForm from '../components/ContactForm.vue'
         <div class="content">
             <div class="text-area">
 
-                <h3>Estamos aquí para ayudarte. Completa el siguiente formulario para que podamos entrar en contacto lo antes posible.</h3>
+                <h3>Estamos aquí para ayudarte. Completa el siguiente formulario para que podamos entrar en contacto lo
+                antes posible.</h3>
 
-
-
-        </div>
+            </div>
         <div class="time-line">
 
             <!-- <div class="splash">
@@ -33,20 +32,20 @@ import ContactForm from '../components/ContactForm.vue'
                                 <div class="line">
                                     <font-awesome-icon :icon="['fas', 'phone']" class="icon " />
                                     <h5>(58) 212-000-0000</h5>
-                                    </div>
-                                    <div class="line">
-                                        <font-awesome-icon :icon="['fas', 'location-dot']" class="icon2" />
-                                        <h5>284 Royal, New Jersey</h5>
-                                    </div>
+                                        </div>
+                                        <div class="line">
+                                            <font-awesome-icon :icon="['fas', 'location-dot']" class="icon2" />
+                                            <h5>284 Royal, New Jersey</h5>
+                                        </div>
 
 
-                                </header>
-                            </div>
-                        </div> -->
+                                    </header>
+                                </div>
+                            </div> -->
                 <div class="frame frame-glass">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3923.0198343323214!2d-66.82497922422601!3d10.499102364246271!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2a597652590ec7%3A0x7fbbed0fb5069750!2sBranza!5e0!3m2!1ses!2sve!4v1700755744999!5m2!1ses!2sve"
-                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
 
@@ -68,27 +67,6 @@ import ContactForm from '../components/ContactForm.vue'
     width: 40%;
     box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.15);
     padding: 15px;
-}
-
-.main-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 40px;
-
-}
-
-.img-container {
-    width: 95%;
-    height: 200px;
-    overflow: hidden;
-    border-radius: 10px;
-    background: linear-gradient(90deg, rgba(0, 173, 239, 1) 0%, rgba(0, 251, 244, 1) 50%, rgba(0, 173, 239, 1) 100%);
-}
-
-.banner-img {
-    width: 100%;
-    transform: translateY(-25em);
 }
 
 .text-area {
@@ -123,71 +101,6 @@ import ContactForm from '../components/ContactForm.vue'
     position: relative;
 }
 
-.medium {
-    width: 150%;
-}
-
-.text-splash {
-    text-align: center;
-    position: relative;
-    z-index: 10
-}
-
-.text-splash header {
-    position: absolute;
-    top: -300px;
-    left: 135px;
-}
-
-.text-splash header h2 {
-    font-weight: 900;
-}
-
-.text-splash header p {
-    font-size: 10pt;
-}
-
-
-.blue {
-    color: #31439b;
-}
-
-.correct {
-    transform: translateY(-30px);
-}
-
-.correction-small {
-    transform: translateY(-15px);
-}
-
-.white {
-    color: white;
-}
-
-.icon {
-    height: 20px;
-    border-radius: 50%;
-    padding: 10px;
-    color: #00adef;
-    background: white;
-
-
-}
-
-.icon2 {
-    height: 20px;
-    border-radius: 50%;
-    padding: 10px 12px;
-    color: #00adef;
-    background: white
-}
-
-.line {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-top: 15px;
-}
 
 .frame-glass {
     border: 3px solid #31439b;
@@ -203,19 +116,17 @@ import ContactForm from '../components/ContactForm.vue'
     transition: 0.2s;
 }
 
-.mission {
-
-    transform: translateY(-40px);
-}
-
-.mission-header {
-    color: white;
-    text-shadow: 5px 5px 6px rgba(0, 0, 0, 0.6);
-
-}
-h3{
+h3 {
     font-size: 22px;
     font-weight: 400;
+    text-align: center;
+    width: 80%;
+
+}
+
+iframe {
+    width: 600px;
+    height: 450px;
 }
 
 @media (max-width: 1100px) {
@@ -230,9 +141,10 @@ h3{
         box-shadow: none;
     }
 
-    .splash {
-        transform: translateX(-100px);
+    iframe {
+        width: 70VW;
     }
+
 
 }
 </style>

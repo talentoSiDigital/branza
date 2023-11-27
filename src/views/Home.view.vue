@@ -9,19 +9,11 @@ import Aliados from '../components/Aliados.vue'
 
 <template>
     <div>
-
-
-        <!-- <WhatsappButton />
-        <Banner />
-        <Cookies />
-        <Productos v-motion-slide-visible-left />
-        <Nosotros v-motion-slide-visible-left />
-        <Mision v-motion-slide-visible-left />
-        <Contacto v-motion-slide-visible-left />
-        <Footer v-motion-slide-visible-left /> -->
         <WhatsappButton />
         <Banner />
         <Cookies />
+
+        
         <Productos  />
         <Aliados  />
         <Contacto  />
