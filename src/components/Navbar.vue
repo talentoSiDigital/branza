@@ -104,7 +104,7 @@ const send = () => {
                         <a href="https://www.instagram.com/branzafoods" target="_blank" class="socials">
                             <font-awesome-icon :icon="['fab', 'instagram']" />
                         </a>
-                        <a href="https://twitter.com/i/flow/login?redirect_after_login=%2Fbranzafoods" target="_blank"
+                        <a href="https://www.x.com/branzafoods" target="_blank"
                             class="socials">
                             <font-awesome-icon :icon="['fab', 'x-twitter']" />
                         </a>
@@ -179,7 +179,7 @@ const send = () => {
 
                     </a>
 
-                    <a href="https://twitter.com/i/flow/login?redirect_after_login=%2Fbranzafoods" target="_blank"
+                    <a href="https://www.x.com/branzafoods" target="_blank"
                         class="socials">
                         <font-awesome-icon :icon="['fab', 'x-twitter']" class="icons"/>
                     </a>
@@ -194,6 +194,10 @@ const send = () => {
 <style scoped>
 nav {
     color: #273294  !important;
+    position: fixed;
+    z-index: 20;
+    width: 98%;
+
 }
 a, a:visited{
     color: #273294  ;
@@ -205,10 +209,8 @@ a, a:visited{
     align-items: center;
     justify-content: space-between;
     padding: 15px;
-    position: fixed;
-    z-index: 20;
+    width: 100%;
     background: white;
-    width: 98%;
 
 }
 
@@ -351,7 +353,7 @@ p a:hover {
     min-width: 160px;
     width: 200px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+    z-index: 20;
     border-radius: 8px;
 }
 
@@ -391,7 +393,7 @@ p a:hover {
     position: fixed;
     top: 10px;
 
-    z-index: 99;
+    z-index: 20;
     width: 50px;
     height: 50px;
     padding: 5px;
@@ -473,11 +475,10 @@ p a:hover {
 .responsive-nav .navigate {
     display: flex;
     flex-direction: column;
-    position: fixed;
-    z-index: 98;
+
     background: #fff9f3ff;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     transition: all 0.5s ease-out;
 }
 

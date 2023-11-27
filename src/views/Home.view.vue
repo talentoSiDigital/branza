@@ -11,12 +11,11 @@ import Aliados from '../components/Aliados.vue'
     <div>
         <WhatsappButton />
         <Banner />
-        <Cookies />
+        <!-- <Cookies /> -->
 
         
         <Productos  />
         <Aliados  />
-        <Contacto  />
         <Footer />
     </div>
 </template>

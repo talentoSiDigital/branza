@@ -65,7 +65,21 @@ watch(product, () => {
                                     Volver
                                     <font-awesome-icon :icon="['fas', 'backward']" />
                                 </button>
-        
+                                <div class="items">
+                                    <a href="https://www.facebook.com/branzafoods/" target="_blank" class="share-container">
+                                        <font-awesome-icon :icon="['fab', 'facebook-f']" class="icons" />
+                                    </a>
+
+                                    <a href="https://www.instagram.com/branzafoods" target="_blank" class="share-container">
+                                        <font-awesome-icon :icon="['fab', 'instagram']" class="icons" />
+
+                                    </a>
+
+                                    <a href="https://www.x.com/branzafoods" target="_blank" class="share-container">
+                                        <font-awesome-icon :icon="['fab', 'x-twitter']" class="icons" />
+                                    </a>
+                                </div>
+
         
                             </li>
                          
@@ -144,15 +158,15 @@ img {
     font-size: 40pt;
     font-weight: 900;
     text-align: center;
-    border: 1px solid black;
-    width: 70%;
+
 
 }
 
 .text-side ul li {
-    font-size: 18pt;
+    font-size: 14pt;
     font-weight: 400;
     list-style-type: none;
+    padding: 3px 0px;
 
 }
 ul{
@@ -174,6 +188,17 @@ strong {
 
 }
 
+.items{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    border-radius: 10px;
+
+
+}
+
+
 .socials .buttons {
     display: flex;
     justify-content: space-between;
@@ -181,17 +206,20 @@ strong {
 }
 
 .socials .icons {
-    width: 25px;
-    height: 25px;
-    border-radius: 15px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
     transition: 0.4s ease-in-out;
     color: #31439b;
+    cursor: pointer;
+    padding: 5px 20px;
+    background: #f0f0f0;
 
 }
 
 .socials .icons:hover {
-    color: #18214f;
-
+    background-color: #13182e;
+    color: white;
 }
 
 .close {
@@ -260,6 +288,9 @@ button:hover {
     }
     .socials{
         margin-top: 20px !important;
+    }
+    .card .info{
+        flex-direction: column;
     }
 
 }

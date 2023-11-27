@@ -39,7 +39,7 @@ const breakpoints = {
 
 <template>
     <div class="aliados">
-        <ImageBanner img="sobrenosotros" title="Aliados Comerciales" />
+        <ImageBanner img="nosotros" title="Aliados Comerciales" />
 
         <div class="slider">
         <div class="slider-container">
@@ -75,6 +75,9 @@ const breakpoints = {
 </template>
 
 <style scoped>
+.aliados{
+    padding: 7vh 0px;
+}
 .fixed{
     position: fixed;
     z-index: 100 ;

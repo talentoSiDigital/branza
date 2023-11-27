@@ -25,29 +25,69 @@ const emitPopUp = () => {
 
 <template>
     <div v-if="referenceProduct != 0" class="container" :class="showClass">
-        <div class="pop-up-card">
+        <div class="pop-up-card-container">
 
-            <div class="card">
+            <div class="card-container">
 
                 <div class="info">
-                    <img :src="`/img/${parsedProduct.img}`" :alt="parsedProduct.name" class="product">
+
+                    <div class="img-side">
+
+                        <img :src="`/img/${parsedProduct.img}`" :alt="parsedProduct.name" class="product-img">
+
+                        <div class="share-container">
+                            <h4>Compartir en:</h4>
+
+                            <div class="share-links">
+                                <a href="https://www.facebook.com/branzafoods/" target="_blank" class="share-button">
+                                    <font-awesome-icon :icon="['fab', 'facebook-f']" class="share-icons" />
+                                </a>
+
+                                <a href="https://www.instagram.com/branzafoods" target="_blank" class="share-button">
+                                    <font-awesome-icon :icon="['fab', 'instagram']" class="share-icons" />
+
+                                </a>
+
+                                <a href="https://www.x.com/branzafoods" target="_blank" class="share-button">
+                                    <font-awesome-icon :icon="['fab', 'x-twitter']" class="share-icons" />
+                                </a>
+                            </div>
+
+                        </div>
+
+                    </div>
 
                     <div class="text-side">
 
-                       
-                        
                         <h1 class="title">Leche {{ parsedProduct.name }}</h1>
 
                         <ul>
-                            <li><strong> 🔹Tipo: </strong>{{ parsedProduct.type }}</li>
-
-                            <li><strong>🔹Peso: </strong>{{ parsedProduct.weight }}</li>
-
                             <li>
-                                <strong>🔹País: </strong>{{ parsedProduct.country }}
-                                <img class="country" :src="`/img/${parsedProduct.icon}`" alt="">
+                                <img src="/img/icono-2.png" alt="icono" class="icon-img">
+                                <div class="line-text">
+                                    <h2><strong> Presentación: </strong></h2>
+                                    <h3>Bolsa multipliego de papel Kraft con bolsa de polietileno interior de 25 kg.</h3>
+                                </div>
                             </li>
+
                             
+                            <li>
+                                <img src="/img/icono-1.png" alt="icono" class="icon-img">
+                                <div class="line-text">
+                                    <h2><strong> Características: </strong></h2>
+                                    <h3>{{parsedProduct.type}}</h3>
+                                </div>
+                            </li>
+                      
+                            <li>
+                                <img src="/img/icono-3.png" alt="icono" class="icon-img">
+                                <div class="line-text">
+                                    <h2><strong> País: </strong></h2>
+                                    <img :src="`/img/${parsedProduct.icon}`" alt="icono" class="icon-img">
+                                </div>
+                            </li>
+
+
                             <li class="socials">
 
                                 <button class="green">
@@ -59,10 +99,11 @@ const emitPopUp = () => {
                                     Volver
                                     <font-awesome-icon :icon="['fas', 'backward']" />
                                 </button>
-        
+
+
                             </li>
                         </ul>
-                        
+
                     </div>
                 </div>
             </div>
@@ -71,27 +112,21 @@ const emitPopUp = () => {
 </template>
 
 <style scoped>
-.pop-up-card {
+.pop-up-card-container {
     color: white;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: white; 
+    background-color: white;
     z-index: 40;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-
-.product {
-    filter: drop-shadow(10px 15px 20px rgba(0, 0, 0, 0.7));
-    max-width: 35vw;
-}
-
-.card .info {
+.card-container .info {
     width: 100%;
     height: 100%;
     display: flex;
@@ -100,9 +135,53 @@ const emitPopUp = () => {
     color: #31439b;
 }
 
-img {
-    width: 35%;
+.img-side {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 25px;
 }
+
+.img-side .product-img {
+    filter: drop-shadow(10px 15px 20px rgba(0, 0, 0, 0.7));
+    max-width: 300px;
+    min-width: 300px;
+
+}
+
+.share-container {
+    width: 100%;
+}
+
+.share-container h4 {
+    text-align: center;
+}
+
+.share-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.share-button {
+    height: 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: 0.4s ease-in-out;
+    color: #31439b;
+    cursor: pointer;
+    background: #f0f0f0;
+    padding: 10px;
+}
+
+.share-button:hover {
+
+    background: #31439b;
+    color: white;
+}
+
 
 .title {
     border-radius: 15px;
@@ -118,65 +197,69 @@ img {
     flex-direction: column;
     align-items: center;
     gap: 25px;
+    height: 90vh;
 }
 
-h1{
+h1 {
     font-size: 40pt;
     font-weight: 900;
     text-align: center;
 
 }
-
-.text-side ul li {
-    font-size: 18pt;
+h2{
+    font-size: 20pt;
+}
+h3{
+    font-size: 15pt;
     font-weight: 400;
-    list-style-type: none;
 }
 
+.text-side ul li {
+    font-size: 14pt;
+    font-weight: 400;
+    list-style-type: none;
+    padding: 3px 0px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 50px 0px;
+}
+.socials{
+    flex-direction: column;
+    width: 100%;
+}
+.icon-img{
+    width: 50px;
+    height: 50px;
+}
 ul{
     width: 100%;
 }
+
 strong {
     font-weight: 900;
 }
 
-.socials {
-    font-size: small;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    color: #31439b;
-    margin-top: 10px;
 
 
-}
 
-.socials .buttons {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
-.socials .icons {
-    width: 25px;
-    height: 25px;
-    border-radius: 15px;
+
+
+button {
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
     transition: 0.4s ease-in-out;
     color: #31439b;
-
-}
-
-.socials .icons:hover {
-    color: #18214f;
-}
-
-.close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 40px;
     cursor: pointer;
-    color: #31439b;
+    background: #f0f0f0;
+    width: 100%;
+}
+
+button:hover {
+    background: #31439b;
+    color: white;
 }
 
 
@@ -197,22 +280,11 @@ strong {
 .none {
     display: none;
 }
-button{
-    height: 40px;
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    transition: 0.4s ease-in-out;
-    color: #31439b;
-    cursor: pointer;
-}
 
-button:hover {
-    background: #31439b;
-    color: white;
-}
+
 
 @media (max-width: 1100px) {
-    .card {
+    .card-container {
         width: 90%;
     }
 
@@ -229,7 +301,15 @@ button:hover {
         font-size: 14pt !important;
 
     }
-  
+
+    .card-container .info {
+        flex-direction: column;
+    }
+
+    .product {
+        max-width: 15vw !important;
+    }
+
 }
 
 @media (max-width: 650px) {
@@ -246,6 +326,5 @@ button:hover {
         font-size: 14pt !important;
 
     }
-}
-</style>
+}</style>
 

@@ -18,7 +18,6 @@ import { Carousel, Slide, Pagination } from 'vue3-carousel'
             </video>
             <div class="video-text-side">
                 <header>
-                    <h3>Conoce a </h3>
                     <img src="/img/logo.png" alt="branza-logo-big" class="logo-banner">
                 </header>
 
@@ -66,9 +65,9 @@ import { Carousel, Slide, Pagination } from 'vue3-carousel'
 
                 <div class="text-side big ">
                     <header>
-                        <h4>
+                        <h3>
                             Nuestros productos
-                        </h4>
+                        </h3>
                         <h5>
                             están elaborados con ingredientes de la más alta calidad y se someten a estrictos controles de
                             calidad para garantizar su seguridad y frescura.
@@ -155,10 +154,11 @@ import { Carousel, Slide, Pagination } from 'vue3-carousel'
 .frame-container {
     display: flex;
     justify-content: center;
+    align-items: center;
     height: 70vh;
     position: relative;
     z-index: 5;
-    padding: 20px 40px 0px 0px;
+    padding: 0px 40px 60px 0px;
 }
 
 .slider-img {
@@ -279,19 +279,20 @@ img {
 }
 
 h3 {
-    font-size: 50pt;
+    font-size: 28pt;
     font-weight: 900;
+    margin-bottom: 15px;
 }
 
 h4 {
-    font-size: 30pt;
+    font-size: 24pt;
     font-weight: 900;
 
 }
 
 h5 {
     font-weight: 400;
-    font-size: 20pt;
+    font-size: 16pt;
 }
 
 

@@ -17,8 +17,8 @@
 <style scoped>
 .container{
     position: fixed;
-    top: 88vh;
-    left: 88vw;
+    top: 87%;
+    left: 93%;
     z-index: 25;
 }
 .fold-container{

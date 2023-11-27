@@ -13,6 +13,7 @@ import products from '../products.json'
 const popUp = ref(0)
 
 const activatePopUp = (index) => {
+    console.log('Funcion ejecutandose')
 
     if(popUp.value == 0){
         popUp.value = index
@@ -48,7 +49,7 @@ const breakpoints = {
 <template>
     <div class="slider">
         <div class="slider-container">
-            <PopUp :product="popUp" @activate-pop-up="activatePopUp" class="fixed"/>
+            <PopUp :product="popUp" @activate-pop-up="activatePopUp" />
 
             <Carousel  
                 class="carousel-container" 
