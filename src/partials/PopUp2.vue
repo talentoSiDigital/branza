@@ -37,34 +37,35 @@ watch(product, () => {
                         <ul>
 
                             <li>
-                                Tipo: {{ parsedProduct.type }}
+                                <strong>Tipo:</strong>
+                                 {{ parsedProduct.type }}
                             </li>
 
                             <li>
-                                Cantidad: {{ parsedProduct.weight }}
+                                <strong>Cantidad:</strong>
+
+                                 {{ parsedProduct.weight }}
                             </li>
 
                             <li>
-                                País: {{ parsedProduct.country }}
+                                <strong>País:</strong>
+
+                                 {{ parsedProduct.country }}
                                 <img class="country" src="/img/venezuela.png" alt="venezuela-icon">
                             </li>
-                            
-                            <li> <h4>Compartir en:</h4> </li>
+                     
                             <li class="socials">
 
-                                <a href="https://www.facebook.com/branzafoods/" target="_blank" class="icon-link">
-                                       <font-awesome-icon :icon="['fab', 'facebook-f']" class="icons" />
-                                    </a>
+                                <button class="green">
+                                    Contacto para Comprar
+                                    <font-awesome-icon :icon="['fab', 'whatsapp']" />
 
-                                    <a href="https://www.instagram.com/branzafoods" target="_blank" class="icon-link">
-                                        <font-awesome-icon :icon="['fab', 'instagram']" class="icons" />
-                                    </a>
-
-                                    <a href="https://twitter.com/i/flow/login?redirect_after_login=%2Fbranzafoods"
-                                        target="_blank" class="icon-link">
-
-                                        <font-awesome-icon :icon="['fab', 'x-twitter']" class="icons" />
-                                    </a>
+                                </button>
+                                <button @click="emitPopUp" class="blue">
+                                    Volver
+                                    <font-awesome-icon :icon="['fas', 'backward']" />
+                                </button>
+        
         
                             </li>
                          
@@ -85,14 +86,15 @@ watch(product, () => {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #33baed;
+    background-color: white; 
+
     z-index: 1000;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.card {
+/* .card {
     width: 50%;
     height: 80%;
     border: 3px solid #31439b;
@@ -104,7 +106,7 @@ watch(product, () => {
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
 
-}
+} */
 
 
 .card .info {
@@ -142,12 +144,19 @@ img {
     font-size: 40pt;
     font-weight: 900;
     text-align: center;
+    border: 1px solid black;
+    width: 70%;
 
 }
 
 .text-side ul li {
     font-size: 18pt;
     font-weight: 400;
+    list-style-type: none;
+
+}
+ul{
+    width: 70%;
 }
 
 strong {
@@ -157,6 +166,7 @@ strong {
 .socials {
     font-size: small;
     display: flex;
+    flex-direction: column;
     gap: 15px;
     color: #31439b;
     margin-top: 10px;
@@ -213,6 +223,22 @@ strong {
 .none {
     display: none;
 }
+
+button{
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: 0.4s ease-in-out;
+    color: #31439b;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #31439b;
+    color: white;
+}
+
+
 
 @media (max-width: 1100px) {
     .card {

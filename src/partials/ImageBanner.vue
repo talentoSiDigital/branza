@@ -49,6 +49,12 @@ img {
     color: white;
 }
 
+@media (max-width: 1100px) {
+    .BANNER-HEADER{
+        font-size: 25pt!important;
+    }
+}
+
 </style>
 
 

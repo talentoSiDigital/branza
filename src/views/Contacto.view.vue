@@ -5,6 +5,7 @@ import Contacto from '../components/Contacto.vue'
 <template>
     <div class="navbar-adjust"></div>
     <Contacto/>
+
 </template>
 
 <style scoped>

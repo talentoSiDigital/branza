@@ -27,7 +27,7 @@ import {
     faEnvelope,
     faPhone,
     faLocationDot,
-    faXmark, faAnglesDown
+    faXmark, faAnglesDown, faBackward
 } from '@fortawesome/free-solid-svg-icons'
 import { faFacebookF, faInstagram, faXTwitter, faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 
@@ -46,7 +46,7 @@ library.add(
     faPhone,
     faLocationDot,
     faXTwitter,
-    faXmark, faWhatsapp, faAnglesDown
+    faXmark, faWhatsapp, faAnglesDown, faBackward
 )
 
 

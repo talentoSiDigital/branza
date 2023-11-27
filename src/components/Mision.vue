@@ -139,6 +139,9 @@ h2 {
     .text-box {
         height: fit-content;
     }
+    .bubble header{
+        width: 80%;
+    }
   
 }
 </style>

@@ -12,8 +12,8 @@ import { Vue3Lottie } from 'vue3-lottie'
 
         </video>
         <div class="video-text-side">
-            <div class="banner">
-                <div class="text-area">
+            <div class="banner ">
+                <div class="text-area ">
                     <header>
                         <h2>Leche</h2>
                         <h2 class="thin">para toda</h2>
@@ -21,7 +21,9 @@ import { Vue3Lottie } from 'vue3-lottie'
                       
                     </header>
                 </div>
-                <img src="/img/logo-motion-2.gif" alt="branza-illustration">
+                <img src="/img/logo-motion-2.gif" alt="branza-illustration" >
+                <div class="img-crop ">
+                </div>
             </div>
 
             <font-awesome-icon :icon="['fas', 'angles-down']" class="icon-down bounce2" />
@@ -32,12 +34,15 @@ import { Vue3Lottie } from 'vue3-lottie'
 
 <style scoped>
 
-
+.border-debug{
+    border: 1px solid black;
+}
 
 .banner {
     display: flex;
     align-items: center;
     justify-content: center;
+  
 }
 
 .text-area {
@@ -52,6 +57,7 @@ import { Vue3Lottie } from 'vue3-lottie'
 
 .text-area header h2 {
     font-weight: 400;
+
     
 }
 
@@ -67,6 +73,7 @@ import { Vue3Lottie } from 'vue3-lottie'
 
 img {
     width: 40%;
+    border: none;
 }
 
 .bounce2 {
@@ -177,6 +184,9 @@ img {
     }
     .video-banner{
         min-width: 1500px;
+    }
+    .text-area header h2 {
+        font-size: 40pt;
     }
 
 }

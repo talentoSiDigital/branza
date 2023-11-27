@@ -3,29 +3,29 @@ import WaveAnimated from '../components/svgComponents/WaveAnimated.vue'
 import Mision from '../components/Mision.vue'
 
 import 'vue3-carousel/dist/carousel.css'
-import { Carousel, Slide, Pagination} from 'vue3-carousel'
+import { Carousel, Slide, Pagination } from 'vue3-carousel'
 
 </script>
 
 <template>
     <div class="frames-container">
-       
-            <div class="frame video-frame">
 
-                <video width="320" height="220" autoplay loop muted class="video-banner">
-                    <source src="/img/video-banner-2.mp4" type="video/mp4">
+        <div class="frame video-frame">
 
-                </video>
-                <div class="video-text-side">
-                    <header>
-                        <h3>Conoce a </h3>
-                        <img src="/img/logo.png" alt="branza-logo-big" class="logo-banner">
-                    </header>
-                  
-                    <font-awesome-icon :icon="['fas', 'angles-down']" class="icon-down bounce2" />
+            <video width="320" height="220" autoplay loop muted class="video-banner">
+                <source src="/img/video-banner-2.mp4" type="video/mp4">
 
-                </div>
+            </video>
+            <div class="video-text-side">
+                <header>
+                    <h3>Conoce a </h3>
+                    <img src="/img/logo.png" alt="branza-logo-big" class="logo-banner">
+                </header>
+
+                <font-awesome-icon :icon="['fas', 'angles-down']" class="icon-down bounce2" />
+
             </div>
+        </div>
 
 
 
@@ -94,13 +94,13 @@ import { Carousel, Slide, Pagination} from 'vue3-carousel'
         <WaveAnimated fillColor="white" reverse="#33baed" />
 
 
-        <Mision  />
-       
+        <Mision />
+
     </div>
 </template>
 
 <style scoped>
-.logo-banner{
+.logo-banner {
     width: 400px;
 }
 
@@ -115,12 +115,13 @@ import { Carousel, Slide, Pagination} from 'vue3-carousel'
 }
 
 .video-banner {
- min-height: 130vh;
- min-width: 100vw;
- max-width: 100vw;
+    min-height: 130vh;
+    min-width: 100vw;
+    max-width: 100vw;
 
 }
-.icon-down{
+
+.icon-down {
     font-size: 3rem;
 }
 
@@ -134,16 +135,17 @@ import { Carousel, Slide, Pagination} from 'vue3-carousel'
     left: 0;
     width: 100%;
     height: 100%;
-    overflow: hidden;  
+    overflow: hidden;
 
     background: rgba(49, 67, 155, 0.40);
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-end   ;
+    justify-content: flex-end;
     gap: 23%;
 }
-.video-text-side header{
+
+.video-text-side header {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -298,10 +300,15 @@ h5 {
         display: none;
     }
 
+    .logo-banner {
+        width: 300px;
+    }
+
     .frame {
         flex-direction: column;
     }
-    .video-frame{
+
+    .video-frame {
         align-items: end !important;
     }
 
@@ -324,15 +331,17 @@ h5 {
         height: fit-content;
     }
 
-    .video-banner{
-        min-width: 1440px;
+    .video-banner {
+        min-width: 1500px;
         transform: translateX(100px);
     }
-    .padding-frame{
+
+    .padding-frame {
         height: 100vh;
         text-align: justify;
     }
-    .frame-container{
+
+    .frame-container {
         height: 80vh;
         flex-direction: column;
         align-items: center;
@@ -341,5 +350,4 @@ h5 {
         padding: 0px;
         text-align: center;
     }
-}
-</style>
+}</style>

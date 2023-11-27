@@ -34,39 +34,35 @@ const emitPopUp = () => {
 
                     <div class="text-side">
 
-                        <font-awesome-icon @click="emitPopUp" :icon="['fas', 'xmark']" class="close" />
+                       
                         
-                        <h1 class="title">Leche <br>{{ parsedProduct.name }}</h1>
+                        <h1 class="title">Leche {{ parsedProduct.name }}</h1>
 
                         <ul>
-                            <li><strong> Tipo:</strong>{{ parsedProduct.type }}</li>
+                            <li><strong> 🔹Tipo: </strong>{{ parsedProduct.type }}</li>
 
-                            <li><strong>Peso:</strong>{{ parsedProduct.weight }}</li>
+                            <li><strong>🔹Peso: </strong>{{ parsedProduct.weight }}</li>
 
                             <li>
-                                <strong>País:</strong>{{ parsedProduct.country }}
+                                <strong>🔹País: </strong>{{ parsedProduct.country }}
                                 <img class="country" :src="`/img/${parsedProduct.icon}`" alt="">
                             </li>
                             
-                            <li> <h4>Compartir en:</h4> </li>
                             <li class="socials">
 
-                                <a href="https://www.facebook.com/branzafoods/" target="_blank" class="icon-link">
-                                       <font-awesome-icon :icon="['fab', 'facebook-f']" class="icons" />
-                                    </a>
+                                <button class="green">
+                                    Contacta para Comprar
+                                    <font-awesome-icon :icon="['fab', 'whatsapp']" />
 
-                                    <a href="https://www.instagram.com/branzafoods" target="_blank" class="icon-link">
-                                        <font-awesome-icon :icon="['fab', 'instagram']" class="icons" />
-                                    </a>
-
-                                    <a href="https://twitter.com/i/flow/login?redirect_after_login=%2Fbranzafoods"
-                                        target="_blank" class="icon-link">
-
-                                        <font-awesome-icon :icon="['fab', 'x-twitter']" class="icons" />
-                                    </a>
+                                </button>
+                                <button @click="emitPopUp" class="blue">
+                                    Volver
+                                    <font-awesome-icon :icon="['fas', 'backward']" />
+                                </button>
         
                             </li>
                         </ul>
+                        
                     </div>
                 </div>
             </div>
@@ -82,28 +78,17 @@ const emitPopUp = () => {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #33baed;
-    z-index: 100;
+    background-color: white; 
+    z-index: 40;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.card {
-    width: 50%;
-    height: 75%;
-    border: 3px solid #31439b;
-    background: rgba(255, 255, 255, .6);
-    box-shadow: 5px 5px 25px 0px rgba(31, 38, 135, 0.75);
-    backdrop-filter: blur(19.5px);
-    -webkit-backdrop-filter: blur(19.5px);
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-
-}
 
 .product {
     filter: drop-shadow(10px 15px 20px rgba(0, 0, 0, 0.7));
+    max-width: 35vw;
 }
 
 .card .info {
@@ -111,7 +96,7 @@ const emitPopUp = () => {
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     color: #31439b;
 }
 
@@ -123,7 +108,6 @@ img {
     border-radius: 15px;
     line-height: 48px;
     padding: 10px 0px 10px 0px !important;
-    color: #31439b;
 
 }
 
@@ -146,8 +130,12 @@ h1{
 .text-side ul li {
     font-size: 18pt;
     font-weight: 400;
+    list-style-type: none;
 }
 
+ul{
+    width: 100%;
+}
 strong {
     font-weight: 900;
 }
@@ -155,6 +143,7 @@ strong {
 .socials {
     font-size: small;
     display: flex;
+    flex-direction: column;
     gap: 15px;
     color: #31439b;
     margin-top: 10px;
@@ -187,12 +176,10 @@ strong {
     right: 10px;
     font-size: 40px;
     cursor: pointer;
-    color: white;
-}
-
-.close:hover {
     color: #31439b;
 }
+
+
 
 .active {
     display: block;
@@ -209,6 +196,19 @@ strong {
 
 .none {
     display: none;
+}
+button{
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: 0.4s ease-in-out;
+    color: #31439b;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #31439b;
+    color: white;
 }
 
 @media (max-width: 1100px) {
