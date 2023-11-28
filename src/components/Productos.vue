@@ -10,19 +10,15 @@ import ImageBanner from '../partials/ImageBanner.vue'
 <template>
     <div class="productos">
         <ImageBanner img="productos" title="Productos" />
-        <Slider  />
+        <Slider />
     </div>
 </template>
 
 <style scoped>
-
 .productos {
-    height:95vh;
     margin-bottom: 10px;
     color: #273294;
- 
 }
-
 
 .text-area {
     display: flex;
@@ -31,7 +27,7 @@ import ImageBanner from '../partials/ImageBanner.vue'
     justify-content: center;
     gap: 5px;
     padding: 10px;
-    
+
 }
 
 .text-area p {
@@ -47,7 +43,7 @@ import ImageBanner from '../partials/ImageBanner.vue'
         width: 80%;
         text-align: center;
     }
-    
+
 
 }
 </style>

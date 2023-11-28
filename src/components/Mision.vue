@@ -7,7 +7,7 @@ import ImageBanner from '../partials/ImageBanner.vue'
 
 <template>
     <div class="mision">
-        <ImageBanner img="productos" title="Misión" />
+        <ImageBanner img="mision" title="Misión" />
 
         <div class="text-box ">
 
@@ -31,7 +31,7 @@ import ImageBanner from '../partials/ImageBanner.vue'
 
         </div>
 
-        <ImageBanner img="mision" title="Visión" />
+        <ImageBanner img="vision" title="Visión" />
 
         <div class="text-box ">
 

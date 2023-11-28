@@ -39,7 +39,7 @@ const breakpoints = {
 
 <template>
     <div class="aliados">
-        <ImageBanner img="nosotros" title="Aliados Comerciales" />
+        <ImageBanner img="aliados" title="Aliados Comerciales" />
 
         <div class="slider">
         <div class="slider-container">

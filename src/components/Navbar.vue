@@ -579,5 +579,12 @@ p a:hover {
 
 
 }
+
+
+@media screen and (min-width: 1980px) {
+    nav{
+        width: 100%;
+    }
+}
 </style>
 

@@ -22,8 +22,7 @@ import { Vue3Lottie } from 'vue3-lottie'
                     </header>
                 </div>
                 <img src="/img/logo-motion-2.gif" alt="branza-illustration" >
-                <div class="img-crop ">
-                </div>
+        
             </div>
 
             <font-awesome-icon :icon="['fas', 'angles-down']" class="icon-down bounce2" />
@@ -42,7 +41,6 @@ import { Vue3Lottie } from 'vue3-lottie'
     display: flex;
     align-items: center;
     justify-content: center;
-  
 }
 
 .text-area {
@@ -189,6 +187,15 @@ img {
         font-size: 40pt;
     }
 
+}
+
+@media screen and (min-width: 1980px) {
+    .text-area header {
+        font-size: 80pt;
+    }
+    .banner{
+        height: 100vh;
+    }
 }
 </style>
 

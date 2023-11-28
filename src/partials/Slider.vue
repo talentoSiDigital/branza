@@ -94,7 +94,6 @@ const breakpoints = {
 }
 .slider-container {
     display: flex;
-    align-items: center;
     justify-content: center;
     overflow: hidden;
     width: 100%;

@@ -162,6 +162,7 @@ const emitPopUp = () => {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 10px;
 
 }
 
@@ -173,7 +174,7 @@ const emitPopUp = () => {
     color: #31439b;
     cursor: pointer;
     background: #f0f0f0;
-    padding: 10px;
+    padding: 10px 20px;
 }
 
 .share-button:hover {
