@@ -147,7 +147,6 @@ const emitPopUp = () => {
     filter: drop-shadow(10px 15px 20px rgba(0, 0, 0, 0.7));
     max-width: 300px;
     min-width: 300px;
-
 }
 
 .share-container {
@@ -163,7 +162,6 @@ const emitPopUp = () => {
     align-items: center;
     justify-content: center;
     gap: 10px;
-
 }
 
 .share-button {
