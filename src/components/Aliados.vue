@@ -9,7 +9,7 @@ const aliados = {
     "Formidable": "formidable-logo.png",
     "Magnalat": "magnalat-logo.png",
     "Purisima": "purisima-logo.png",
-    "US-Dairy": "us-dairy-logo.png"
+    "Adecoagro":"adecoagro-logo.png"
      
 }
 
@@ -52,12 +52,12 @@ const breakpoints = {
                 >
                 <Slide v-for="(key,index) in aliados" :key="index">
 
-                    <a href="#" class="card">
+                    <div class="card">
                         
                         <img :src="`/img/${key}`" :alt="key">
 
 
-                    </a>
+                    </div>
 
                 </Slide>
                 <template #addons>
