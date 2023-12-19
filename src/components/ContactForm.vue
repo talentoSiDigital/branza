@@ -1,4 +1,35 @@
 <script setup>
+import { ref } from 'vue';
+import router from '../router'
+import emailjs from '@emailjs/browser';
+
+const name = ref('')
+const message = ref('')
+const email = ref('')
+const phone = ref('')
+const subject = ref('')
+
+
+
+function sendEmail() {
+    emailjs.init("k8ykLNuaD05s3szif");
+    emailjs.send("service_7fp6zjo", "template_or8aocp", {
+        name: name.value,
+        message: message.value,
+        email: email.value,
+        phone: phone.value,
+        subject: subject.value,
+    })
+    .then(function (response){
+        console.log('success' + response.status + response.text)
+    },function(error) {
+       console.log('FAILED...', error);
+    })
+    
+    // router.push("/")
+
+}
+
 
 </script>
 
@@ -15,19 +46,19 @@
         </div>
         <div class="form">
             <div class="form-group">
-                <input type="text" class="form-control" id="name" placeholder="Nombre">
-                <input type="email" class="form-control" id="email" placeholder="Email">
+                <input type="text" class="form-control" id="name" placeholder="Nombre" v-model="name">
+                <input type="email" class="form-control" id="email" placeholder="Email" v-model="email">
             </div>
 
             <div class="form-group">
-                <input type="text" class="form-control" id="subject" placeholder="Asunto">
-                <input type="text" class="form-control" id="phone" placeholder="Telefono">
+                <input type="text" class="form-control" id="subject" placeholder="Asunto" v-model="subject">
+                <input type="text" class="form-control" id="phone" placeholder="Telefono" v-model="phone">
             </div>
             <div class="form-group">
-                <textarea class=" textarea" placeholder="Escribe tu mensaje" id="message"></textarea>
+                <textarea class=" textarea" placeholder="Escribe tu mensaje" id="message" v-model="message"></textarea>
             </div>
             <div class="form-group">
-                <button>Enviar</button>
+                <button  type="button" @click="sendEmail">Enviar</button>
             </div>
         </div>
     </form>
@@ -39,7 +70,8 @@
     display: flex;
     gap: 5px;
 }
-header{
+
+header {
     color: #31439b;
 }
 
