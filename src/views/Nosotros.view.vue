@@ -1,6 +1,7 @@
 <script setup>
 import WaveAnimated from '../components/svgComponents/WaveAnimated.vue'
 import Mision from '../components/Mision.vue'
+import WhatsappButton from '../components/WhatsappButton.vue'
 
 import 'vue3-carousel/dist/carousel.css'
 import { Carousel, Slide, Pagination } from 'vue3-carousel'
@@ -8,6 +9,8 @@ import { Carousel, Slide, Pagination } from 'vue3-carousel'
 </script>
 
 <template>
+    <WhatsappButton />
+
     <div class="frames-container">
 
         <div class="frame video-frame">
@@ -37,9 +40,10 @@ import { Carousel, Slide, Pagination } from 'vue3-carousel'
                         ¿Quiénes Somos?
                     </h3>
                     <h5>
-                        Somos una empresa fundada en 2012, nos dedicamos a la distribución e importación de materia primas
-                        en el mercado venezolano, brindando a todos nuestros clientes el servicio y asesoría técnica
-                        requerida.
+                        Somos una empresa fundada en 2012, nos dedicamos a la distribución e importación de 
+                        <strong>materias primas para el mercado venezolano, y la asesoría técnica requerida.</strong> Nuestros productos están elaborados con
+                        <strong>ingredientes de la más alta calidad y se someten a estrictos controles de calidad, frescura y seguridad alimentaria.</strong>
+
                     </h5>
                 </header>
 

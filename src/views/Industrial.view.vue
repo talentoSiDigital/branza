@@ -4,6 +4,7 @@ import ProductCard from '../partials/ProductCard.vue'
 import PopUp from '../partials/PopUp.vue'
 import BG1 from '../components/svgComponents/BG-1.vue'
 
+import WhatsappButton from '../components/WhatsappButton.vue'
 
 import { ref } from 'vue';
 
@@ -24,6 +25,7 @@ const activatePopUp = (index) => {
 <template>
     <PopUp :product="popUp" @activate-pop-up="activatePopUp"/>
 
+    <WhatsappButton />
  
     <div class="navbar-adjust"></div>
 

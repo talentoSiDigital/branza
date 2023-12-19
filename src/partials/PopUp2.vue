@@ -26,7 +26,33 @@ watch(product, () => {
         <div class="pop-up-card">
             <div class="card">
                 <div class="info">
-                    <img :src="`/img/${parsedProduct.img}`" :alt="parsedProduct.name">
+
+                    <div class="img-side">
+
+                        <img :src="`/img/${parsedProduct.img}`" :alt="parsedProduct.name" class="product-img">
+
+                        <div class="share-container">
+                            <h4>Compartir en:</h4>
+
+                            <div class="share-links">
+                                <a href="https://www.facebook.com/branzafoods/" target="_blank" class="share-button">
+                                    <font-awesome-icon :icon="['fab', 'facebook-f']" class="share-icons" />
+                                </a>
+
+                                <a href="https://www.instagram.com/branzafoods" target="_blank" class="share-button">
+                                    <font-awesome-icon :icon="['fab', 'instagram']" class="share-icons" />
+
+                                </a>
+
+                                <a href="https://www.x.com/branzafoods" target="_blank" class="share-button">
+                                    <font-awesome-icon :icon="['fab', 'x-twitter']" class="share-icons" />
+                                </a>
+                            </div>
+
+                        </div>
+
+                    </div>
+
                     <div class="text-side">
                         <div class="close">
                             <font-awesome-icon @click="emitPopUp" :icon="['fas', 'xmark']" class="close" />
@@ -35,56 +61,45 @@ watch(product, () => {
                         <h1 class="title">{{ parsedProduct.name }}</h1>
 
                         <ul>
-
                             <li>
-                                <strong>Tipo:</strong>
-                                 {{ parsedProduct.type }}
+                                <img src="/img/icono-2.png" alt="icono" class="icon-img">
+                                <div class="line-text">
+                                    <h2><strong> Presentación: </strong></h2>
+                                    <h3>Bolsa multipliego de papel Kraft con bolsa de polietileno interior de 25 kg.</h3>
+                                </div>
                             </li>
 
+                            
                             <li>
-                                <strong>Cantidad:</strong>
-
-                                 {{ parsedProduct.weight }}
+                                <img src="/img/icono-1.png" alt="icono" class="icon-img">
+                                <div class="line-text">
+                                    <h2><strong> Características: </strong></h2>
+                                    <h3>{{parsedProduct.type}}</h3>
+                                </div>
+                            </li>
+                      
+                            <li>
+                                <img src="/img/icono-3.png" alt="icono" class="icon-img">
+                                <div class="line-text">
+                                    <h2><strong> País: </strong></h2>
+                                    <img :src="`/img/${parsedProduct.icon}`" alt="icono" class="icon-img">
+                                </div>
                             </li>
 
-                            <li>
-                                <strong>País:</strong>
 
-                                 {{ parsedProduct.country }}
-                                <img class="country" src="/img/venezuela.png" alt="venezuela-icon">
-                            </li>
-                     
                             <li class="socials">
+                                <a href="https://wa.me/584142665125" class="green button">
+                                    Contacta para Comprar  <font-awesome-icon :icon="['fab', 'whatsapp']" />
 
-                                <button class="green">
-                                    Contacto para Comprar
-                                    <font-awesome-icon :icon="['fab', 'whatsapp']" />
-
-                                </button>
-                                <button @click="emitPopUp" class="blue">
+                                </a>
+                                <button @click="emitPopUp" class="blue button">
                                     Volver
                                     <font-awesome-icon :icon="['fas', 'backward']" />
                                 </button>
-                                <div class="items">
-                                    <a href="https://www.facebook.com/branzafoods/" target="_blank" class="share-container">
-                                        <font-awesome-icon :icon="['fab', 'facebook-f']" class="icons" />
-                                    </a>
 
-                                    <a href="https://www.instagram.com/branzafoods" target="_blank" class="share-container">
-                                        <font-awesome-icon :icon="['fab', 'instagram']" class="icons" />
 
-                                    </a>
-
-                                    <a href="https://www.x.com/branzafoods" target="_blank" class="share-container">
-                                        <font-awesome-icon :icon="['fab', 'x-twitter']" class="icons" />
-                                    </a>
-                                </div>
-
-        
                             </li>
-                         
                         </ul>
-
                     </div>
                 </div>
             </div>
@@ -100,7 +115,7 @@ watch(product, () => {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: white; 
+    background-color: white;
 
     z-index: 1000;
     display: flex;
@@ -108,34 +123,65 @@ watch(product, () => {
     justify-content: center;
 }
 
-/* .card {
-    width: 50%;
-    height: 80%;
-    border: 3px solid #31439b;
-    background: rgba(255, 255, 255, .6);
-
-    box-shadow: 5px 5px 25px 0px rgba(31, 38, 135, 0.75);
-    backdrop-filter: blur(19.5px);
-    -webkit-backdrop-filter: blur(19.5px);
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-
-} */
-
-
-.card .info {
-    width: 100%;
-    height: 100%;
+.img-side {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    gap: 25px;
+    height: 80%;
+
+}
+
+.img-side .product-img {
+    filter: drop-shadow(10px 15px 20px rgba(0, 0, 0, 0.7));
+    max-width: 300px;
+    min-width: 300px;
+}
+
+.share-container {
+    width: 100%;
+    height: 1%;
+}
+
+.share-container h4 {
+    text-align: center;
+}
+
+.share-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.share-button {
+    height: 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: 0.4s ease-in-out;
+    color: #31439b;
+    cursor: pointer;
+    background: #f0f0f0;
+    padding: 10px 20px;
+}
+
+.share-button:hover {
+
+    background: #31439b;
+    color: white;
+}
+
+.card .info {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
     color: #31439b;
 
 }
 
-img {
-    width: 35%;
-}
 
 .title {
     border-radius: 15px;
@@ -147,7 +193,7 @@ img {
 
 .text-side {
     width: 50%;
-    height: 50%;
+    /* height: 50%; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -155,70 +201,67 @@ img {
 }
 
 .text-side h1 {
-    font-size: 40pt;
+    font-size: 38pt;
     font-weight: 900;
     text-align: center;
 
-
 }
-
+.text-side h3{
+    font-size: 14pt;
+    font-weight: 400;
+}
 .text-side ul li {
     font-size: 14pt;
     font-weight: 400;
     list-style-type: none;
     padding: 3px 0px;
-
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0px;
+}
+.socials{
+    flex-direction: column;
+    width: 100%;
+}
+.icon-img{
+    width: 50px;
+    height: 50px;
 }
 ul{
-    width: 70%;
+    width: 100%;
 }
 
 strong {
     font-weight: 900;
 }
 
-.socials {
-    font-size: small;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    color: #31439b;
-    margin-top: 10px;
 
 
-}
-
-.items{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 5px;
-    border-radius: 10px;
 
 
-}
 
 
-.socials .buttons {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.socials .icons {
-    height: 30px;
+.button {
+    height: 40px;
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
     transition: 0.4s ease-in-out;
     color: #31439b;
     cursor: pointer;
-    padding: 5px 20px;
     background: #f0f0f0;
-
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    text-decoration: none;
+    font-size: medium;
 }
 
-.socials .icons:hover {
-    background-color: #13182e;
+.button:hover {
+    background: #31439b;
     color: white;
 }
 
@@ -252,7 +295,7 @@ strong {
     display: none;
 }
 
-button{
+button {
     height: 40px;
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
@@ -269,45 +312,54 @@ button:hover {
 
 
 @media (max-width: 1100px) {
-    .card {
+    .card-container {
         width: 90%;
+    }
+    .card-container .info{
+        justify-content: space-evenly;
     }
 
     .title {
-        font-size: 40pt !important;
+        font-size: 30pt !important;
     }
 
-    .text-side {
+    h2 {
         font-size: 14pt !important;
 
     }
 
-    .text-side ul li {
-        font-size: 14pt !important;
+    h3 {
+        font-size: 10pt !important;
 
     }
-    .socials{
-        margin-top: 20px !important;
+    .text-side{
+        gap: 0px;
+        justify-content: center;
     }
-    .card .info{
-        flex-direction: column;
+    .text-side ul li{
+         margin: 0px;
+    }
+    .product-img{
+        max-width: 180px !important;
+    min-width: 180px !important;
+    }
+    .button{
+        font-size: small;
+    }
+
+    .product {
+        max-width: 15vw !important;
     }
 
 }
 
 @media (max-width: 650px) {
     .title {
-        font-size: 24pt !important;
+        font-size: 26pt !important;
     }
-
-    .text-side {
-        font-size: 14pt !important;
-
-    }
-
-    .text-side ul li {
-        font-size: 14pt !important;
-
+    .product-img{
+        max-width: 140px !important;
+    min-width: 140px !important;
     }
 }
 </style>

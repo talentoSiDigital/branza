@@ -1,5 +1,6 @@
 <script setup>
 import TwoFrameSection from '../partials/TwoFrameSection.vue'
+import WhatsappButton from '../components/WhatsappButton.vue'
 
 import WaveAnimated from '../components/svgComponents/WaveAnimated.vue'
 
