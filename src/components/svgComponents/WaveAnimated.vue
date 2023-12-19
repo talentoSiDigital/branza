@@ -7,7 +7,7 @@ const {fillColor,Bg} = defineProps(['fillColor','Bg'])
 
 <template>
     <div class="wave" :style="['background',Bg]">
-        <svg :class="reverse" class="wave-svg" id="visual" viewBox="0 0 1200 200" width="1200" height="200"
+        <svg  class="wave-svg" id="visual" viewBox="0 0 1200 200" width="1200" height="200"
             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
             <path
                 

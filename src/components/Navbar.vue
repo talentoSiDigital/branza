@@ -549,6 +549,7 @@ p a:hover {
 
     nav {
         justify-content: center;
+        width: 0%;
     }
 
     .normal-nav {
@@ -575,6 +576,7 @@ p a:hover {
 
     .responsive-nav {
         display: block;
+        width: 0%;
     }
 
 

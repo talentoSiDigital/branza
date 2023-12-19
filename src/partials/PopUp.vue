@@ -89,13 +89,11 @@ const emitPopUp = () => {
 
 
                             <li class="socials">
+                                <a href="https://wa.me/584142665125" class="green button">
+                                    Contacta para Comprar  <font-awesome-icon :icon="['fab', 'whatsapp']" />
 
-                                <button class="green">
-                                    Contacta para Comprar
-                                    <font-awesome-icon :icon="['fab', 'whatsapp']" />
-
-                                </button>
-                                <button @click="emitPopUp" class="blue">
+                                </a>
+                                <button @click="emitPopUp" class="blue button">
                                     Volver
                                     <font-awesome-icon :icon="['fas', 'backward']" />
                                 </button>
@@ -245,7 +243,7 @@ strong {
 
 
 
-button {
+.button {
     height: 40px;
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
@@ -254,13 +252,19 @@ button {
     cursor: pointer;
     background: #f0f0f0;
     width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    text-decoration: none;
+    font-size: medium;
 }
 
-button:hover {
+.button:hover {
     background: #31439b;
     color: white;
 }
-
 
 
 .active {
@@ -286,23 +290,36 @@ button:hover {
     .card-container {
         width: 90%;
     }
+    .card-container .info{
+        justify-content: space-evenly;
+    }
 
     .title {
-        font-size: 40pt !important;
+        font-size: 30pt !important;
     }
 
-    .text-side {
+    h2 {
         font-size: 14pt !important;
 
     }
 
-    .text-side ul li {
-        font-size: 14pt !important;
+    h3 {
+        font-size: 10pt !important;
 
     }
-
-    .card-container .info {
-        flex-direction: column;
+    .text-side{
+        gap: 0px;
+        justify-content: center;
+    }
+    .text-side ul li{
+         margin: 0px;
+    }
+    .product-img{
+        max-width: 180px !important;
+    min-width: 180px !important;
+    }
+    .button{
+        font-size: small;
     }
 
     .product {
@@ -313,17 +330,14 @@ button:hover {
 
 @media (max-width: 650px) {
     .title {
-        font-size: 32pt !important;
+        font-size: 26pt !important;
+    }
+    .product-img{
+        max-width: 140px !important;
+    min-width: 140px !important;
     }
 
-    .text-side {
-        font-size: 14pt !important;
-
-    }
-
-    .text-side ul li {
-        font-size: 14pt !important;
-
-    }
-}</style>
+  
+}
+</style>
 

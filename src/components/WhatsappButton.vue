@@ -3,26 +3,26 @@
 </script>
 
 <template>
-    
     <div class="container">
-        <div class="button">
-        
-            <font-awesome-icon :icon="['fab', 'whatsapp']" class="green"/>
-        </div>
-       
+        <a href="https://wa.me/584142665125" class="button green">
+
+            <font-awesome-icon :icon="['fab', 'whatsapp']" class="icon" />
+        </a>
+
 
     </div>
 </template>
 
 <style scoped>
-.container{
+.container {
     position: fixed;
     top: 87%;
     left: 93%;
     z-index: 25;
 }
-.fold-container{
-    
+
+.fold-container {
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -32,25 +32,47 @@
 
 
 .button {
+    display: block;
     padding: 10px;
-    background: rgb(0, 210, 0);
+    background-color: #00d200;
+
     border-radius: 100px;
-   
+
     cursor: pointer;
     width: 45px;
     height: 45px;
     transition: all 0.5s;
-    
 }
+
 .button:hover {
     background: rgb(1, 81, 1);
 
 }
-.green {
-    
+
+.icon {
+    color: white;
     width: 100%;
-    height: 100%;
-    color: white
+    height: 90%;
+
+}
+
+@media (max-width: 1100px) {
+    .container {
+        left: 90% !important;
+    }
+}
+
+@media (max-width: 750px) {
+    .container {
+        left: 85% !important;
+    }
+
+}
+@media (max-width: 475px) {
+    .container {
+        left: 75% !important;
+    }
+
 }
 </style>
 
