@@ -8,8 +8,7 @@
 
             <font-awesome-icon :icon="['fab', 'whatsapp']" class="icon" />
         </a>
-
-
+ 
     </div>
 </template>
 

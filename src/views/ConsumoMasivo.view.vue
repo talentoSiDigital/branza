@@ -2,7 +2,8 @@
 import productsData from '../products-small.json'
 import ProductCard from '../partials/ProductCard2.vue'
 import PopUp from '../partials/PopUp2.vue'
-import BG1 from '../components/svgComponents/BG-1.vue'
+import WhatsappButton from '../components/WhatsappButton.vue'
+
 import { ref } from 'vue';
 
 const popUp = ref(0)
@@ -19,6 +20,8 @@ const activatePopUp = (index) => {
 </script>
 
 <template>
+        <WhatsappButton />
+
     <PopUp :product="popUp" @activate-pop-up="activatePopUp" />
 
 

@@ -1,0 +1,12 @@
+{
+    "us-diary":{
+    "name":"US-Diary",
+    "type":"Leche Entera",
+    "weight":"25kg",
+    "img":"us-diary.png",
+    "country":"USA",
+    "icon":"united-states.png",
+    "tag":"industrial"
+    }
+
+}
