@@ -69,7 +69,7 @@ import { Carousel, Slide, Pagination } from 'vue3-carousel'
                             Nuestros productos
                         </h3>
                         <h5>
-                            están elaborados con ingredientes de la más alta calidad y se someten a estrictos controles de
+                            Están elaborados con ingredientes de la más alta calidad y se someten a estrictos controles de
                             calidad para garantizar su seguridad y frescura.
 
                         </h5>
@@ -295,6 +295,12 @@ h5 {
     font-size: 16pt;
 }
 
+@media (max-width:1100px) {
+    .video-banner {
+        min-width: 1500px;
+        transform: translateX(100px);
+    }
+}
 
 @media (max-width:800px) {
     .navbar-adjust {

@@ -13,7 +13,6 @@ import products from '../products.json'
 const popUp = ref(0)
 
 const activatePopUp = (index) => {
-    console.log('Funcion ejecutandose')
 
     if(popUp.value == 0){
         popUp.value = index

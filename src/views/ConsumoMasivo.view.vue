@@ -8,7 +8,6 @@ import { ref } from 'vue';
 const popUp = ref(0)
 
 const activatePopUp = (index) => {
-
     if (popUp.value == 0) {
         popUp.value = index
     } else {
