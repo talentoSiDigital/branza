@@ -7,17 +7,19 @@
         "img":"magnalat.png",
         "country":"Uruguay",
         "icon":"uruguay.png",
-        "tag":"industrial"
+        "tag":"industrial",
+        "doc":"false"
     },
     "adecoagro":{
-        "name":"Adecoagro",
+        "name":"AdecoAgro",
         "type":"Leche Entera",
         "description":"Leche entera en polvo al 26%",
         "weight":"25kg",
         "img":"adecoagro.png",
         "country":"Argentina",
         "icon":"argentina.png",
-        "tag":"industrial"
+        "tag":"industrial",
+        "doc":"Ficha-Tecnica-AdecoAgro"
 
     },
     "conaprole":{
@@ -28,7 +30,8 @@
         "img":"conaprole.png",
         "country":"Uruguay",
         "icon":"uruguay.png",
-        "tag":"industrial"
+        "tag":"industrial",
+        "doc":"Ficha-Tecnica-Conaprole"
 
     },
     "purisima":{
@@ -39,7 +42,8 @@
         "img":"purisima.png",
         "country":"Uruguay",
         "icon":"uruguay.png",
-        "tag":"industrial"
+        "tag":"industrial",
+        "doc":"Ficha-Tecnica-Purisima"
 
     },
     
@@ -51,19 +55,20 @@
         "img":"formidable.png",
         "country": "Uruguay",
         "icon":"uruguay.png",
-        "tag":"industrial"
+        "tag":"industrial",
+        "doc":"Ficha-Tecnica-Formidable"
 
     },
     "lactolun":{
         "name":"Lactolun",
         "type":"Suero de Leche",
         "description":"Leche entera en polvo al 26%",
-
         "weight":"25kg",
         "img":"colun.png",
         "country":"Chile",
         "icon":"chile.png",
-        "tag":"industrial"
+        "tag":"industrial",
+        "doc":"Ficha-Tecnica-suero-Colun"
     }
     
 }

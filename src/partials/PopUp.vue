@@ -1,5 +1,6 @@
 <script setup>
 import { ref, watch } from "vue";
+import { RouterLink } from "vue-router";
 
 import ProductsList from "../products.json"
 
@@ -19,6 +20,7 @@ watch(product, () => {
 const emitPopUp = () => {
     emit('activate-pop-up', 0)
 }
+
 
 
 </script>
@@ -93,6 +95,10 @@ const emitPopUp = () => {
                                     Contacta para Comprar  <font-awesome-icon :icon="['fab', 'whatsapp']" />
 
                                 </a>
+
+                                <RouterLink v-if="parsedProduct.doc != 'false'" :to="parsedProduct.doc" class="green button">
+                                    Ficha Tecnica
+                                </RouterLink>
                                 <button @click="emitPopUp" class="blue button">
                                     Volver
                                     <font-awesome-icon :icon="['fas', 'backward']" />
@@ -219,7 +225,7 @@ h3{
     display: flex;
     align-items: center;
     gap: 10px;
-    margin: 50px 0px;
+    margin: 40px 0px;
 }
 .socials{
     flex-direction: column;
@@ -329,12 +335,20 @@ strong {
 }
 
 @media (max-width: 650px) {
+    .card-container .info {
+        flex-direction: column;
+    }
+
+    .text-side{
+        width: 100%;
+        height: fit-content;
+    }
     .title {
         font-size: 26pt !important;
     }
     .product-img{
-        max-width: 140px !important;
-    min-width: 140px !important;
+        max-width: 100px !important;
+    min-width: 100px !important;
     }
 
   
