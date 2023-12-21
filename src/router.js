@@ -5,6 +5,7 @@ import Elaboraciones from './views/Elaboraciones.view.vue'
 import Contacto from './views/Contacto.view.vue'
 import Industrial from './views/Industrial.view.vue'
 import ConsumoMasivo from './views/ConsumoMasivo.view.vue'
+import PDFShow from './views/PDFShow.vue'
 
 
 const router = createRouter({
@@ -61,6 +62,15 @@ const router = createRouter({
             component:ConsumoMasivo,
             meta: {
                 title:'Branza - Consumo Masivo'
+            }
+        },
+        {
+          
+            path:"/:name",
+            name:"ficha-tecnica",
+            component:PDFShow,
+            meta: {
+                title:'Branza - Ficha Tecnica'
             }
         }
       
