@@ -1,7 +1,7 @@
 {
     "magnalat":{
         "name":"Magnalat ",
-        "type":"Leche Entera",
+        "type":"Leche entera",
         "description":"Leche entera en polvo al 26%",
         "weight":"25kg",
         "img":"magnalat.png",
@@ -12,7 +12,7 @@
     },
     "adecoagro":{
         "name":"AdecoAgro",
-        "type":"Leche Entera",
+        "type":"Leche entera",
         "description":"Leche entera en polvo al 26%",
         "weight":"25kg",
         "img":"adecoagro.png",
@@ -24,7 +24,7 @@
     },
     "conaprole":{
         "name":"Conaprole",
-        "type":"Leche Entera",
+        "type":"Leche entera",
         "description":"Leche entera en polvo al 26%",
         "weight":"25kg",
         "img":"conaprole.png",
@@ -36,7 +36,7 @@
     },
     "purisima":{
         "name":"Purísima",
-        "type":"Leche Entera",
+        "type":"Leche entera",
         "description":"Leche entera en polvo con vitamina A y B3",
         "weight":"25kg",
         "img":"purisima.png",
@@ -49,7 +49,7 @@
     
     "formidable":{
         "name":"Formidable",
-        "type":"Leche Entera",
+        "type":"Leche entera",
         "description":"Leche entera en polvo al 26%",
         "weight":"25kg",
         "img":"formidable.png",
@@ -62,7 +62,7 @@
     "lactolun":{
         "name":"Lactolun",
         "type":"Suero de Leche",
-        "description":"Leche entera en polvo al 26%",
+        "description":"Suero de leche en polvo desmineralizado",
         "weight":"25kg",
         "img":"colun.png",
         "country":"Chile",

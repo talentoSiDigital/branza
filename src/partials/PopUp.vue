@@ -77,7 +77,7 @@ const emitPopUp = () => {
                                 <img src="/img/icono-1.png" alt="icono" class="icon-img">
                                 <div class="line-text">
                                     <h2><strong> Características: </strong></h2>
-                                    <h3>{{parsedProduct.type}}</h3>
+                                    <h3>{{parsedProduct.description}}</h3>
                                 </div>
                             </li>
                       
