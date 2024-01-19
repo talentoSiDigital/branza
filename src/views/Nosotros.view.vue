@@ -41,9 +41,7 @@ import { Carousel, Slide, Pagination } from 'vue3-carousel'
                     </h3>
                     <h5>
                         Somos una empresa fundada en 2012, nos dedicamos a la distribución e importación de 
-                        materias primas para el mercado venezolano, y la asesoría técnica requerida. Nuestros productos están elaborados con
-                        ingredientes de la más alta calidad y se someten a estrictos controles de calidad, frescura y seguridad alimentaria.
-
+                        materias primas para el mercado venezolano, y la asesoría técnica requerida. 
                     </h5>
                 </header>
 

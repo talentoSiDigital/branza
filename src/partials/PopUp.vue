@@ -97,7 +97,7 @@ const emitPopUp = () => {
                                 </a>
 
                                 <RouterLink v-if="parsedProduct.doc != 'false'" :to="parsedProduct.doc" class="green button">
-                                    Ficha Tecnica
+                                    Ficha Técnica
                                 </RouterLink>
                                 <button @click="emitPopUp" class="blue button">
                                     Volver
