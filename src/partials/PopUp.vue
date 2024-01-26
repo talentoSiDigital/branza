@@ -72,15 +72,15 @@ const emitPopUp = () => {
                                 </div>
                             </li>
 
-                            
+
                             <li>
                                 <img src="/img/icono-1.png" alt="icono" class="icon-img">
                                 <div class="line-text">
                                     <h2><strong> Características: </strong></h2>
-                                    <h3>{{parsedProduct.description}}</h3>
+                                    <h3>{{ parsedProduct.description }}</h3>
                                 </div>
                             </li>
-                      
+
                             <li>
                                 <img src="/img/icono-3.png" alt="icono" class="icon-img">
                                 <div class="line-text">
@@ -92,11 +92,12 @@ const emitPopUp = () => {
 
                             <li class="socials">
                                 <a href="https://wa.me/584142665125" class="green button">
-                                    Contacta para Comprar  <font-awesome-icon :icon="['fab', 'whatsapp']" />
+                                    Contacta para Comprar <font-awesome-icon :icon="['fab', 'whatsapp']" />
 
                                 </a>
 
-                                <RouterLink v-if="parsedProduct.doc != 'false'" :to="parsedProduct.doc" class="green button">
+                                <RouterLink v-if="parsedProduct.doc != 'false'" :to="parsedProduct.doc"
+                                    class="green button">
                                     Ficha Técnica
                                 </RouterLink>
                                 <button @click="emitPopUp" class="blue button">
@@ -111,6 +112,10 @@ const emitPopUp = () => {
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="footer">
+            <img src="/img/logo-blanco.png" alt="branza-logo">
+            <h5>Branza &#8482; - Todos los derechos reservados</h5>
         </div>
     </div>
 </template>
@@ -130,13 +135,15 @@ const emitPopUp = () => {
     justify-content: center;
 }
 
+.card-container {}
+
 .card-container .info {
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: #31439b;
+    color: #30449b;
 }
 
 .img-side {
@@ -149,8 +156,8 @@ const emitPopUp = () => {
 
 .img-side .product-img {
     filter: drop-shadow(10px 15px 20px rgba(0, 0, 0, 0.7));
-    max-width: 300px;
-    min-width: 300px;
+    max-width: 190px;
+    min-width: 190px;
 }
 
 .share-container {
@@ -173,7 +180,7 @@ const emitPopUp = () => {
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
     transition: 0.4s ease-in-out;
-    color: #31439b;
+    color: #30449b;
     cursor: pointer;
     background: #f0f0f0;
     padding: 10px 20px;
@@ -181,7 +188,7 @@ const emitPopUp = () => {
 
 .share-button:hover {
 
-    background: #31439b;
+    background: #30449b;
     color: white;
 }
 
@@ -195,25 +202,25 @@ const emitPopUp = () => {
 
 .text-side {
     width: 50%;
-    height: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 25px;
-    height: 90vh;
+    height: 70vh;
 }
 
 h1 {
-    font-size: 40pt;
+    font-size: 30pt;
     font-weight: 900;
     text-align: center;
 
 }
-h2{
-    font-size: 20pt;
-}
-h3{
+
+h2 {
     font-size: 15pt;
+}
+
+h3 {
+    font-size: 10pt;
     font-weight: 400;
 }
 
@@ -225,17 +232,20 @@ h3{
     display: flex;
     align-items: center;
     gap: 10px;
-    margin: 40px 0px;
+    margin: 10px 0px;
 }
-.socials{
+
+.socials {
     flex-direction: column;
     width: 100%;
 }
-.icon-img{
+
+.icon-img {
     width: 50px;
     height: 50px;
 }
-ul{
+
+ul {
     width: 100%;
 }
 
@@ -254,7 +264,7 @@ strong {
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
     transition: 0.4s ease-in-out;
-    color: #31439b;
+    color: #30449b;
     cursor: pointer;
     background: #f0f0f0;
     width: 100%;
@@ -268,7 +278,7 @@ strong {
 }
 
 .button:hover {
-    background: #31439b;
+    background: #30449b;
     color: white;
 }
 
@@ -290,13 +300,35 @@ strong {
     display: none;
 }
 
+.footer{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background:  #30449b ;
+    color: white;
+    padding: 5px;
+    gap: 10px;
+    z-index: 60;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+}
+
+.footer img{
+    width: 100px;
+    height: 50px;
+}
+
 
 
 @media (max-width: 1100px) {
     .card-container {
         width: 90%;
     }
-    .card-container .info{
+
+    .card-container .info {
         justify-content: space-evenly;
     }
 
@@ -313,18 +345,22 @@ strong {
         font-size: 10pt !important;
 
     }
-    .text-side{
+
+    .text-side {
         gap: 0px;
         justify-content: center;
     }
-    .text-side ul li{
-         margin: 0px;
+
+    .text-side ul li {
+        margin: 0px;
     }
-    .product-img{
+
+    .product-img {
         max-width: 180px !important;
-    min-width: 180px !important;
+        min-width: 180px !important;
     }
-    .button{
+
+    .button {
         font-size: small;
     }
 
@@ -339,19 +375,20 @@ strong {
         flex-direction: column;
     }
 
-    .text-side{
+    .text-side {
         width: 100%;
         height: fit-content;
     }
+
     .title {
         font-size: 26pt !important;
     }
-    .product-img{
+
+    .product-img {
         max-width: 100px !important;
-    min-width: 100px !important;
+        min-width: 100px !important;
     }
 
-  
-}
-</style>
+
+}</style>
 

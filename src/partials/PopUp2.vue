@@ -160,7 +160,7 @@ watch(product, () => {
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
     transition: 0.4s ease-in-out;
-    color: #31439b;
+    color: #30449b;
     cursor: pointer;
     background: #f0f0f0;
     padding: 10px 20px;
@@ -168,7 +168,7 @@ watch(product, () => {
 
 .share-button:hover {
 
-    background: #31439b;
+    background: #30449b;
     color: white;
 }
 
@@ -178,7 +178,7 @@ watch(product, () => {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    color: #31439b;
+    color: #30449b;
 
 }
 
@@ -187,7 +187,7 @@ watch(product, () => {
     border-radius: 15px;
     line-height: 48px;
     padding: 10px 0px 10px 0px !important;
-    color: #31439b;
+    color: #30449b;
 
 }
 
@@ -247,7 +247,7 @@ strong {
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
     transition: 0.4s ease-in-out;
-    color: #31439b;
+    color: #30449b;
     cursor: pointer;
     background: #f0f0f0;
     width: 100%;
@@ -261,7 +261,7 @@ strong {
 }
 
 .button:hover {
-    background: #31439b;
+    background: #30449b;
     color: white;
 }
 
@@ -275,7 +275,7 @@ strong {
 }
 
 .close:hover {
-    color: #31439b;
+    color: #30449b;
 }
 
 .active {
@@ -300,12 +300,12 @@ button {
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
     transition: 0.4s ease-in-out;
-    color: #31439b;
+    color: #30449b;
     cursor: pointer;
 }
 
 button:hover {
-    background: #31439b;
+    background: #30449b;
     color: white;
 }
 

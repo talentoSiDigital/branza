@@ -80,7 +80,7 @@ h1 {
     font-size: 3rem;
     font-weight: 600;
     margin-bottom: 1rem;
-    color: #31439b;
+    color: #30449b;
 
 }
 

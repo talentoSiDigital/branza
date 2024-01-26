@@ -9,28 +9,28 @@ const aliados = {
     "Formidable": "formidable-logo.png",
     "Magnalat": "magnalat-logo.png",
     "Purisima": "purisima-logo.png",
-    "Adecoagro":"adecoagro-logo.png"
-     
+    "Adecoagro": "adecoagro-logo.png"
+
 }
 
 const breakpoints = {
-    500:{
-          // 500px and up
-          itemsToShow: 1,
-          snapAlign: 'center',
-        }
-        ,
-        800: {
-          // 700px and up
+    500: {
+        // 500px and up
+        itemsToShow: 1,
+        snapAlign: 'center',
+    }
+    ,
+    800: {
+        // 700px and up
         itemsToShow: 3,
         snapAlign: 'center',
-      },
-      1024: {
-          // 1024 and up
+    },
+    1024: {
+        // 1024 and up
         itemsToShow: 4,
         snapAlign: 'start',
-      }
     }
+}
 
 
 
@@ -42,46 +42,43 @@ const breakpoints = {
         <ImageBanner img="aliados" title="Aliados Comerciales" />
 
         <div class="slider">
-        <div class="slider-container">
+            <div class="slider-container">
 
-            <Carousel  
-                class="carousel-container" 
-                :wrap-around="true" 
-                :breakpoints="breakpoints"
-                :autoplay="2000"
-                >
-                <Slide v-for="(key,index) in aliados" :key="index">
+                <Carousel class="carousel-container" :wrap-around="true" :breakpoints="breakpoints" :autoplay="2000">
+                    <Slide v-for="(key, index) in aliados" :key="index">
 
-                    <div class="card">
-                        
-                        <img :src="`/img/${key}`" :alt="key">
+                        <div class="card">
+
+                            <img :src="`/img/${key}`" :alt="key">
 
 
-                    </div>
+                        </div>
 
-                </Slide>
-                <template #addons>
-                    <Pagination />
-                </template>
+                    </Slide>
+                    <template #addons>
+                        <Pagination />
+                    </template>
 
-            </Carousel>
+                </Carousel>
 
 
+            </div>
         </div>
-    </div>    
 
 
     </div>
 </template>
 
 <style scoped>
-.aliados{
+.aliados {
     padding: 7vh 0px;
 }
-.fixed{
+
+.fixed {
     position: fixed;
-    z-index: 100 ;
+    z-index: 100;
 }
+
 .slider-container {
     display: flex;
     align-items: center;
@@ -101,7 +98,9 @@ const breakpoints = {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center
+    align-items: center;
+    padding: 15px 0px;
+
 }
 
 
@@ -111,7 +110,7 @@ const breakpoints = {
 }
 
 
-.card-title{
+.card-title {
     font-size: 17px;
 }
 
@@ -131,8 +130,5 @@ const breakpoints = {
 .normal {
     display: flex;
 }
-
-
-
 </style>
 

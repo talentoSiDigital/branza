@@ -195,7 +195,7 @@ const send = () => {
 nav {
     color: #273294  !important;
     position: fixed;
-    z-index: 20;
+    z-index: 50;
     width: 98%;
 
 }
@@ -349,7 +349,7 @@ p a:hover {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #31439b;
+    background-color: #30449b;
     min-width: 160px;
     width: 200px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -415,7 +415,7 @@ p a:hover {
 
     height: 7px;
     width: 50px;
-    background: #31439b;
+    background: #30449b;
     border-radius: 9px;
     opacity: 1;
     left: 10px;
@@ -536,7 +536,7 @@ p a:hover {
     padding: 15px;
     border-radius: 15px;
     transition: 0.4s ease-in-out;
-    color: #31439b;
+    color: #30449b;
 }
 
 .socials .icons:hover {

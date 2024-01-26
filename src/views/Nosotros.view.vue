@@ -251,7 +251,7 @@ import { Carousel, Slide, Pagination } from 'vue3-carousel'
 }
 
 .dark-blue {
-    background: #31439bff;
+    background: #30449bff;
 }
 
 .light-blue-text {
@@ -259,7 +259,7 @@ import { Carousel, Slide, Pagination } from 'vue3-carousel'
 }
 
 .dark-blue-text {
-    color: #31439bff;
+    color: #30449bff;
 }
 
 .white-text {

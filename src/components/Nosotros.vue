@@ -168,7 +168,7 @@ import BG from './svgComponents/BG-1.vue'
 }
 
 .blue {
-    color: #31439b;
+    color: #30449b;
 }
 
 .correction {
@@ -195,7 +195,7 @@ import BG from './svgComponents/BG-1.vue'
         height: 130vh;
     }
     .text-area{
-        color: #31439b !important ;
+        color: #30449b !important ;
 
     }
 

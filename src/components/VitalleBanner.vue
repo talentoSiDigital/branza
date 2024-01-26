@@ -73,7 +73,7 @@
 }
 
 .box-blue {
-    background: #293c98;
+    background: #30449b;
     color: white;
     justify-content: end;
     align-items: end;

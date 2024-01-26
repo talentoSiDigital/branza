@@ -40,7 +40,7 @@ import WaveAnimated from '../components/svgComponents/WaveAnimated.vue'
 
 
 .dark-blue {
-    background: #31439bff;
+    background: #30449bff;
 }
 
 .light-blue {
