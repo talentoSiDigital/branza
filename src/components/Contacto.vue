@@ -80,7 +80,7 @@ import ContactForm from '../components/ContactForm.vue'
 
 .form-header,
 .text-area {
-    color: #31439b;
+    color: #30449b;
 }
 
 .text-area p {
@@ -103,7 +103,7 @@ import ContactForm from '../components/ContactForm.vue'
 
 
 .frame-glass {
-    border: 3px solid #31439b;
+    border: 3px solid #30449b;
     background: rgba(31, 38, 135, 0.75);
     box-shadow: 5px 5px 25px 0px rgba(31, 38, 135, 0.75);
     backdrop-filter: blur(19.5px);

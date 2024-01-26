@@ -30,7 +30,7 @@ const parsedProduct = ProductsList[product.product]
     justify-content: center;
     flex-direction: column;
     gap: 15px;
-    border: 3px solid #31439b;
+    border: 3px solid #30449b;
     background: rgba(255, 255, 255, .8);
 
     box-shadow: 5px 5px 25px 0px rgba(31,38,135,0.75);
@@ -59,7 +59,7 @@ const parsedProduct = ProductsList[product.product]
 
 }
 h1{
-    color: #31439b;
+    color: #30449b;
     font-size: 16pt;
 }
 .card img {
@@ -75,7 +75,7 @@ h1{
 }
 button{
     border: none;
-    background: #31439b;
+    background: #30449b;
     color: white;
     padding: 10px;
     border-radius: 5px;

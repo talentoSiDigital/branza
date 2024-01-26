@@ -72,7 +72,7 @@ function sendEmail() {
 }
 
 header {
-    color: #31439b;
+    color: #30449b;
 }
 
 
@@ -101,7 +101,7 @@ button {
     padding: 10px 35px;
     border-radius: 10px;
     font-weight: 900;
-    background: #31439b;
+    background: #30449b;
     border: none;
     color: white;
     transition: 0.5s;
