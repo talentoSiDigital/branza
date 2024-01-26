@@ -22,7 +22,7 @@ watch(product, () => {
 </script>
 
 <template>
-    <div v-if="referenceProduct != 0" class="container" :class="showClass">
+    <div v-if="referenceProduct != 0" class="container" >
         <div class="pop-up-card">
             <div class="card">
                 <div class="info">
@@ -457,6 +457,37 @@ button:hover {
 }
 
 @media (max-width: 650px) {
+    .card{
+        border: none;
+
+    }
+    .card .info{
+        flex-direction: column;
+
+    }
+    .share-container {
+        display: none;
+    }
+    .text-side {
+        width: 100%;
+        height: fit-content;
+    }
+    .icon-img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .button {
+        height: 30px;
+    }
+
+    .img-side {
+        flex-direction: row;
+    }
+
+
+
+
     .title {
         font-size: 20pt !important;
     }
