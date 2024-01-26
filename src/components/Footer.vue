@@ -11,14 +11,14 @@
 footer{
     position: relative;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: space-around;
     background:  #30449b ;
     color: white;
     padding: 5px;
     gap: 10px;
-    z-index: 50;
+    z-index: 10;
+    height: 10vh;
 
 }
 

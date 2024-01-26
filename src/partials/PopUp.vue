@@ -8,13 +8,13 @@ const emit = defineEmits(['activate-pop-up'])
 const product = defineProps(["product"])
 
 const referenceProduct = ref(product.product)
-const showClass = ref("show")
 
 let parsedProduct = ProductsList[product.product]
 
 watch(product, () => {
     referenceProduct.value = product.product
     parsedProduct = ProductsList[product.product]
+    console.log(referenceProduct.value)
 })
 
 const emitPopUp = () => {
@@ -26,101 +26,104 @@ const emitPopUp = () => {
 </script>
 
 <template>
-    <div v-if="referenceProduct != 0" class="container" :class="showClass">
-        <div class="pop-up-card-container">
+        <div v-if="referenceProduct != 0" class="container">
+            <div class="pop-up-card-container">
 
-            <div class="card-container">
+                <div class="card-container">
 
-                <div class="info">
+                    <div class="info">
 
-                    <div class="img-side">
+                        <div class="img-side">
 
-                        <img :src="`/img/${parsedProduct.img}`" :alt="parsedProduct.name" class="product-img">
+                            <img :src="`/img/${parsedProduct.img}`" :alt="parsedProduct.name" class="product-img">
 
-                        <div class="share-container">
-                            <h4>Compartir en:</h4>
+                            <div class="share-container">
+                                <h4>Compartir en:</h4>
 
-                            <div class="share-links">
-                                <a href="https://www.facebook.com/branzafoods/" target="_blank" class="share-button">
-                                    <font-awesome-icon :icon="['fab', 'facebook-f']" class="share-icons" />
-                                </a>
+                                <div class="share-links">
+                                    <a href="https://www.facebook.com/branzafoods/" target="_blank" class="share-button">
+                                        <font-awesome-icon :icon="['fab', 'facebook-f']" class="share-icons" />
+                                    </a>
 
-                                <a href="https://www.instagram.com/branzafoods" target="_blank" class="share-button">
-                                    <font-awesome-icon :icon="['fab', 'instagram']" class="share-icons" />
+                                    <a href="https://www.instagram.com/branzafoods" target="_blank" class="share-button">
+                                        <font-awesome-icon :icon="['fab', 'instagram']" class="share-icons" />
 
-                                </a>
+                                    </a>
 
-                                <a href="https://www.x.com/branzafoods" target="_blank" class="share-button">
-                                    <font-awesome-icon :icon="['fab', 'x-twitter']" class="share-icons" />
-                                </a>
+                                    <a href="https://www.x.com/branzafoods" target="_blank" class="share-button">
+                                        <font-awesome-icon :icon="['fab', 'x-twitter']" class="share-icons" />
+                                    </a>
+                                </div>
+
                             </div>
 
                         </div>
 
-                    </div>
+                        <div class="text-side">
 
-                    <div class="text-side">
+                            <h1 class="title">Leche {{ parsedProduct.name }}</h1>
 
-                        <h1 class="title">Leche {{ parsedProduct.name }}</h1>
-
-                        <ul>
-                            <li>
-                                <img src="/img/icono-2.png" alt="icono" class="icon-img">
-                                <div class="line-text">
-                                    <h2><strong> Presentación: </strong></h2>
-                                    <h3>Bolsa multipliego de papel Kraft con bolsa de polietileno interior de 25 kg.</h3>
-                                </div>
-                            </li>
-
-
-                            <li>
-                                <img src="/img/icono-1.png" alt="icono" class="icon-img">
-                                <div class="line-text">
-                                    <h2><strong> Características: </strong></h2>
-                                    <h3>{{ parsedProduct.description }}</h3>
-                                </div>
-                            </li>
-
-                            <li>
-                                <img src="/img/icono-3.png" alt="icono" class="icon-img">
-                                <div class="line-text">
-                                    <h2><strong> País: </strong></h2>
-                                    <img :src="`/img/${parsedProduct.icon}`" alt="icono" class="icon-img">
-                                </div>
-                            </li>
+                            <ul>
+                                <li>
+                                    <img src="/img/icono-2.png" alt="icono" class="icon-img">
+                                    <div class="line-text">
+                                        <h2><strong> Presentación: </strong></h2>
+                                        <h3>Bolsa multipliego de papel Kraft con bolsa de polietileno interior de 25 kg.
+                                        </h3>
+                                    </div>
+                                </li>
 
 
-                            <li class="socials">
-                                <a href="https://wa.me/584142665125" class="green button">
-                                    Contacta para Comprar <font-awesome-icon :icon="['fab', 'whatsapp']" />
+                                <li>
+                                    <img src="/img/icono-1.png" alt="icono" class="icon-img">
+                                    <div class="line-text">
+                                        <h2><strong> Características: </strong></h2>
+                                        <h3>{{ parsedProduct.description }}</h3>
+                                    </div>
+                                </li>
 
-                                </a>
-
-                                <RouterLink v-if="parsedProduct.doc != 'false'" :to="parsedProduct.doc"
-                                    class="green button">
-                                    Ficha Técnica
-                                </RouterLink>
-                                <button @click="emitPopUp" class="blue button">
-                                    Volver
-                                    <font-awesome-icon :icon="['fas', 'backward']" />
-                                </button>
+                                <li>
+                                    <img src="/img/icono-3.png" alt="icono" class="icon-img">
+                                    <div class="line-text">
+                                        <h2><strong> País: </strong></h2>
+                                        <img :src="`/img/${parsedProduct.icon}`" alt="icono" class="icon-img">
+                                    </div>
+                                </li>
 
 
-                            </li>
-                        </ul>
+                                <li class="socials">
+                                    <a href="https://wa.me/584142665125" class="green button">
+                                        Contacta para Comprar <font-awesome-icon :icon="['fab', 'whatsapp']" />
 
+                                    </a>
+
+                                    <RouterLink v-if="parsedProduct.doc != 'false'" :to="parsedProduct.doc"
+                                        class="green button">
+                                        Ficha Técnica
+                                    </RouterLink>
+                                    <button @click="emitPopUp" class="blue button">
+                                        Volver
+                                        <font-awesome-icon :icon="['fas', 'backward']" />
+                                    </button>
+
+
+                                </li>
+                            </ul>
+
+                        </div>
                     </div>
                 </div>
             </div>
+            <div class="footer">
+                <img src="/img/logo-blanco.png" alt="branza-logo">
+                <h5>Branza &#8482; - Todos los derechos reservados</h5>
+            </div>
         </div>
-        <div class="footer">
-            <img src="/img/logo-blanco.png" alt="branza-logo">
-            <h5>Branza &#8482; - Todos los derechos reservados</h5>
-        </div>
-    </div>
 </template>
 
 <style scoped>
+
+
 .pop-up-card-container {
     color: white;
     position: fixed;
@@ -133,9 +136,15 @@ const emitPopUp = () => {
     display: flex;
     align-items: center;
     justify-content: center;
+
+
 }
 
-.card-container {}
+.card-container {
+    border: 1px solid #bababa;
+    padding: 20px 50px;
+    border-radius: 15px;
+}
 
 .card-container .info {
     width: 100%;
@@ -162,6 +171,8 @@ const emitPopUp = () => {
 
 .share-container {
     width: 100%;
+    height: 1%;
+
 }
 
 .share-container h4 {
@@ -205,7 +216,8 @@ const emitPopUp = () => {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 70vh;
+    height: 100%;
+
 }
 
 h1 {
@@ -300,32 +312,86 @@ strong {
     display: none;
 }
 
-.footer{
+.footer {
     position: fixed;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background:  #30449b ;
+    background: #30449b;
     color: white;
     padding: 5px;
     gap: 10px;
-    z-index: 60;
+    z-index: 50;
     bottom: 0;
     left: 0;
     width: 100%;
 
 }
 
-.footer img{
+.footer img {
     width: 100px;
     height: 50px;
 }
 
+@media (min-width: 2000px) {
+    .img-side .product-img {
+        max-width: 500px;
+        min-width: 500px;
+    }
 
+    .text-side ul li {
+        margin: 40px 0px;
+    }
+
+    .footer h5 {
+        font-size: 20pt
+    }
+
+    .footer img {
+        width: 150px;
+        height: 75px;
+    }
+
+    .share-button {
+        height: 35px;
+
+    }
+
+    .button {
+        font-size: 15pt;
+    }
+
+    .share-icons {
+        font-size: 35px;
+    }
+
+    h1 {
+        font-size: 60pt;
+
+    }
+
+    h2 {
+        font-size: 30pt;
+    }
+
+    h3 {
+        font-size: 20pt;
+        font-weight: 400;
+    }
+
+    h4 {
+        font-size: 20pt;
+    }
+
+
+
+}
 
 @media (max-width: 1100px) {
     .card-container {
         width: 90%;
+        padding: 20px 0px;
+
     }
 
     .card-container .info {
@@ -371,7 +437,19 @@ strong {
 }
 
 @media (max-width: 650px) {
+    .card-container {
+        border: none;
+    }
+
     .card-container .info {
+        flex-direction: column;
+    }
+
+    .share-container {
+        display: none;
+    }
+
+    .share-links {
         flex-direction: column;
     }
 
@@ -380,8 +458,32 @@ strong {
         height: fit-content;
     }
 
+    .img-side {
+        flex-direction: row;
+    }
+
+    .icon-img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .button {
+        height: 30px;
+    }
+
+
     .title {
-        font-size: 26pt !important;
+        font-size: 20pt !important;
+    }
+
+    h2 {
+        font-size: 14pt !important;
+
+    }
+
+    h3 {
+        font-size: 10pt !important;
+
     }
 
     .product-img {
@@ -390,5 +492,6 @@ strong {
     }
 
 
-}</style>
+}
+</style>
 

@@ -15,9 +15,9 @@
 <style scoped>
 .container {
     position: fixed;
-    top: 87%;
+    bottom: 10%;
     left: 93%;
-    z-index: 25;
+    z-index: 60;
 }
 
 .fold-container {
