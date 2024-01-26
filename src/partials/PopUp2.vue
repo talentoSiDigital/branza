@@ -69,15 +69,15 @@ watch(product, () => {
                                 </div>
                             </li>
 
-                            
+
                             <li>
                                 <img src="/img/icono-1.png" alt="icono" class="icon-img">
                                 <div class="line-text">
                                     <h2><strong> Características: </strong></h2>
-                                    <h3>{{parsedProduct.type}}</h3>
+                                    <h3>{{ parsedProduct.type }}</h3>
                                 </div>
                             </li>
-                      
+
                             <li>
                                 <img src="/img/icono-3.png" alt="icono" class="icon-img">
                                 <div class="line-text">
@@ -89,7 +89,7 @@ watch(product, () => {
 
                             <li class="socials">
                                 <a href="https://wa.me/584142665125" class="green button">
-                                    Contacta para Comprar  <font-awesome-icon :icon="['fab', 'whatsapp']" />
+                                    Contacta para Comprar <font-awesome-icon :icon="['fab', 'whatsapp']" />
 
                                 </a>
                                 <button @click="emitPopUp" class="blue button">
@@ -102,6 +102,10 @@ watch(product, () => {
                         </ul>
                     </div>
                 </div>
+            </div>
+            <div class="footer">
+                <img src="/img/logo-blanco.png" alt="branza-logo">
+                <h5>Branza &#8482; - Todos los derechos reservados</h5>
             </div>
         </div>
     </div>
@@ -116,12 +120,27 @@ watch(product, () => {
     width: 100%;
     height: 100%;
     background-color: white;
-
-    z-index: 1000;
+    z-index: 40;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+.card{
+    border: 1px solid #bababa;
+    padding: 20px 50px;
+    border-radius: 15px;
+}
+
+
+.card .info {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #30449b;
+}
+
 
 .img-side {
     display: flex;
@@ -129,7 +148,6 @@ watch(product, () => {
     justify-content: center;
     flex-direction: column;
     gap: 25px;
-    height: 80%;
 
 }
 
@@ -174,7 +192,6 @@ watch(product, () => {
 
 .card .info {
     width: 100%;
-    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -187,29 +204,35 @@ watch(product, () => {
     border-radius: 15px;
     line-height: 48px;
     padding: 10px 0px 10px 0px !important;
-    color: #30449b;
 
 }
 
 .text-side {
     width: 50%;
-    /* height: 50%; */
+    height: fit-content;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 25px;
 }
 
-.text-side h1 {
-    font-size: 38pt;
+
+h1 {
+    font-size: 30pt;
     font-weight: 900;
     text-align: center;
 
 }
-.text-side h3{
-    font-size: 14pt;
+
+h2 {
+    font-size: 15pt;
+}
+
+h3 {
+    font-size: 10pt;
     font-weight: 400;
 }
+
+
 .text-side ul li {
     font-size: 14pt;
     font-weight: 400;
@@ -218,17 +241,20 @@ watch(product, () => {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin: 20px 0px;
+    margin: 10px 0px;
 }
-.socials{
+
+.socials {
     flex-direction: column;
     width: 100%;
 }
-.icon-img{
+
+.icon-img {
     width: 50px;
     height: 50px;
 }
-ul{
+
+ul {
     width: 100%;
 }
 
@@ -309,13 +335,86 @@ button:hover {
     color: white;
 }
 
+.footer {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: #30449b;
+    color: white;
+    padding: 5px;
+    gap: 10px;
+    z-index: 50;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+}
+
+.footer img {
+    width: 100px;
+    height: 50px;
+}
+
+@media (min-width: 2000px) {
+    .img-side .product-img {
+        max-width: 500px;
+        min-width: 500px;
+    }
+
+    .text-side ul li {
+        margin: 40px 0px;
+    }
+
+    .footer h5 {
+        font-size: 20pt
+    }
+
+    .footer img {
+        width: 150px;
+        height: 75px;
+    }
+
+    .share-button {
+        height: 35px;
+
+    }
+    .button{
+        font-size: 15pt;
+    }
+
+    .share-icons {
+        font-size: 35px;
+    }
+
+    h1 {
+        font-size: 60pt;
+
+    }
+
+    h2 {
+        font-size: 30pt;
+    }
+
+    h3 {
+        font-size: 20pt;
+        font-weight: 400;
+    }
+    h4{
+        font-size: 20pt;
+    }
+
+
+
+}
 
 
 @media (max-width: 1100px) {
     .card-container {
         width: 90%;
     }
-    .card-container .info{
+
+    .card-container .info {
         justify-content: space-evenly;
     }
 
@@ -332,18 +431,22 @@ button:hover {
         font-size: 10pt !important;
 
     }
-    .text-side{
+
+    .text-side {
         gap: 0px;
         justify-content: center;
     }
-    .text-side ul li{
-         margin: 0px;
+
+    .text-side ul li {
+        margin: 0px;
     }
-    .product-img{
+
+    .product-img {
         max-width: 180px !important;
-    min-width: 180px !important;
+        min-width: 180px !important;
     }
-    .button{
+
+    .button {
         font-size: small;
     }
 
@@ -355,12 +458,25 @@ button:hover {
 
 @media (max-width: 650px) {
     .title {
-        font-size: 26pt !important;
+        font-size: 20pt !important;
     }
-    .product-img{
+
+
+    h2 {
+        font-size: 14pt !important;
+
+    }
+
+    h3 {
+        font-size: 10pt !important;
+
+    }
+    .product-img {
         max-width: 140px !important;
-    min-width: 140px !important;
+        min-width: 140px !important;
     }
 }
+
+
 </style>
 

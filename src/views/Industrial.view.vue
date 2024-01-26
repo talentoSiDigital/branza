@@ -12,45 +12,49 @@ const popUp = ref(0)
 
 const activatePopUp = (index) => {
 
-    if(popUp.value == 0){
+    if (popUp.value == 0) {
         popUp.value = index
     } else {
         popUp.value = 0
     }
-    
+
 }
 
 </script>
 
 <template>
-    <PopUp :product="popUp" @activate-pop-up="activatePopUp"/>
+        <PopUp :product="popUp" @activate-pop-up="activatePopUp" />
 
-    <WhatsappButton />
- 
-    <div class="navbar-adjust"></div>
 
-    <div class="industrial">
+        <WhatsappButton />
 
-        <h1 class="white-text">Productos Industriales</h1>
+        <div class="navbar-adjust"></div>
 
-        <div class="grid">
-            <div class="products">
+        <div class="industrial">
 
-                 <div v-for="(key, index) in productsData" :key="index" class="grid-item">
-                    <ProductCard v-if="key.tag == 'industrial'" :product="index" @click="activatePopUp(index)" />
+            <h1 class="white-text">Productos Industriales</h1>
+
+            <div class="grid">
+                <div class="products">
+
+                    <div v-for="(key, index) in productsData" :key="index" class="grid-item">
+
+                        <ProductCard  :product="index" @click="activatePopUp(index)" />
+
+                    </div>
+
+
+
+
                 </div>
-               
-
-
-
             </div>
         </div>
-    </div>
 </template>
 
 <style scoped>
+
 .navbar-adjust {
-    height: 100px;
+    height: 10vh;
     background: white
 }
 
@@ -64,6 +68,7 @@ const activatePopUp = (index) => {
     z-index: 2;
     padding: 10px;
     background: white;
+    min-height: 80vh
 }
 
 .products {
@@ -81,15 +86,16 @@ h1 {
     margin-bottom: 1rem;
     color: #30449b;
 }
+
 .absolute {
     position: absolute;
     z-index: 1;
 }
+
 .bg-container {
     height: 100vh;
     width: 100%;
     overflow: hidden;
 }
-
 </style>
 

@@ -1,12 +1,12 @@
 <script setup>
 import { ref } from 'vue';
+import { useRoute } from 'vue-router';
 import  router  from '../router.js';
 
 const navStatus = ref('close')
 const navFull = ref('nav-close')
 const responsiveNavDetail = ref('deactivate-details')
 
-console.log("1")
 const navChange = () => {
     navStatus.value === 'close' ? navStatus.value = 'open' : navStatus.value = 'close'
     navFull.value === 'nav-close' ? navFull.value = 'nav-open' : navFull.value = 'nav-close'
@@ -17,8 +17,8 @@ const showDetails = () => {
 }
 
 const send = () => {
-    console.log('Home')
-    router.push({name: 'Home'})
+    // if()
+    // router.go()
 }
 </script>
 
@@ -31,7 +31,7 @@ const send = () => {
                     <li>
                         <router-link to="/">
 
-                            <img src="/img/logo.png" alt="branza-logo" class="logo" />
+                            <img src="/img/logo.png" alt="branza-logo" class="logo" @click="send()" />
                             <!-- <img src="../assets/img/LOGO MOTION GRAPHIC.gif" alt="branza-logo" class="logo" /> -->
                         </router-link>
                     </li>

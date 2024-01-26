@@ -2,14 +2,17 @@
 import Navbar from './components/Navbar.vue'
 import Footer from './components/Footer.vue'
 
-import { RouterView } from 'vue-router'
+import { RouterView,useRoute } from 'vue-router'
+
+const route = useRoute()
+
 
 </script>
 
 <template>
   <div>
     <Navbar />
-    <RouterView />
+    <RouterView :key="route.fullPath"/>
     <Footer/>
 
   </div>

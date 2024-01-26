@@ -7,7 +7,6 @@
         "img":"magnalat.png",
         "country":"Uruguay",
         "icon":"uruguay.png",
-        "tag":"industrial",
         "doc":"false"
     },
     "adecoagro":{
@@ -18,7 +17,6 @@
         "img":"adecoagro.png",
         "country":"Argentina",
         "icon":"argentina.png",
-        "tag":"industrial",
         "doc":"Ficha-Tecnica-AdecoAgro"
 
     },
@@ -30,7 +28,6 @@
         "img":"conaprole.png",
         "country":"Uruguay",
         "icon":"uruguay.png",
-        "tag":"industrial",
         "doc":"Ficha-Tecnica-Conaprole"
 
     },
@@ -42,7 +39,6 @@
         "img":"purisima.png",
         "country":"Uruguay",
         "icon":"uruguay.png",
-        "tag":"industrial",
         "doc":"Ficha-Tecnica-Purisima"
 
     },
@@ -55,7 +51,6 @@
         "img":"formidable.png",
         "country": "Uruguay",
         "icon":"uruguay.png",
-        "tag":"industrial",
         "doc":"Ficha-Tecnica-Formidable"
 
     },
@@ -67,7 +62,6 @@
         "img":"colun.png",
         "country":"Chile",
         "icon":"chile.png",
-        "tag":"industrial",
         "doc":"Ficha-Tecnica-suero-Colun"
     }
     

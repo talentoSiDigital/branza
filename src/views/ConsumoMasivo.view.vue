@@ -48,7 +48,7 @@ const activatePopUp = (index) => {
 <style scoped>
 .navbar-adjust {
     background: white;
-    height: 100px;
+    height: 10vh;
 }
 
 .grid {
@@ -64,6 +64,7 @@ const activatePopUp = (index) => {
     z-index: 2;
     padding: 10px;
     background: white;
+    min-height: 80vh;
 }
 
 .products {

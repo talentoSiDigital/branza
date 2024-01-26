@@ -11,6 +11,7 @@ import products from '../products.json'
 
 
 const popUp = ref(0)
+const filter = ref(false)
 
 const activatePopUp = (index) => {
 
@@ -52,6 +53,7 @@ const breakpoints = {
 
             <Carousel  
                 class="carousel-container" 
+                :class="filter ? 'filter':'no-filter'"
                 :wrap-around="true" 
                 :breakpoints="breakpoints"
                 :autoplay="1500"
@@ -91,13 +93,18 @@ const breakpoints = {
     position: fixed;
     z-index: 100 ;
 }
+.filter{
+    filter: blur(5px);
+}
 .slider-container {
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    overflow: hidden;
+    overflow: hidden; */
     width: 100%;
 }
-
+.normal{
+    cursor: pointer;
+}
 .carousel-container {
     width: 95%;
 }
