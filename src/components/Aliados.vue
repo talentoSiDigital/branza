@@ -10,7 +10,6 @@ const aliados = {
     "Magnalat": "magnalat-logo.png",
     "Purisima": "purisima-logo.png",
     "Adecoagro": "adecoagro-logo.png"
-
 }
 
 const breakpoints = {

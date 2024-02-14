@@ -1,11 +1,8 @@
-<script setup>
-
-</script>
 
 <template>
     <section class="banner-vitalle">
         <div class="correction">
-            <div class="img-box flex">
+            <div class="img-box ">
                 <img src="/img/vitalle-logo.png" alt="vitalle logo" class="logo">
                 <img src="/img/vitalle.png" alt="leche vitalle" class="vitalle">
             </div>
@@ -26,15 +23,10 @@
     padding: 25px;
     overflow: hidden;
 }
-.correction{
-    width: 90%;
-}
 
-.flex {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.correction {
+    width: 100%;
+    height: fit-content;
 }
 
 .section {
@@ -44,7 +36,11 @@
 .img-box {
     margin-top: 20px;
     position: absolute;
-    width: 98%;
+    width: 92%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
 }
 
@@ -55,21 +51,20 @@
 
 .img-box .vitalle {
     width: 50%;
+
     transform: rotate(2deg);
     animation: bounce2 2s ease infinite;
 
 }
 
 .bg {
-    height: 90vh;
+    height: 80vh;
     display: flex;
-
 }
 
 .box {
     width: 50%;
     display: flex;
-
 }
 
 .box-blue {
@@ -91,25 +86,12 @@
     font-weight: 800;
     font-size: 26pt;
     margin: 0px 5px;
+    text-align: center;
+
 }
 
 @keyframes bounce2 {
 
-    /* 0%,
-20%,
-50%,
-80%,
-100% {
-    transform: translateY(0);
-}
-
-40% {
-    transform: translateY(-30px);
-}
-
-60% {
-    transform: translateY(-15px);
-} */
 
     0%,
     100% {
@@ -128,5 +110,56 @@
 
 
 
-}</style>
+}
+
+@media (max-width:920px) {
+    .box h2 {
+        font-size: 30pt;
+    }
+}
+
+
+@media (max-width:768px) {
+    .img-box .vitalle {
+        width: 70%;
+    }
+
+    .bg {
+        height: 50vh;
+    }
+
+    .box h2 {
+        font-size: 20pt;
+    }
+
+}
+
+@media (max-width:500px) {
+    .img-box .logo {
+        width: 50%;
+
+    }
+
+    .img-box .vitalle {
+        width: 60%;
+        margin-top: 10%;
+    }
+
+    .box h2 {
+        font-size: 15pt;
+    }
+
+}
+
+@media (max-width:400px) {
+    .img-box .vitalle {
+        width: 60%;
+        margin-top: 20%;
+    }
+
+    .box h2 {
+        font-size: 10pt;
+    }
+}
+</style>
 

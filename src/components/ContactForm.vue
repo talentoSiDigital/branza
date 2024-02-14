@@ -1,7 +1,8 @@
 <script setup>
 import { ref } from 'vue';
-import router from '../router'
 import emailjs from '@emailjs/browser';
+
+const emit = defineEmits(['change-note', 'loader'])
 
 const name = ref('')
 const message = ref('')
@@ -10,25 +11,36 @@ const phone = ref('')
 const subject = ref('')
 
 
+function clearAll() {
+    name.value = ""
+    message.value = ""
+    email.value = ""
+    phone.value = ""
+    subject.value = ""
+}
+
 
 function sendEmail() {
-    emailjs.init("k8ykLNuaD05s3szif");
-    emailjs.send("service_7fp6zjo", "template_or8aocp", {
+    emit('change-note')
+
+    emailjs.init("FmqBXCr3a6s1f-R2b");
+    emailjs.send("service_irltyr3", "template_65vetww", {
         name: name.value,
         message: message.value,
         email: email.value,
         phone: phone.value,
         subject: subject.value,
     })
-    .then(function (response){
-        console.log('success' + response.status + response.text)
-    },function(error) {
-       console.log('FAILED...', error);
-    })
-    
-    // router.push("/")
-
+        .then(function (response) {
+            emit('loader')
+            clearAll()
+        }, function (error) {
+            console.log('FAILED...', error);
+        })
+      
 }
+
+
 
 
 </script>
@@ -58,7 +70,7 @@ function sendEmail() {
                 <textarea class=" textarea" placeholder="Escribe tu mensaje" id="message" v-model="message"></textarea>
             </div>
             <div class="form-group">
-                <button  type="button" @click="sendEmail">Enviar</button>
+                <button type="button" @click="sendEmail">Enviar</button>
             </div>
         </div>
     </form>
@@ -82,7 +94,7 @@ header {
     padding: 5px;
     border-radius: 10px;
     border: none;
-    background: #e4e4e4;
+    background: #f5f5f5;
 }
 
 
@@ -93,7 +105,7 @@ header {
     padding: 5px;
     border-radius: 15px;
     border: none;
-    background: #e4e4e4;
+    background: #f5f5f5;
     padding: 10px;
 }
 
