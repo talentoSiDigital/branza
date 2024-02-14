@@ -1,8 +1,3 @@
-<script setup>
-
-import { Vue3Lottie } from 'vue3-lottie'
-
-</script>
 
 <template>
     <div class="frame video-frame">
@@ -18,11 +13,11 @@ import { Vue3Lottie } from 'vue3-lottie'
                         <h2>Leche</h2>
                         <h2 class="thin">para toda</h2>
                         <h2><strong>Venezuela</strong></h2>
-                      
+
                     </header>
                 </div>
-                <img src="/img/logo-motion-2.gif" alt="branza-illustration" >
-        
+                <img src="/img/logo-motion-2.gif" alt="branza-illustration">
+
             </div>
 
             <font-awesome-icon :icon="['fas', 'angles-down']" class="icon-down bounce2" />
@@ -32,8 +27,7 @@ import { Vue3Lottie } from 'vue3-lottie'
 </template>
 
 <style scoped>
-
-.border-debug{
+.border-debug {
     border: 1px solid black;
 }
 
@@ -48,18 +42,18 @@ import { Vue3Lottie } from 'vue3-lottie'
 }
 
 
-.text-area header{
-    text-shadow: 5px 5px 6px rgba(0,0,0,0.6);   
-    font-size: 30pt;     
+.text-area header {
+    text-shadow: 5px 5px 6px rgba(0, 0, 0, 0.6);
+    font-size: 30pt;
 }
 
 .text-area header h2 {
     font-weight: 400;
 
-    
+
 }
 
-.text-area header .thin{
+.text-area header .thin {
     font-weight: 200;
 }
 
@@ -82,7 +76,7 @@ img {
 
 .frame {
     width: 100%;
-    
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -157,6 +151,12 @@ img {
 }
 
 
+@media (max-width:550px) {
+
+    img {
+        width: 80%;
+    }
+}
 
 
 @media (max-width: 1100px) {
@@ -180,9 +180,11 @@ img {
         font-weight: normal;
         font-size: 40pt;
     }
-    .video-banner{
+
+    .video-banner {
         min-width: 1500px;
     }
+
     .text-area header h2 {
         font-size: 40pt;
     }
@@ -193,7 +195,8 @@ img {
     .text-area header {
         font-size: 80pt;
     }
-    .banner{
+
+    .banner {
         height: 100vh;
     }
 }

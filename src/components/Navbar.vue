@@ -64,13 +64,7 @@ const send = () => {
 
                     </li>
 
-                    <!-- <li class="hover hover-underline-animation">
-                        <div class="nav-heading">
-                            Elaboraciones
-                            <font-awesome-icon :icon="['fas', 'angle-down']" />
-                        </div>
-
-                    </li> -->
+                   
 
                     <li class="hover hover-underline-animation">
                         <router-link to="/contacto">
@@ -155,12 +149,6 @@ const send = () => {
                 </router-link>
 
 
-                <!-- <router-link to="/elaboraciones" class="nav-item" @click="navChange">
-
-                    Elaboraciones
-                    <font-awesome-icon :icon="['fas', 'angle-down']" />
-
-                </router-link> -->
 
                 <router-link to="/contacto" class="nav-item" @click="navChange">
                     Contacto
@@ -415,6 +403,7 @@ p a:hover {
 
     height: 7px;
     width: 50px;
+    border: 1px solid #fff9f3ff;
     background: #30449b;
     border-radius: 9px;
     opacity: 1;
