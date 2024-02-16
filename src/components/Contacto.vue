@@ -238,6 +238,11 @@ iframe {
         width: 70VW;
     }
 
+    h3{
+    font-size: 15px;
+
+    }
+
 
 }
 </style>

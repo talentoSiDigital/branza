@@ -32,6 +32,9 @@ const {img,title} = defineProps(['img','title'])
     align-items: center;
     justify-content: center;
     height: 100%;
+    background: #31439b;
+    border-radius: 10px;
+
 }
 
 img {

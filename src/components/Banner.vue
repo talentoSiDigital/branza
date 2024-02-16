@@ -35,6 +35,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top:510px ;
 }
 
 .text-area {
@@ -151,12 +152,20 @@ img {
 }
 
 
+@media (max-width:960px) {
+
+    .video-text-side{
+        justify-content: space-between;
+    }
+}
 @media (max-width:550px) {
 
     img {
-        width: 80%;
+        width: 60%;
     }
 }
+
+
 
 
 @media (max-width: 1100px) {

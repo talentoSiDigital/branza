@@ -212,6 +212,7 @@ import { Carousel, Slide, Pagination } from 'vue3-carousel'
     width: 80%;
 }
 
+
 .img-side {
     width: 100%;
     height: 100vh;
@@ -305,6 +306,9 @@ h5 {
 }
 
 @media (max-width:800px) {
+    .img-side{
+        margin-top: 40px;
+    }
     .navbar-adjust {
         display: none;
     }
@@ -322,18 +326,18 @@ h5 {
     }
 
     h3 {
-        font-size: 30pt;
+        font-size: 25pt;
         font-weight: 900;
     }
 
     h4 {
-        font-size: 20pt;
+        font-size: 17pt;
         font-weight: 900;
     }
 
     h5 {
         font-weight: 400;
-        font-size: 15pt;
+        font-size: 12pt;
     }
 
     .img-side {

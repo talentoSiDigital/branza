@@ -85,6 +85,7 @@ function sendEmail() {
 
 header {
     color: #30449b;
+    white-space: nowrap;
 }
 
 
