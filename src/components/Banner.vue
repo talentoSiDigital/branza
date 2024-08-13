@@ -27,9 +27,7 @@
 </template>
 
 <style scoped>
-.border-debug {
-    border: 1px solid black;
-}
+
 
 .banner {
     display: flex;

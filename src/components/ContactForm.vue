@@ -24,7 +24,7 @@ function sendEmail() {
     emit('change-note')
 
     emailjs.init("FmqBXCr3a6s1f-R2b");
-    emailjs.send("service_irltyr3", "template_65vetww", {
+    emailjs.send("service_89w54ri", "template_65vetww", {
         name: name.value,
         message: message.value,
         email: email.value,

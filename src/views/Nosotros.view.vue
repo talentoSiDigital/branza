@@ -138,7 +138,7 @@ import { Carousel, Slide, Pagination } from 'vue3-carousel'
     height: 100%;
     overflow: hidden;
 
-    background: rgba(49, 67, 155, 0.40);
+    /* background: rgba(49, 67, 155, 0.40); */
     display: flex;
     flex-direction: column;
     align-items: center;
