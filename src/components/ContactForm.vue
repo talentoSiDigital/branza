@@ -23,8 +23,8 @@ function clearAll() {
 function sendEmail() {
     emit('change-note')
 
-    emailjs.init("FmqBXCr3a6s1f-R2b");
-    emailjs.send("service_irltyr3", "template_65vetww", {
+    emailjs.init("zDxl6gzN1u4NE1xiW");
+    emailjs.send("service_f9vepwz", "template_98947n9", {
         name: name.value,
         message: message.value,
         email: email.value,
@@ -85,6 +85,7 @@ function sendEmail() {
 
 header {
     color: #30449b;
+    white-space: nowrap;
 }
 
 

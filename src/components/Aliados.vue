@@ -8,7 +8,6 @@ const aliados = {
     "Conaprole": "conaprole-logo.png",
     "Formidable": "formidable-logo.png",
     "Magnalat": "magnalat-logo.png",
-    "Purisima": "purisima-logo.png",
     "Adecoagro": "adecoagro-logo.png"
 }
 

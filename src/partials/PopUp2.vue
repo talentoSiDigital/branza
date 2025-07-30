@@ -22,12 +22,12 @@ watch(product, () => {
 </script>
 
 <template>
-    <div v-if="referenceProduct != 0" class="container" >
+    <div v-if="referenceProduct != 0" class="container">
         <div class="pop-up-card">
             <div class="card">
                 <div class="info">
 
-                    <div class="img-side">
+                    <div class="img-side desktop-only">
 
                         <img :src="`/img/${parsedProduct.img}`" :alt="parsedProduct.name" class="product-img">
 
@@ -59,7 +59,31 @@ watch(product, () => {
                         </div>
 
                         <h1 class="title">{{ parsedProduct.name }}</h1>
+                        <div class="img-side mobile-only">
 
+                            <img :src="`/img/${parsedProduct.img}`" :alt="parsedProduct.name" class="product-img">
+
+                            <div class="share-container">
+                                <h4>Compartir en:</h4>
+
+                                <div class="share-links">
+                                    <a href="https://www.facebook.com/branzafoods/" target="_blank" class="share-button">
+                                        <font-awesome-icon :icon="['fab', 'facebook-f']" class="share-icons" />
+                                    </a>
+
+                                    <a href="https://www.instagram.com/branzafoods" target="_blank" class="share-button">
+                                        <font-awesome-icon :icon="['fab', 'instagram']" class="share-icons" />
+
+                                    </a>
+
+                                    <a href="https://www.x.com/branzafoods" target="_blank" class="share-button">
+                                        <font-awesome-icon :icon="['fab', 'x-twitter']" class="share-icons" />
+                                    </a>
+                                </div>
+
+                            </div>
+
+                        </div>
                         <ul>
                             <li>
                                 <img src="/img/icono-2.png" alt="icono" class="icon-img">
@@ -112,6 +136,11 @@ watch(product, () => {
 </template>
 
 <style scoped>
+
+
+.mobile-only{
+    display: none !important;
+}
 .pop-up-card {
     color: white;
     position: fixed;
@@ -125,7 +154,8 @@ watch(product, () => {
     align-items: center;
     justify-content: center;
 }
-.card{
+
+.card {
     border: 1px solid #bababa;
     padding: 20px 50px;
     border-radius: 15px;
@@ -379,7 +409,8 @@ button:hover {
         height: 35px;
 
     }
-    .button{
+
+    .button {
         font-size: 15pt;
     }
 
@@ -400,7 +431,8 @@ button:hover {
         font-size: 20pt;
         font-weight: 400;
     }
-    h4{
+
+    h4 {
         font-size: 20pt;
     }
 
@@ -457,21 +489,32 @@ button:hover {
 }
 
 @media (max-width: 650px) {
-    .card{
+    .desktop-only{
+        display: none !important;
+    }
+    .mobile-only{
+    display: flex !important;
+        
+    }
+    .card {
         border: none;
 
     }
-    .card .info{
+
+    .card .info {
         flex-direction: column;
 
     }
+
     .share-container {
         display: none;
     }
+
     .text-side {
         width: 100%;
         height: fit-content;
     }
+
     .icon-img {
         width: 25px;
         height: 25px;
@@ -502,12 +545,10 @@ button:hover {
         font-size: 10pt !important;
 
     }
+
     .product-img {
         max-width: 140px !important;
         min-width: 140px !important;
     }
-}
-
-
-</style>
+}</style>
 

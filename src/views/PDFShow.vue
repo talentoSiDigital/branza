@@ -27,7 +27,7 @@ const { pdf, pages } = usePDF('/data/'+route.params.name+'.pdf')
 
 <style scoped>
 .main-pdf{
-    border: 1px solid black;
+ 
     display: flex;
     flex-direction: column;
     justify-content: center;

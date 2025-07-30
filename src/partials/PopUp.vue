@@ -26,14 +26,43 @@ const emitPopUp = () => {
 </script>
 
 <template>
-        <div v-if="referenceProduct != 0" class="container">
-            <div class="pop-up-card-container">
+    <div v-if="referenceProduct != 0" class="container">
+        <div class="pop-up-card-container">
 
-                <div class="card-container">
+            <div class="card-container">
 
-                    <div class="info">
+                <div class="info">
 
-                        <div class="img-side">
+                    <div class="img-side desktop-only">
+
+                        <img :src="`/img/${parsedProduct.img}`" :alt="parsedProduct.name" class="product-img">
+
+                        <div class="share-container">
+                            <h4>Compartir en:</h4>
+
+                            <div class="share-links">
+                                <a href="https://www.facebook.com/branzafoods/" target="_blank" class="share-button">
+                                    <font-awesome-icon :icon="['fab', 'facebook-f']" class="share-icons" />
+                                </a>
+
+                                <a href="https://www.instagram.com/branzafoods" target="_blank" class="share-button">
+                                    <font-awesome-icon :icon="['fab', 'instagram']" class="share-icons" />
+
+                                </a>
+
+                                <a href="https://www.x.com/branzafoods" target="_blank" class="share-button">
+                                    <font-awesome-icon :icon="['fab', 'x-twitter']" class="share-icons" />
+                                </a>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="text-side">
+
+                        <h1 class="title">Leche {{ parsedProduct.name }}</h1>
+                        <div class="img-side mobile-only">
 
                             <img :src="`/img/${parsedProduct.img}`" :alt="parsedProduct.name" class="product-img">
 
@@ -58,71 +87,69 @@ const emitPopUp = () => {
                             </div>
 
                         </div>
-
-                        <div class="text-side">
-
-                            <h1 class="title">Leche {{ parsedProduct.name }}</h1>
-
-                            <ul>
-                                <li>
-                                    <img src="/img/icono-2.png" alt="icono" class="icon-img">
-                                    <div class="line-text">
-                                        <h2><strong> Presentación: </strong></h2>
-                                        <h3>Bolsa multipliego de papel Kraft con bolsa de polietileno interior de 25 kg.
-                                        </h3>
-                                    </div>
-                                </li>
+                        <ul>
+                            <li>
+                                <img src="/img/icono-2.png" alt="icono" class="icon-img">
+                                <div class="line-text">
+                                    <h2><strong> Presentación: </strong></h2>
+                                    <h3>Bolsa multipliego de papel Kraft con bolsa de polietileno interior de 25 kg.
+                                    </h3>
+                                </div>
+                            </li>
 
 
-                                <li>
-                                    <img src="/img/icono-1.png" alt="icono" class="icon-img">
-                                    <div class="line-text">
-                                        <h2><strong> Características: </strong></h2>
-                                        <h3>{{ parsedProduct.description }}</h3>
-                                    </div>
-                                </li>
+                            <li>
+                                <img src="/img/icono-1.png" alt="icono" class="icon-img">
+                                <div class="line-text">
+                                    <h2><strong> Características: </strong></h2>
+                                    <h3>{{ parsedProduct.description }}</h3>
+                                </div>
+                            </li>
 
-                                <li>
-                                    <img src="/img/icono-3.png" alt="icono" class="icon-img">
-                                    <div class="line-text">
-                                        <h2><strong> País: </strong></h2>
-                                        <img :src="`/img/${parsedProduct.icon}`" alt="icono" class="icon-img">
-                                    </div>
-                                </li>
-
-
-                                <li class="socials">
-                                    <a href="https://wa.me/584142665125" class="green button">
-                                        Contacta para Comprar <font-awesome-icon :icon="['fab', 'whatsapp']" />
-
-                                    </a>
-
-                                    <RouterLink v-if="parsedProduct.doc != 'false'" :to="parsedProduct.doc"
-                                        class="green button">
-                                        Ficha Técnica
-                                    </RouterLink>
-                                    <button @click="emitPopUp" class="blue button">
-                                        Volver
-                                        <font-awesome-icon :icon="['fas', 'backward']" />
-                                    </button>
+                            <li>
+                                <img src="/img/icono-3.png" alt="icono" class="icon-img">
+                                <div class="line-text">
+                                    <h2><strong> País: </strong></h2>
+                                    <img :src="`/img/${parsedProduct.icon}`" alt="icono" class="icon-img">
+                                </div>
+                            </li>
 
 
-                                </li>
-                            </ul>
+                            <li class="socials">
+                                <a href="https://wa.me/584142665125" class="green button">
+                                    Contacta para Comprar <font-awesome-icon :icon="['fab', 'whatsapp']" />
 
-                        </div>
+                                </a>
+
+                                <RouterLink v-if="parsedProduct.doc != 'false'" :to="parsedProduct.doc"
+                                    class="green button">
+                                    Ficha Técnica
+                                </RouterLink>
+                                <button @click="emitPopUp" class="blue button">
+                                    Volver
+                                    <font-awesome-icon :icon="['fas', 'backward']" />
+                                </button>
+
+
+                            </li>
+                        </ul>
+
                     </div>
                 </div>
             </div>
-            <div class="footer">
-                <img src="/img/logo-blanco.png" alt="branza-logo">
-                <h5>Branza &#8482; - Todos los derechos reservados</h5>
-            </div>
         </div>
+        <div class="footer">
+            <img src="/img/logo-blanco.png" alt="branza-logo">
+            <h5>Branza &#8482; - Todos los derechos reservados</h5>
+        </div>
+    </div>
 </template>
 
 <style scoped>
 
+.mobile-only{
+    display: none !important;
+}
 
 .pop-up-card-container {
     color: white;
@@ -437,6 +464,13 @@ strong {
 }
 
 @media (max-width: 650px) {
+    .desktop-only{
+        display: none !important;
+    }
+    .mobile-only{
+    display: flex !important;
+        
+    }
     .card-container {
         border: none;
     }

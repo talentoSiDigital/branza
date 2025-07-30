@@ -31,17 +31,7 @@
         "doc":"Ficha-Tecnica-Conaprole"
 
     },
-    "purisima":{
-        "name":"Purísima",
-        "type":"Leche entera",
-        "description":"Leche entera en polvo con vitamina A y B3",
-        "weight":"25kg",
-        "img":"purisima.png",
-        "country":"Uruguay",
-        "icon":"uruguay.png",
-        "doc":"Ficha-Tecnica-Purisima"
 
-    },
     
     "formidable":{
         "name":"Formidable",
